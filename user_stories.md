@@ -9,6 +9,15 @@
 * I want users to make 25 votes so that we collect enough data.
 
 ## Developer
-*
+* I want the 3 images side-by-side-by-side near the top.
+* I want a header, footer, and instructions.
+* I want to display results after 25 clicks.
+* I want similar image sizes so that designing the page is easier.
+* I want clicking on the image to register as a vote, and then display the new images
 
 ## Focus Participant
+* I want to see 3 different products at a time.
+* I want to be able to vote on products just by clicking on the picture.
+* I want to know the final tally results and view count so that I can see what was most popular.
+* I want instructions so I know what to do.
+* I want this to not take a long time.
