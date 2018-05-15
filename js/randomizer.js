@@ -1,0 +1,1 @@
+document.write('randomizer.js is loading properly');

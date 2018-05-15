@@ -1,1 +1,2 @@
-document.write('app.js is loading properly');
+//document.write('app.js is loading properly');
+
