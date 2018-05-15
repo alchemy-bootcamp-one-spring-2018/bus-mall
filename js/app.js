@@ -1,7 +1,13 @@
 'use strict';
 
-const  = document.getElementById('product-images');
+const  appTemplate = document.getElementById('app-template');
 
-class  {
+class App {
+    constructor() {
 
+    }
+    render() {
+        const testing = appTemplate.content;
+        return testing;
+    } 
 }
