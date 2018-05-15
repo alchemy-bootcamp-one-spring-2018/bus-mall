@@ -1,0 +1,1 @@
+This is a survey app project that will randomize photos and display three that a participant will pick from, ,for a total of 25 times ,to gather information that the marketing team will analyze.
