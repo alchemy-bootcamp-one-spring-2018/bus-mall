@@ -2,15 +2,17 @@
 /* globals */
 'use strict';
 
+const imageDisplayTemplate = document.getElementById('image-display-template');
+
 class Image {
-    constructor(imageSrc, views, votes, onStatusChange) {
+    constructor(name, imageSrc, views, votes, onStatusChange) {
         this.name = name;
         this.imageSrc = imageSrc;
         this.views = views;
         this.votes = votes;
         this.onStatusChange = onStatusChange;
     }
-
+/* 
     random() {
         //code block
     }
@@ -18,8 +20,14 @@ class Image {
     update() {
         //code block
     }
-
+ */
     render() {
-        //code block
+        const dom = imageDisplayTemplate.contentEditable.cloneNode(true);
+        //reference to a dom so we can append image
+        const img = dom.querySelector('img');
+        this.img = img;
+
+        return dom;
+
     }
 }
