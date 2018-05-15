@@ -1,15 +1,3 @@
-User Stories:
-As a __User__, 
-I need/want the __application/feature___ to perform/have __some functionality__, 
-so that I __some objective__.
-
-As a user, I need the Index page to say "Hello World", so that I feel welcomed.
-
-AC:
-Given  .... (pre-requisites), describe expected behavior
-
-Given I have loaded the Index page, the text "Hello World" will be visible.
-
 # Lab 10 - BusMall: User Stories
 
 ## Marketing Research Team
@@ -22,10 +10,10 @@ Given I have loaded the Index page, the text "Hello World" will be visible.
 
 ## The Developer
 
-* clean simple organized ability to change in the future 
 * As a developer, I need files that adhere to the separation of concerns so that my code is clean and easy to understand should I need to go back and refactor it.
-* As a developer, I need 
-* 
+* As a developer, I need comments and pseudo code to mark out the data tree that I have drawn up so that I can approach my code methodically. 
+* As a developer, I need images that will function as buttons so that my app is more user friendly. 
+* As a developer, I want the Index page to be visually appealing so that my user feels welcome and happy to interact with the product. 
 
 ## The Focus Group (User)
 
@@ -33,3 +21,5 @@ Given I have loaded the Index page, the text "Hello World" will be visible.
 * As a user, I need the Index page to include a section with instructions so that I understand how I am voting.
 * As a user, I need the Index page to include a clearly marked vote button so I know where to click when I am ready to vote. 
 * As a user, I need the Index page to include a place to display the results of my votes so that I know which products I liked best. 
+
+
