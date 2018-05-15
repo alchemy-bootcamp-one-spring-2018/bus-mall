@@ -25,3 +25,12 @@ let imageArray = [
     new Image ('water-can', 'water-can.png'),
     new Image ('wine-glass', 'wine-glass.png')
 ];
+
+let images = [
+    {
+        name: 
+        imageSrc:
+        views:
+        votes:
+    }
+]

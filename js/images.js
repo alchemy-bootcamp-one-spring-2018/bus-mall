@@ -1,8 +1,8 @@
-/* exported Images */
+/* exported Image */
 /* globals */
 'use strict';
 
-Class Image {
+class Image {
     constructor(imageSrc, views, votes, onStatusChange) {
         this.name = name;
         this.imageSrc = imageSrc;
