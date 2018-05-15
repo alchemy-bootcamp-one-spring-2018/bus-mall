@@ -13,11 +13,10 @@ class App {
 
         const choiceSection = dom.getElementById('choice');
         const choiceComponent = new Choice();
+        choiceSection.appendChild(choiceComponent.render());
 
         const resultSection = dom.getElementById('result');
         const resultComponent = new Result();
-
-        choiceSection.appendChild(choiceComponent.render());
         resultSection.appendChild(resultComponent.render());
         
         return dom;
