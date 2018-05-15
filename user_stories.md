@@ -15,7 +15,7 @@
 * I want similar image sizes so that designing the page is easier.
 * I want clicking on the image to register as a vote, and then display the new images
 
-## Focus Participant
+## Focus Group Participant
 * I want to see 3 different products at a time.
 * I want to be able to vote on products just by clicking on the picture.
 * I want to know the final tally results and view count so that I can see what was most popular.
