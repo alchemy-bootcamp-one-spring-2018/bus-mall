@@ -4,13 +4,11 @@
 let voteCount = 0;
 
 function vote() {
-    console.log('in the vote function');
     let form = document.getElementsByName('vote');
     let vote = -1;
     for(let i in form) {
         if(form[i].checked) {
             vote = form[i].id.split('_')[1];
-            console.log(pictureArray[vote]);
         }
     }
 
@@ -25,6 +23,7 @@ function vote() {
         results();
         return;
     }
+
     random();
 }
 

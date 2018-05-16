@@ -11,6 +11,6 @@ function results() {
         }
         res.innerHTML += '<strong>Name:</strong> ' + pic.name + '<br> <span class="underline"><strong>xShown:</strong> ' + pic.shown + '| <strong>xVoted:</strong> ' + pic.vote + '| <strong>Percentage:</strong> ' + percent.toFixed(2) + '%</span><br>';
     }
+
     res.parentElement.style.display = 'block';
-    res.style.alignSelf = 'top';
 }
