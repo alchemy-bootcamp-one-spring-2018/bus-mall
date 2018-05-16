@@ -1,4 +1,12 @@
+var myImage = new Image();
+myImage.src = 'images/banana.jpg';
+document.getElementById('my-images').appendChild(myImage);
 
+function createImg() {
+    var img = document.createElement('img');
+    img.setAttribute('src', 'images/bag.jpg');
+    document.body.appendChild(img);
+}
 
 var imageArray = [
     { name: 'bag', image: 'images/bag.jpg' },
@@ -23,6 +31,32 @@ var imageArray = [
     { name: 'wine glass', image: 'images/wine-glass.jpg' }
 ];
 console.log(imageArray);
+
+function randomNumber(amount) {
+    return Math.floor(Math.random(amount) * imageArray.length);
+}
+
+
+function getRandomImage(imageArray) {
+    var index = randomNumber(imageArray.length);
+    var theImage = imageArray[index];
+}
+
+getRandomImage();
+
+function makeThrees() {
+    var copy = imageArray.slice();
+
+    for(var i = 0; i < 6; i++) {
+        var imageOne = randomImage(copy);
+        var imageTwo = randomImage(copy);
+        var imageThree = randomImage(copy);
+
+        document.getElementById('three-' + i).
+    }
+}
+
+
 
 // function createImg() {
 //     var img = document.createElement('img');
