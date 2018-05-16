@@ -1,13 +1,16 @@
 'use strict';
+/* globals VotingOptions, Result, Product, productList */
+/* exported App */ 
 
 const  appTemplate = document.getElementById('app-template');
 
 class App {
     constructor() {
 
-
     }
+
     render() {
+        
         const testing = appTemplate.content;
         const testResult = appTemplate.content;
         
