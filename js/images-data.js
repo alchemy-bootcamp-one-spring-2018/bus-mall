@@ -2,7 +2,7 @@
 /* globals */
 'use strict';
 
-//list of images
+//list of images - keeping this just in case
 // let imageArray = [
 //     new Image ('bag', 'bag.png'),
 //     new Image ('banana', 'banana.png'),
