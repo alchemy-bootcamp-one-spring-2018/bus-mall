@@ -9,40 +9,41 @@ const appTemplate = document.getElementById('app-template');
 class App {
     
     constructor() {
+        this.list = productList;
+        this.lastDisplay = [];
+    }
 
+    randomize(max) {
+        const productImages = [];
+        
+        for(let i = 0; i < 3; i++) {
+            const index = Math.floor(Math.random() * max);
+            
+            if(productImages.includes(this.list[index].image) || this.lastDisplay.includes(this.list[index].image)) {
+                i--;
+                continue;
+            }
+            productImages[i] = this.list[index].image;
+        }
+        
+        this.lastDisplay = productImages;
+        return productImages;
     }
 
     render() {
         
         const dom = appTemplate.content;
         
-        const productSection = dom.getElementById('product-choice');
+        const choiceSection = dom.getElementById('choice');
+        const randomProducts = this.randomize(this.list.length);
+        const choiceComponent = new ProductChoice(randomProducts);
+        choiceSection.appendChild(choiceComponent.render());
+        
         const resultsSection = dom.getElementById('results');
-
-        const testing = displayProducts(productList.length);
-        const productComponent = new ProductChoice(testing);
-        productSection.appendChild(productComponent.render());
-
-        const choicesComponent = new Results(productList);
-        resultsSection.appendChild(choicesComponent.render());
+        const resultsComponent = new Results(productList);
+        resultsSection.appendChild(resultsComponent.render());
 
         return dom;
     }
-}
-
-function displayProducts(max) {
-    
-    const productImages = [];
-    
-    for(let i = 0; i < 3; i++) {
-        let index = Math.floor(Math.random() * max);
-        if(productImages.includes(productList[index].image)) {
-            i--;
-            continue;
-        }
-        productImages[i] = productList[index].image;
-    }
-
-    return productImages;
 }
 

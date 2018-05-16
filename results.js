@@ -15,9 +15,9 @@ class Results {
 
     render() {
 
-        const resultsContent = resultsTemplate.content.cloneNode(true);
+        const dom = resultsTemplate.content.cloneNode(true);
 
-        const resultsList = resultsContent.getElementById('results-list');
+        const resultsList = dom.getElementById('results-list');
         
         for(let i = 0; i < this.list.length; i++) {
 
@@ -25,8 +25,8 @@ class Results {
             list.textContent = this.list[i].name;
             resultsList.appendChild(list);
         }
-        
-        return resultsContent;
+
+        return dom;
 
     }
 

@@ -7,16 +7,20 @@ class ProductChoice {
         this.list = list;
     }
 
+    update() {
+        
+    }
+
     render() {
         
-        const testing = productTemplate.content;
+        const dom = productTemplate.content;
 
         for(let i = 0; i < this.list.length; i++) {
-            let product = testing.getElementById('product-' + i);
+            let product = dom.getElementById('product-' + i);
             product.src = this.list[i];
         
         }
         
-        return testing;
+        return dom;
     }
 }
