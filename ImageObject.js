@@ -2,8 +2,6 @@
 dragon pen petSweep scissors shark sweep tauntaun unicorn usb waterCan wineGlass */
 'use strict';
 
-const imageList = document.getElementById('image-list');
-
 class ImageObject {
     constructor(name, source, viewCount, selectCount) {
         this.name = name;
@@ -12,24 +10,24 @@ class ImageObject {
         this.selectCount = selectCount;
     }
 
-    render() {
+    render(parent) {
         this.viewCount++;
         // let imageList = document.getElementById('image-list');
         let newImage = document.createElement('img');
         newImage.setAttribute('src', this.source);
-        imageList.appendChild(newImage);
+        parent.appendChild(newImage);
         newImage.addEventListener('click', () => {
             this.selectCount++;
-            this.update();
         });
     }
 
-    update() {
-        const ul = this.ul;
-        while(ul.lastElementChild) {
-            ul.lastElementChild.remove();
-        }
-        this.render();
+    print(parent) {
+        let viewNumber = document.createElement('p');
+        viewNumber.textContent = this.viewCount;
+        let selectNumber = document.createElement('p');
+        selectNumber.textContent = this.selectCount;
+        parent.appendChild(viewNumber);
+        parent.appendChild(selectNumber);
     }
 }
 
