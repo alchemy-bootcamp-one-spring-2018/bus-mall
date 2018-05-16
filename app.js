@@ -39,9 +39,8 @@ function randomInt(max) {
     const displayImages = [];
     
     for(let i = 0; i < 3; i++) {
-        displayImages[i] = productList[Math.floor(Math.random() * max)].image;
-        
-        if(displayImages)
+        let index = Math.floor(Math.random() * max);
+        displayImages[i] = productList[index].image;
         
     }
     
