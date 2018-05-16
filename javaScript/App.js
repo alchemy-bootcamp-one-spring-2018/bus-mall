@@ -1,9 +1,10 @@
 /* globals ImageChoices objectArray*/
 /* exported clearImages App */
-
+let vote = 0;
 const appTemplate = document.getElementById('app-template');
 
 class App {
+
     render(){
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
@@ -23,11 +24,11 @@ function getRandomObject() {
         randomImageArray[i].views++;
     }
     
-    
+    vote++;
     console.log(randomImageArray);
 }
 
-// function clearImages() {
+// function resetImages() {
 //     const imageSection = document.getElementById('image-vote');
 //     imageSection.parentNode.removeChild(imageSection);
 //     getRandomObject();

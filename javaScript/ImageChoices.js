@@ -1,5 +1,5 @@
 /* exported ImageChoices */
-/* globals clearImages  */
+/* globals randomImageArray getRandomObject  */
 'use strict';
 
 const votingTemplate = document.getElementById('voting-template');
@@ -10,14 +10,14 @@ class ImageChoices {
         this.image3 = image3;
     }
 
-    update(randomImages) {
-        this.randomImages = randomImages;
+    // update() {
+    //     this.randomImages = randomImages;
 
-        while(this.imageVote.lastElement){
-            this.imageVote.lastElementChild.remove();
+    //     while(this.imageVote.lastElement){
+    //         this.imageVote.lastElementChild.remove();
 
-        }
-    }
+    //     }
+    // }
 
     render() {
         const dom = votingTemplate.content.cloneNode(true);
@@ -33,15 +33,20 @@ class ImageChoices {
 
         displayImage1.addEventListener('click', function() {
             // clearImages(); 
+            randomImageArray[0].clicks++;
             getRandomObject();
         });
         displayImage2.addEventListener('click', function() {
             // clearImages(); 
+            randomImageArray[1].clicks++;
             getRandomObject();
+            
         });
         displayImage3.addEventListener('click', function() {
             // clearImages(); 
+            randomImageArray[2].clicks++;
             getRandomObject();
+
         });
         return dom;
     }
