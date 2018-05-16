@@ -5,32 +5,32 @@
 const choiceTemplate = document.getElementById('choice-template');
 
 class Choice {
-    constructor(list, indices, onClick) {
-        this.list = list;
-        this.indices = indices;
+    constructor(objArray, onClick) {
+        this.objArray = objArray;
         this.onClick = onClick;
     }
 
-    update(indices) {
-        const imageSection = this.imageSection;
-        while(imageSection.lastElementChild) {
-            imageSection.lastElementChild.remove();
-        }
-        for(let i = 0; i < indices.length; i++) {
-            const imageComponent = new Image(indices[i], this.onClick);
+    // update(array) {
+        
+    //     while(this.imageSection.lastElementChild) {
+    //         this.imageSection.lastElementChild.remove();
+    //     }
 
-            imageSection.appendChild(imageComponent.render());
-        }
+    //     for(let i = 0; i < array.length; i++) {
+    //         const imageComponent = new Image(array[i], this.onClick);
+
+    //         this.imageSection.appendChild(imageComponent.render());
+    //     }
 
     }
     render() {
+        console.log('choice:', this.objArray);
         const dom = choiceTemplate.content.cloneNode(true);
-        const imageSection = dom.getElementById('image-section');
-        this.imageSection = imageSection;
+        this.imageSection = dom.getElementById('image-section');
 
-        for(let i = 0; i < this.indices.length; i++) {
-            const imageComponent = new Image(this.list[this.indices[i]].image, this.onClick);
-            imageSection.appendChild(imageComponent.render());
+        for(let i = 0; i < this.objArray.length; i++) {
+            const imageComponent = new Image(this.objArray[i].image, this.onClick);
+            this.imageSection.appendChild(imageComponent.render());
         }
         
         return dom;
