@@ -5,7 +5,7 @@
 class Product {
     constructor(name, image) {
         this.name = name;
-        this.image = './assets/' + image;
+        this.image = './image/' + image;
         this.views = 0;
         this.clicks = 0;
     }
@@ -18,7 +18,7 @@ const boots = new Product('Yellow Boots', 'boots.jpg');
 const breakfast = new Product('All-in-One Breakfast Maker', 'breakfast.jpg');
 const bubblegum = new Product('Meatball Bubblegum', 'bubblegum.jpg');
 const chair = new Product('Red Chair', 'chair.jpg');
-const cthulu = new Product('C\'thulu Figurine', 'cthulu.jpg');
+const cthulhu = new Product('C\'thulu Figurine', 'cthulhu.jpg');
 const dogDuck = new Product('Dog Duck-shaped Mouth Cover', 'dog-duck.jpg');
 const dragon = new Product('Dragon Meat', 'dragon.jpg');
 const pen = new Product('Utensil Pen', 'pen.jpg');
@@ -40,7 +40,7 @@ const productList = [
     breakfast,
     bubblegum,
     chair,
-    cthulu,
+    cthulhu,
     dogDuck,
     dragon,
     pen,

@@ -9,7 +9,8 @@
 * I want users to make 25 votes so that we collect enough data.
 
 ## Developer
-* I want the 3 images side-by-side-by-side near the top.
+* I want the 3 unique images side-by-side-by-side near the top.
+* I want images to not immediately repeat to increase variation.
 * I want a header, footer, and instructions.
 * I want to display results after 25 clicks.
 * I want similar image sizes so that designing the page is easier.

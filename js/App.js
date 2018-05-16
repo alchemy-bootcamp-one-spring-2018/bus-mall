@@ -5,43 +5,47 @@ const appTemplate = document.getElementById('app-template');
 
 class App {
     constructor() {
-        
+        this.list = productList;
+        this.votes = 0;
+        this.lastArray = [];
     }
 
     render() {
         const dom = appTemplate.content;
-
         const choiceSection = dom.getElementById('choice');
+        
+        const imageIndices = this.randomImageIndices(this.list.length);
+        console.log(imageIndices);
 
-        const imageIndexes = threeRandomInts(productList.length);
-        console.log(imageIndexes, 'random ints from product list length');
-
-
-        const image0 = productList[imageIndexes[0]].image;
-        const image1 = productList[imageIndexes[1]].image;
-        const image2 = productList[imageIndexes[2]].image;
-
-
-        const choiceComponent = new Choice(image0, image1, image2);
+        const choiceComponent = new Choice(this.list, imageIndices);
         choiceSection.appendChild(choiceComponent.render());
 
-        const resultSection = dom.getElementById('result');
-        const resultComponent = new Result(productList);
-        resultSection.appendChild(resultComponent.render());
+
+
+        if(this.votes === 25) {
+            const resultSection = dom.getElementById('result');
+            const resultComponent = new Result(this.list);
+            resultSection.appendChild(resultComponent.render());
+        }
         
         return dom;
+    }
+
+    randomImageIndices(max) {
+        let array = [];
+        for(let i = 0; i < 3;) {
+            let int = randomInt(max);
+            if(this.lastArray.includes(int) === false && array.includes(int) === false) {
+                array[i] = int;
+                i++;
+            }
+        }
+        this.lastArray = array;
+        return array;
     }
 
 }
 
 function randomInt(max) {
     return Math.floor(Math.random() * max);
-}
-
-function threeRandomInts(max) {
-    let arrayOfThreeInts = [];
-    for(let i = 0; i < 3; i++) {
-        arrayOfThreeInts[i] = randomInt(max);
-    }
-    return arrayOfThreeInts;
 }
