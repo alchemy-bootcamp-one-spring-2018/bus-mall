@@ -12,11 +12,18 @@ class ImageRecord {
         this.timesPresented++;
         let newImage = document.createElement('img');
         newImage.src = 'img/' + this.imageName;
-        newImage.style.width = '200px';
+        newImage.style.height = '200px';
+        newImage.classList.add('pic');
         rootElement.appendChild (newImage);
         newImage.addEventListener('click', () => {
             this.timesChosen++;
         });
+    }
+
+    reportResults(rootElement) {
+        let newParagraph = document.createElement('p');
+        newParagraph.textContent = 'Image ' + this.imageName + ' presented ' + this.timesPresented + ' time(s), chosen ' + this.timesChosen + ' times.';
+        rootElement.appendChild (newParagraph);
     }
 
 }
@@ -36,7 +43,7 @@ const images = [
     new ImageRecord ('pet-sweep.jpg'),
     new ImageRecord ('scissors.jpg'),
     new ImageRecord ('shark.jpg'),
-    new ImageRecord ('pet-sweep.jpg'),
+    new ImageRecord ('sweep.png'),
     new ImageRecord ('tauntaun.jpg'),
     new ImageRecord ('unicorn.jpg'),
     new ImageRecord ('usb.gif'),
