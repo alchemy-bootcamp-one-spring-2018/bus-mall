@@ -9,29 +9,34 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <title>BusMall Catalog Product Voting</title>
 </head>
+
 <body>
     <header>
     <h1>BusMall Product Selection Survey</h1>
     <h2>Help us select which products to carry!</h2>
     </header>
-<section id = "product-display" class = "flex-grid">
-    <div class = "col">
-        <img id="prod1" src="img/dragon.jpg" width = "100%" >
-    </div>
-    <div class = "col">
-    <img id="prod2" src="img/shark.jpg" width = "100%" >
-    </div>
-    <div class = "col">
-    <img id="prod3" src="img/pen.jpg" width = "100%"
->
-    </div>
-</section>
-<h2>Click on your favorite product to vote.</h2>
-<article>
-    <p><strong>It's up to you</strong> to help select the best products for our BusMall catalog. You can vote for your favorite just by clicking on one of the three images above. Once you vote, we'll show you three more products - you can vote up to 25 times!</p>
-</article>
 
-<section id = "report-container"></section>
+
+    <template id = "product-display-template">
+        <div class = "flex-grid">
+            <div class = "col">
+            </div>
+        </div>
+    </template>
+
+<h2>Click on your favorite product to vote.</h2>
+
+    <p><strong>It's up to you</strong> to help select the best products for our BusMall catalog. You can vote for your favorite just by clicking on one of the three images above. Once you vote, we'll show you three more products - you can vote up to 25 times!</p>
+
+    <template id = "report-container-template">
+        <p></p>
+    </template>
+
+
+<template id = "app-template">
+    <section id = "product-display"></section>
+    <section id = "report-container"></section>
+</template>
     
     <script src = "js/images.js"></script>
     <script src = "js/randomizer.js"></script>
