@@ -7,15 +7,13 @@ class App {
         this.items = items;
     }
 
-    randomImages() {
-        
-    }
-
     render() {
         const dom = appTemplate;
 
+
+
         const displayImageSelection = dom.getElementById('displayed-images');
-        const imageViewerComponent = new ItemDisplay(this.items[getRandomNumber(items.length)]);
+        const imageViewerComponent = new ItemDisplay(acquireRandomItems());
         const imageDom = imageViewerComponent.render();
         displayImageSelection.appendChild(imageDom);
 
