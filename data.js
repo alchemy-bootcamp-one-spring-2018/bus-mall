@@ -1,6 +1,5 @@
 'use strict';
-/* exported Image imageArray */
-
+/* exported imageArray */
 
 class Image {
     
@@ -14,26 +13,26 @@ class Image {
 }
 
 const imageArray = [
-    new Image('Bag', 'img/bag.jpg'),
-    new Image('Banana', 'img/banana.jpg'),
-    new Image('Bathroom', 'img/bathroom.jpg'),
-    new Image('Boots', 'img/boots.jpg'),
-    new Image('', 'img/breakfast.jpg'),
-    new Image('', 'img/bubblegum.jpg'),
-    new Image('', 'img/chair.jpg'),
-    new Image('', 'img/cthulhu.jpg'),
-    new Image('', 'img/dog-duck.jpg'),
-    new Image('', 'img/dragon.jpg'),
-    new Image('', 'img/pen.jpg'),
-    new Image('', 'img/pet-sweep.jpg'),
-    new Image('', 'img/scissors.jpg'),
-    new Image('', 'img/shark.jpg'),
-    new Image('', 'img/sweep.jpg'),
-    new Image('', 'img/tauntaun.jpg'),
-    new Image('', 'img/unicorn.jpg'),
-    new Image('', 'img/usb.gif'),
-    new Image('', 'img/water-can.jpg'),
-    new Image('', 'img/wine-glass.jpg'),
+    new Image('Bag', 'img/bag.jpg', '0', '0'),
+    new Image('Banana', 'img/banana.jpg', '0', '0'),
+    new Image('Bathroom', 'img/bathroom.jpg', '0', '0'),
+    new Image('Boots', 'img/boots.jpg', '0', '0'),
+    new Image('Breakfast', 'img/breakfast.jpg', '0', '0'),
+    new Image('Bubblegum', 'img/bubblegum.jpg', '0', '0'),
+    new Image('Chair', 'img/chair.jpg', '0', '0'),
+    new Image('Cthulhu', 'img/cthulhu.jpg', '0', '0'),
+    new Image('Dog-Duck', 'img/dog-duck.jpg', '0', '0'),
+    new Image('Dragon', 'img/dragon.jpg', '0', '0'),
+    new Image('Pen', 'img/pen.jpg', '0', '0'),
+    new Image('Pet-Sweep', 'img/pet-sweep.jpg', '0', '0'),
+    new Image('Scissors', 'img/scissors.jpg', '0', '0'),
+    new Image('Shark', 'img/shark.jpg', '0', '0'),
+    new Image('Sweep', 'img/sweep.jpg', '0', '0'),
+    new Image('TaunTaun', 'img/tauntaun.jpg', '0', '0'),
+    new Image('Unicorn', 'img/unicorn.jpg', '0', '0'),
+    new Image('USB', 'img/usb.gif', '0', '0'),
+    new Image('Water Can', 'img/water-can.jpg', '0', '0'),
+    new Image('Wine Glass', 'img/wine-glass.jpg', '0', '0')
 ];
 
 
