@@ -1,3 +1,5 @@
+
+
 var imageArray = [
     { name: 'bag', image: 'images/bag.jpg' },
     { name: 'banana', image: 'images/banana.jpg' },
@@ -20,3 +22,21 @@ var imageArray = [
     { name: 'water can', image: 'images/water-can.jpg' },
     { name: 'wine glass', image: 'images/wine-glass.jpg' }
 ];
+console.log(imageArray);
+
+// function createImg() {
+//     var img = document.createElement('img');
+//     img.setAttribute('src', this.image);
+//     return img;
+// }
+
+
+// function makeImg() {
+//     var imgSpan = document.getElementById('my-images');
+
+//     for(var i = 0; i < imageArray.length; i++) {
+//         var img = imageArray[i].createImg();
+//         imgSpan.appendChild(img);
+//     }
+// }
+
