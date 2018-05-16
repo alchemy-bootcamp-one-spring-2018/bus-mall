@@ -30,3 +30,25 @@ const usb= new Product('usb', 'usb.gif');
 const waterCan= new Product('water-can', 'water-can.jpg');
 const wineGlass= new Product('wine-glass', 'wine-glass.jpg');
 
+const productList = [
+    bag, 
+    banana,
+    bathroom,
+    boots,
+    breakfast,
+    bubblegum,
+    chair,
+    cthulhu,
+    dogDuck,
+    dragon,
+    pen,
+    petSweep,
+    scissors,
+    shark,
+    sweep,
+    tauntaun,
+    unicorn,
+    usb,
+    waterCan,
+    wineGlass,
+];
