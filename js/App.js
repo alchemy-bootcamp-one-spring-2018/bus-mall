@@ -6,35 +6,36 @@ const appTemplate = document.getElementById('app-template');
 class App {
     constructor() {
         this.list = productList;
-        this.votes = 24;
+        this.votes = 0;
         this.lastArray = [];
     }
 
     showResults() {
-        const dom = appTemplate.content;
-        const resultSection = dom.getElementById('result');
         const resultComponent = new Result(this.list);
-        resultSection.appendChild(resultComponent.render());
-
+        this.resultSection.appendChild(resultComponent.render());
+        while(this.choiceSection.lastElementChild) {
+            this.choiceSection.lastElementChild.remove();
+        }
     }
 
     render() {
         const dom = appTemplate.content;
-        const choiceSection = dom.getElementById('choice');
-        
+        this.choiceSection = dom.getElementById('choice');
+        this.resultSection = dom.getElementById('result');
+
         const imagesArray = this.randomThreeObjects(this.list.length);
 
         const choiceComponent = new Choice(imagesArray, (product) => {
             product.clicks++;
             this.votes++;
-            choiceComponent.update([bag, bag, bag]);
+            const imagesArray = this.randomThreeObjects(this.list.length);
+            choiceComponent.update(imagesArray);
             if(this.votes === 25) {
                 this.showResults();
             }
         });
-        choiceSection.appendChild(choiceComponent.render());
+        this.choiceSection.appendChild(choiceComponent.render());
 
- 
         return dom;
     }
 

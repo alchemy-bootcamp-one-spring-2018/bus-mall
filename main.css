@@ -1,4 +1,10 @@
 img {
-    max-width: 30%;
+    max-width: 100%;
     cursor: pointer;
+}
+
+#image-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }

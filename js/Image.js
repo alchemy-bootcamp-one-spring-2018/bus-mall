@@ -17,6 +17,9 @@ class Image {
             this.onClick(this.product);
         });
         
+        const caption = dom.querySelector('p');
+        caption.textContent = this.product.name;
+
         return dom;
     }
 }
