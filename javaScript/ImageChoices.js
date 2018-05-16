@@ -25,15 +25,14 @@ class ImageChoices {
 
         displayImage1.addEventListener('click', function() {
             randomImageArray[0].clicks++;
-            getRandomObject();
         });
         displayImage2.addEventListener('click', function() {
             randomImageArray[1].clicks++;
-            getRandomObject();
         });
         displayImage3.addEventListener('click', function() {
             randomImageArray[2].clicks++;
-            getRandomObject();});
+            
+        });
         return dom;
     }
 }

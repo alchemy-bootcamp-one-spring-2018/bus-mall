@@ -8,6 +8,7 @@ class App {
     render(){
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
+        getRandomObject();
         const imageComponent = new ImageChoices(randomImageArray[0].imgSrc, randomImageArray[1].imgSrc, randomImageArray[2].imgSrc);
         imageSection.appendChild(imageComponent.render());
         return dom;
@@ -21,13 +22,12 @@ function getRandomObject() {
         var ranNum = Math.floor(Math.random() * objectArray.length);
         randomImageArray.push(objectArray[ranNum]);
         randomImageArray[i].views++;
-        
+
     }
     vote++;
     console.log(randomImageArray);
 }
 
-getRandomObject();
 
 
 
