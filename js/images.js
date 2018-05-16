@@ -12,20 +12,10 @@ class Image {
         this.votes = votes;
         this.onStatusChange = onStatusChange;
     }
-/* 
-    random() {
-        //code block
-    }
 
-    update() {
-        //code block
-    }
- */
     render() {
-        const dom = imageDisplayTemplate.contentEditable.cloneNode(true);
-        //reference to a dom so we can append image
-        const img = dom.querySelector('img');
-        this.img = img;
+        const dom = imageDisplayTemplate.content;
+        
 
         return dom;
 

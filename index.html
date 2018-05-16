@@ -13,8 +13,7 @@
         <!-- nav bar -->
     </header>
 
-    <main>
-        <div id="root"></div>
+    <div id="root"></div>
 
         <section>
             <!-- instructions -->
@@ -23,15 +22,16 @@
         <!-- App Template -->
         <template id="app-template">
             <h2>Pick Your Favorite!</h2>
-            <section id="images"></section>
-            <section id="results"></section>
+            <section id="add-image-display"></section>
+            <section id="add-results"></section>
         </template>
 
         <!-- Image Display Component -->
         <template id="image-display-template">
-            <img src="" alt="left random image">
-<!--             <img id="img2" src="" alt="middle random image">
-            <img id="img3" src="" alt="right random image"> -->
+            <h2>Images</h2>
+            <img id="img1" src="" alt="left random image">
+            <img id="img2" src="" alt="middle random image">
+            <img id="img3" src="" alt="right random image">
         </template>
 
        <!-- Result Display Component -->
@@ -39,13 +39,12 @@
             <ul></ul>
         </template>
 
-    </main>
 
     <footer></footer>
 
-    <script src="images.js"></script>
-    <script src="images-data.js"></script>
-    <script src="app.js"></script>
-    <script src="main.js"></script>
+    <script src="js/images-data.js"></script>
+    <script src="js/images.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* exported imageArray */
+/* exported imagesData */
 /* globals */
 'use strict';
 
@@ -26,7 +26,7 @@
 //     new Image ('wine-glass', 'wine-glass.png')
 // ];
 
-let images = [
+let imagesData = [
     {
         name: 'bag',
         imageSrc: 'bag.png',
