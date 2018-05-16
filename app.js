@@ -1,21 +1,35 @@
+/* globals randomImg imageArray */
+/* exported pictureBox Prod */
+'use strict';
 
 
-// holds the images
-
-const imageArray = [1, 2, 3, 4, 5];
-
-// gets random item out of the image array
+// creates a variable that references the "picture-box element in index.html"
+// const pictureBox = document.getElementById('picture-box');
 
 
-const randomImg = imageArray[Math.floor(Math.random() * imageArray.length)];
 
-console.log(randomImg);
 
-// function grabImage() {
-//     for(let i = 0; i < imageArray.length; i++);
+
+
+
+
+
+
+
+    
+
+//     showImage() {
+//         let displayImage;
+//         displayImage = this.image;
+//     }
 // }
 
-// grabImage();
+// function getRandomImage(array) {
+//     return Math.floor(Math.random() * imageArray.length);
+// }
+
+// console.log(randomImg);
+// console.log(imageArray.length);
 
 
-
+// getRandomImage(dvds);
