@@ -8,17 +8,27 @@ let views = 0;
 //function - pick three index values
 function find3images() {
     let copy = imagesData.slice();
+    let holderArray=[];
 
     for(let i = 0; i < 3; i++) {
 
+
         let imageOne = randomImage(copy);
+        holderArray.push(imageOne);
+        console.log(imageOne);
 
-        document.getElementById('img-' + i).src = imageOne;
+        //push into empty array
+    
+
+        // document.getElementById('img-' + i).src = imageOne;
     }
-
+    console.log(holderArray);
+    return holderArray;
     views++;
 }
 
+find3images();
+console.log(find3images);
 
 //function - generate random number for above
 function randomImage(listOfImages) {

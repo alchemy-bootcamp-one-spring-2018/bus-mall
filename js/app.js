@@ -7,10 +7,10 @@ const appTemplate = document.getElementById('app-template');
 class App {
     constructor() {
         //initialization logic
+        //state containers
         this.imagesData = imagesData;
         // still need to add results section
         // this.results = results;
-        //state containers
     }
 
     render() {
@@ -18,11 +18,7 @@ class App {
 
         //image displayed
         const imageDisplaySection = dom.getElementById('add-image-display');
-        const imageComponent = new ProductDisplay(this.imagesData, (image) => {
-            for(let i = 0; i < 3; i++) {
-                
-            }
-        });
+        const imageComponent = new ProductDisplay(find3images());
         imageDisplaySection.appendChild(imageComponent.render());
 
 
