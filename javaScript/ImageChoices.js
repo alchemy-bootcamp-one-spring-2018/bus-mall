@@ -1,23 +1,18 @@
 /* exported ImageObjects */
 'use strict';
 
-const  votingTemplate = document.getElementById('voting-template');
-class ImageObjects {
-    constructor(name, views, clicks, img, onClick){
-        this.name = name;
-        this.views = views;
-        this.clicks = clicks;
-        this.imgSrc = img;
-        this.onclick = onClick;
-
+const votingTemplate = document.getElementById('voting-template');
+class ImageChoices {
+    constructor(){
+        
     }
 
+
     render() {
-        const dom = votingTemplate.contentEditable.cloneNode(true);
-
-        const span = dom.querySelector('span');
-        const img = this.img;
-        span.appendChile(img);
-
+        const dom = votingTemplate.content.cloneNode(true);
+        // const span = dom.querySelector('span');
+        // const img = this.img;
+        // span.appendChild(img);
+        return dom;
     }
 }
