@@ -1,10 +1,10 @@
-/* exported Image */
+/* exported Product */
 /* globals */
 'use strict';
 
 const imageDisplayTemplate = document.getElementById('image-display-template');
 
-class Image {
+class Product {
     constructor(name, imageSrc, views, votes, onStatusChange) {
         this.name = name;
         this.imageSrc = imageSrc;
@@ -14,10 +14,15 @@ class Image {
     }
 
     render() {
-        const dom = addTemplate.content;
+        const dom = imageDisplayTemplate.content;
         
 
         return dom;
 
     }
 }
+
+//comments for planning out next steps
+//need render image method
+//random method that will come before render image
+//event listener waiting for clicks on images

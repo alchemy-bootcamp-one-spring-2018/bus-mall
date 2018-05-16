@@ -1,4 +1,4 @@
-/* globals App */
+/* globals App */ 
 
 // create an "instance" of the App component
 const app = new App();
