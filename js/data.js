@@ -6,8 +6,8 @@ class Image {
     constructor(name, image) {
         
         this.name = name;
-        this.image = image;
-        this.timesClicked = 0;
+        this.imageURL = image;
+        this.timesVoted = 0;
         this.timesShown = 0;
     }
 }

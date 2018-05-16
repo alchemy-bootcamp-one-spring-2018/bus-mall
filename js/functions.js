@@ -1,6 +1,6 @@
 'use strict';
-/* globals imageArray */
-/* exported loadImages getRandomImage */
+/* globals */
+/* exported getRandomImage */
 
 /* function loadImages() {
     const tbl = document.createElement('table');
@@ -22,9 +22,9 @@
 } */
 
 
-function getRandomImage() {
-    const randomImageArray = [];
+function getRandomImage(imageArray) {
     var random = Math.floor(Math.random() * (imageArray.length - 1) + 1);
-    var randomImage = imageArray[random].image;
-    randomImageArray.push(randomImage);
+    var randomImage = imageArray[random];
+
+    return randomImage;
 }
