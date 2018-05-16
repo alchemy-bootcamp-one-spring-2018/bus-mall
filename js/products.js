@@ -1,5 +1,4 @@
-'use strict';
-/* exporting productList */
+/* exported Product, productList */
 
 class Product {
     constructor (name, image){

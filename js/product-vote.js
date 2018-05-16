@@ -1,11 +1,11 @@
 'use strict';
-/* globals Product  */
-/* exported VotingOptions */
+/* globals Product, productList, Result  */
+/* exported ProductVote */
 
 
-const votingTemplate = document.getElementById('voting-template');
+const productVote = document.getElementById('product-vote-template');
 
-class VotingOptions {
+class ProductVote {
 
     constructor(image1, image2, image3) {
         this.image1 = image1;
@@ -16,10 +16,10 @@ class VotingOptions {
     render() {
 
         const testing = votingTemplate.content.cloneNode(true);
-        const firstProduct = testing.getElementById('product-0');
+        const firstProduct = testing.getElementById('product-1');
         firstProduct.src = this.image;
         
         return testing;
-        console.log('voting-options render function' , testing);
+        console.log('product vote render function' , testing);
     }
 }

@@ -1,4 +1,5 @@
-'use strict';
+
+/* globals Product, productList */
 /* exported Result */
 
 

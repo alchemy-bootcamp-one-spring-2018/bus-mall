@@ -1,5 +1,5 @@
 'use strict';
-/* globals VotingOptions, Result, Product, productList */
+/* globals ProductVote, Result, Product, productList */
 /* exported App */ 
 
 const  appTemplate = document.getElementById('app-template');
@@ -10,27 +10,25 @@ class App {
     }
 
     render() {
-        
-        const testing = appTemplate.content;
-        const testResult = appTemplate.content;
-        
-        const votingSection = testing.getElementById('voting-options');
 
-        //the goal is to get the stuff passed to VotingOptions to be the 3 random images
-        const votingComponent = new VotingOptions('./images/bag.jpg');
-        
-        const resultSection = testResult.getElementById('results');
-        const resultComponent = new Result();  
+        const productIndexes = threeRandomProducts(productList.length);
+        const image0 = productList[productIndexes[0]];
+        const image1 = productList[productIndexes[1]];
+        const image2 = productList[productIndexes[2]];
 
-        votingSection.appendChild(votingComponent.render());
-        resultSection.appendChild(resultComponent.render());
         
-        return testing;
-        return testResult;
+        
     } 
 }
 
 function randomInt(max){
 return Math.floor(Math.random() * max);
+}
 
+function threeRandomProducts(max) {
+    let arrayOfThreeProducts = [];
+    for(let i=0; i<3; i++) {
+        arrayOfThreeProducts[i] = randomInt(max);
+    }
+    return arrayOfThreeProducts;
 }
