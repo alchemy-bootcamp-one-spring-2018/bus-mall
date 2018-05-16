@@ -143,5 +143,5 @@ const productOption = [
     }
 ];
 
-console.log(productOption);
+console.log(productOption[2].id);
 console.log(productOption[5].name);

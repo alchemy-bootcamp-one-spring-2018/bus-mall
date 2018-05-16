@@ -8,6 +8,7 @@ function voteForProduct(event){
     console.log('voteForProduct event', event.target);
     totalClicks ++;
     event.preventDefault();
+    console.log(totalClicks);
 }
 var recordVote = document.getElementById('prod1');
 recordVote.addEventListener('click', voteForProduct);
