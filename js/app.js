@@ -1,5 +1,5 @@
 /* exported App */
-/* globals Product, imagesData */
+/* globals Product, imagesData, find3images */
 'use strict';
 
 const appTemplate = document.getElementById('app-template');
@@ -18,7 +18,11 @@ class App {
 
         //image displayed
         const imageDisplaySection = dom.getElementById('add-image-display');
-        const imageComponent = new ProductDisplay(this.imagesData[0]);
+        const imageComponent = new ProductDisplay(this.imagesData, (image) => {
+            for(let i = 0; i < 3; i++) {
+                
+            }
+        });
         imageDisplaySection.appendChild(imageComponent.render());
 
 
@@ -29,6 +33,8 @@ class App {
     }
 
 }
+
+// find3images();
 
 //call randomizer function
 //callback functions

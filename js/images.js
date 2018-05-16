@@ -9,14 +9,23 @@ class ProductDisplay {
         this.imagesData = imagesData;
     }
 
+    update(imagesData) {
+        this.imagesData = imagesData;
+
+        // this.header.textContent = this.imagesData.name;
+        this.img.src = this.imagesData.imageSrc;
+    }
+
     render() {
         const dom = imageDisplayTemplate.content.cloneNode(true);
         
-        this.header = dom.querySelector('h2');
-        this.img = dom.querySelector('img');
-        this.header.textContent = this.imagesData.name;
-        this.img.src = this.imagesData.imageSrc;
 
+        for(let i = 0; i < 3; i++) {
+            // this.header = dom.querySelector('h2');
+            this.img = dom.querySelector('img');
+        }
+        this.update(this.imagesData);
+        
         return dom;
 
     }
