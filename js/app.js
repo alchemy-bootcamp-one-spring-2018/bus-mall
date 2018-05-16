@@ -12,8 +12,8 @@ class App {
 
         const pictureSection = dom.getElementById('pictures');
 
-        pictureSection.appendChild(pictureComponent.render());
-
+        dom.appendChild(pictureSection);
+        
         return dom;
     }
 
