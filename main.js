@@ -45,14 +45,22 @@ function getRandomImage(imageArray) {
 getRandomImage();
 
 function makeThrees() {
+       
+    }
+
     var copy = imageArray.slice();
 
+    var img = document.createElement('img');
+
+    document.body.appendChild(img);
+    //working with 6 for now for 6 sets of 3
     for(var i = 0; i < 6; i++) {
         var imageOne = randomImage(copy);
         var imageTwo = randomImage(copy);
         var imageThree = randomImage(copy);
 
-        document.getElementById('three-' + i).
+        //img.setAttribute('src', 'images/bag.jpg');
+        document.getElementById(three-' + i).textContent = image1 + ' - ' + image2 + ' - ' + image 3;
     }
 }
 
