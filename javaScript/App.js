@@ -1,4 +1,4 @@
-/* globals ImageChoices getRandomObjects*/
+/* globals ImageChoices objectArray*/
 /* exported App */
 
 const appTemplate = document.getElementById('app-template');
@@ -8,15 +8,21 @@ class App {
     render(){
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
-        const imageComponent = new ImageChoices();
+        const imageComponent = new ImageChoices(randomImageArray[0].imgSrc, randomImageArray[1].imgSrc, randomImageArray[2].imgSrc);
         imageSection.appendChild(imageComponent.render());
 
-        // const randomObjects = getRandomObjects(this.Object);
         return dom;
     }
 }
 
-// function getRandomObject(object) {
+let randomImageArray = [];
 
-//     return object;
-// }
+function getRandomObject() {
+    for(let i = 0; i < 3;i++){
+        var ranNum = Math.floor(Math.random() * objectArray.length);
+
+        randomImageArray.push(objectArray[ranNum]);
+
+    }
+}
+getRandomObject();

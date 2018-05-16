@@ -1,29 +1,28 @@
 /* exported ImageChoices */
-/* globals objectArray */
+/* globals  */
 'use strict';
 
 const votingTemplate = document.getElementById('voting-template');
 class ImageChoices {
-    constructor(){
-        
+    constructor(image1, image2, image3){
+        this.image1 = image1;
+        this.image2 = image2;
+        this.image3 = image3;
     }
 
 
     render() {
         const dom = votingTemplate.content.cloneNode(true);
         
-        const image1 = dom.getElementById('image-1');
-        console.log(objectArray[0].imgSrc);
-        image1.src = objectArray[0].imgSrc;
+        const displayImage1 = dom.getElementById('image-1');
+        displayImage1.src = this.image1;
 
-        const image2 = dom.getElementById('image-2');
-        console.log(objectArray[2].imgSrc);
-        image2.src = objectArray[2].imgSrc;
+        const displayImage2 = dom.getElementById('image-2');
+        displayImage2.src = this.image2;
 
-        const image3 = dom.getElementById('image-3');
-        console.log(objectArray[3].imgSrc);
-        image3.src = objectArray[3].imgSrc;
-        
+        const displayImage3 = dom.getElementById('image-3');
+        displayImage3.src = this.image3;
+
         return dom;
     }
 }
