@@ -1,18 +1,18 @@
-/* globals ImageViewer, images */
+/* globals ImageViewer, imageArray */
 /* exported App */
 
 const appTemplate = document.getElementById('app-template');
 
 class App {
     constructor() {
-        this.images = images;
+        this.imageArray = imageArray;
     }
 
     render() {
         const dom = appTemplate.content;
 
         const imageViewerSection = dom.getElementById('image-viewer');
-        const imageViewerComponent = new ImageViewer(this.images[0]);
+        const imageViewerComponent = new ImageViewer(this.imageArray);
         const imageDom = imageViewerComponent.render();
         imageViewerSection.appendChild(imageDom);
 
