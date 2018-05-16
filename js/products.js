@@ -1,5 +1,5 @@
-/* globals */
-/* exported */
+
+/* exported productList */
 'use strict';
 
 class Product {
@@ -16,7 +16,7 @@ const banana = new Product('Banana Slicer', 'banana.jpg');
 const bathroom = new Product('Bathroom Tablet Pedestal', 'bathroom.jpg');
 const boots = new Product('Yellow Boots', 'boots.jpg');
 const breakfast = new Product('All-in-One Breakfast Maker', 'breakfast.jpg');
-const bubblegum = new Product('', 'bubblegu .jpg');
+const bubblegum = new Product('Meatball Bubblegum', 'bubblegum.jpg');
 const chair = new Product('Red Chair', 'chair.jpg');
 const cthulu = new Product('C\'thulu Figurine', 'cthulu.jpg');
 const dogDuck = new Product('Dog Duck-shaped Mouth Cover', 'dog-duck.jpg');
@@ -54,7 +54,6 @@ const productList = [
     waterCan,
     wineGlass
 ];
-console.log(productList);
 
 
 
