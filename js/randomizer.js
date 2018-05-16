@@ -5,26 +5,22 @@ document.write('randomizer.js is loading properly');
 
 var selectedImage = '';
 let imageArray = [];
-let image0;
-let image1;
-let image2;
+let productNameArray = [];
 
 function randomNumber(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-function selectionSet(){
-
-    let copy = selectedImage.slice();
-    let VoteOnThis = '';
-}
-
-function selectImage(productOption) {
+function selectImages(productOption) {
     for(var i = 0; i < 3; i++){
         let index = randomNumber(productOption.length);
         let selectedImage = productOption[index];
-        console.log(selectedImage);
+        selectedImage.viewed ++;
+        console.log('product option views value = ', productOption[index].viewed);
+        console.log(selectedImage.name);
         imageArray[i] = selectedImage.image;
+        productNameArray[i] = selectedImage.name;
+        
         
         productOption.splice(index, 1);
     }
@@ -34,9 +30,8 @@ function selectImage(productOption) {
     
 }
 
-
 // Console logs for testing
 console.log(randomNumber(99));
 console.log(productOption.length);
 console.log(selectedImage);
-selectImage(productOption);
+selectImages(productOption);
