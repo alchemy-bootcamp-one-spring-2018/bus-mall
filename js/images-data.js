@@ -2,9 +2,17 @@
 /* globals */
 'use strict';
 
+// constructor(name, imageSrc, views, votes, onStatusChange) {
+//     this.name = name;
+//     this.imageSrc = imageSrc;
+//     this.views = views;
+//     this.votes = votes;
+//     this.onStatusChange = onStatusChange;
+// }
+
 //list of images - keeping this just in case
 // let imageArray = [
-//     new Image ('bag', 'bag.png'),
+//     new Image ('bag', 'bag.jpg'),
 //     new Image ('banana', 'banana.png'),
 //     new Image ('bathroom', 'bathroom.png'),
 //     new Image ('boots', 'boots.png'),
@@ -29,121 +37,121 @@
 let imagesData = [
     {
         name: 'bag',
-        imageSrc: 'bag.png',
+        imageSrc: 'img/bag.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'banana',
-        imageSrc: 'banana.png',
+        imageSrc: 'img/banana.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'bathroom',
-        imageSrc: 'bathroom.png',
+        imageSrc: 'img/bathroom.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'boots',
-        imageSrc: 'boots.png',
+        imageSrc: 'img/boots.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'breakfast',
-        imageSrc: 'breakfast.png',
+        imageSrc: 'img/breakfast.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'bubblegum',
-        imageSrc: 'bubblegum.png',
+        imageSrc: 'img/bubblegum.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'chair',
-        imageSrc: 'chair.png',
+        imageSrc: 'img/chair.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'cthulhu',
-        imageSrc: 'cthulhu.png',
+        imageSrc: 'img/cthulhu.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'dog-duck',
-        imageSrc: 'dog-duck.png',
+        imageSrc: 'img/dog-duck.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'dragon',
-        imageSrc: 'dragon.png',
+        imageSrc: 'img/dragon.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'pen',
-        imageSrc: 'pen.png',
+        imageSrc: 'img/pen.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'pet-sweep',
-        imageSrc: 'pet-sweep.png',
+        imageSrc: 'img/pet-sweep.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'scissors',
-        imageSrc: 'scissors.png',
+        imageSrc: 'img/scissors.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'shark',
-        imageSrc: 'shark.png',
+        imageSrc: 'img/shark.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'sweep',
-        imageSrc: 'sweep.png',
+        imageSrc: 'img/sweep.png',
         views: 0,
         votes: 0
     },
     {
         name: 'tauntaun',
-        imageSrc: 'tauntaun.png',
+        imageSrc: 'img/tauntaun.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'unicorn',
-        imageSrc: 'unicorn.png',
+        imageSrc: 'img/unicorn.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'usb',
-        imageSrc: 'usb.png',
+        imageSrc: 'img/usb.gif',
         views: 0,
         votes: 0
     },
     {
         name: 'water-can',
-        imageSrc: 'water-can.png',
+        imageSrc: 'img/water-can.jpg',
         views: 0,
         votes: 0
     },
     {
         name: 'wine-glass',
-        imageSrc: 'wine-glass.png',
+        imageSrc: 'img/wine-glass.jpg',
         views: 0,
         votes: 0
     }

@@ -1,21 +1,21 @@
 /* exported Product */
-/* globals */
+/* globals imagesData */
 'use strict';
 
 const imageDisplayTemplate = document.getElementById('image-display-template');
 
-class Product {
-    constructor(name, imageSrc, views, votes, onStatusChange) {
-        this.name = name;
-        this.imageSrc = imageSrc;
-        this.views = views;
-        this.votes = votes;
-        this.onStatusChange = onStatusChange;
+class ProductDisplay {
+    constructor(imagesData) {
+        this.imagesData = imagesData;
     }
 
     render() {
-        const dom = imageDisplayTemplate.content;
+        const dom = imageDisplayTemplate.content.cloneNode(true);
         
+        this.header = dom.querySelector('h2');
+        this.img = dom.querySelector('img');
+        this.header.textContent = this.imagesData.name;
+        this.img.src = this.imagesData.imageSrc;
 
         return dom;
 
