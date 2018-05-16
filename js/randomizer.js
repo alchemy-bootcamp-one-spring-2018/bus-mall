@@ -1,7 +1,8 @@
-document.write('randomizer.js is loading properly');
+//document.write('randomizer.js is loading properly');
 
-/* globals productOption  */
-/* exported displaySets */
+'use strict';
+
+/* exported displaySets, selectImages, selectedImage */
 
 var selectedImage = '';
 let imageArray = [];

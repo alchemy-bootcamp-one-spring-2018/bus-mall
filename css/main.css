@@ -18,12 +18,23 @@ h2 {
     color: rgba(0,0,0,.7);
     text-align: center;
 }
-p{
+#report-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+    font-style: italic;
+    padding: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 0;
+    background-color: #fff;
+    border-bottom: 1px dashed black;
+}
+p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     font-weight: 300;
     padding: 20px;
     border-radius: 15px;
     background-color: blanchedalmond;
-
 }
