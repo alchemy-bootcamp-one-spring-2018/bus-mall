@@ -1,27 +1,30 @@
 'use strict';
 /* globals imageArray */
-/* exported Display */
+/* exported ImageDisplay */
 
 
-const displayTemplate = document.getElementById('display-template');
+const imageDisplayTemplate = document.getElementById('image-display-template').content;
 
-class Display {
-    render() {
+class ImageDisplay {
 
-        return dom;
+    constructor() {
+
     }
 
-    loadImages() {
-        const dom = displayTemplate.content;
+    render() {
+        const dom = imageDisplayTemplate;
+
+
         const tbl = document.createElement('table');
+        tbl.setAttribute('id', 'image-table');
+        //const tbl = document.getElementById('image-table');
         const row = document.createElement('tr');
 
         for(var i = 0; i < 3; i++) {
             const random = Math.floor(Math.random() * (imageArray.length - 1) + 1);
-            console.log(random);
             const cell = document.createElement('td');
             const imgTag = document.createElement('img');
-            imgTag.setAttribute('src', imageArray[random].imgSource);
+            imgTag.setAttribute('src', imageArray[random].image);
             imgTag.setAttribute('height', '200px');
             cell.appendChild(imgTag);
             row.appendChild(cell);
@@ -29,5 +32,7 @@ class Display {
 
         tbl.appendChild(row);
         return tbl;
+
+        return dom;
     }
 }

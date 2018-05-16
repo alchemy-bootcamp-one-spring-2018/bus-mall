@@ -11,20 +11,34 @@
 <div id="root"></div>
 
     <template id="app-template">
-        <h1>Hello world!</h1>
-        <section id="add-display"></section>
-        
+        <h1>Main Template</h1>
+        <section id="image-display"></section>
+        <section id="voting-display"></section>
+        <section id="results-display"></section>
     </template>
 
+
+
     <!--^^^ Templates below get loaded in to main template above ^^^-->
-    <template id="display-template">
-        <h2>Display</h2>
+    <template id="image-display-template">
+        <h2>Display Template</h2>
+    </template>
+
+    <template id="voting-display-template">
+        <h3>Voting Display</h3>
+    </template>
+
+    <template id="results-display-template">
+        <h4>Results Template</h4>
     </template>
     
 
-    <script src="data.js"></script>
-    <script src="app.js"></script>
-    <script src="display.js"></script>
-    <script src="main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/ImageDisplay.js"></script>
+    <script src="js/VotingDisplay.js"></script>
+    <script src="js/ResultsDisplay.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

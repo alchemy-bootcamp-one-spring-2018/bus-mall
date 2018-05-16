@@ -1,3 +1,7 @@
 body {
     background-color: rgb(170, 216, 243)
 }
+
+table {
+    border: 1px solid black;
+}
