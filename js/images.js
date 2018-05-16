@@ -14,7 +14,7 @@ class Image {
     }
 
     render() {
-        const dom = imageDisplayTemplate.content;
+        const dom = addTemplate.content;
         
 
         return dom;
