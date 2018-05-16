@@ -6,6 +6,7 @@ class ImageVote {
     }
 
     render() {
+        console.log(this.products);
         const dom = imageVoteTemplate.content;
         const img1 = dom.getElementById('img-1');
         img1.src = 'img/' + this.products[0].image;

@@ -10,7 +10,3 @@ class ProductImages {
         this.source = source;
     }
 }
-
-render() {
-    const dom = 
-}
