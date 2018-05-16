@@ -1,20 +1,20 @@
+/* exported Image */
 'use strict';
 
 const imageTemplate = document.getElementById('image-template');
 
 class Image {
-    constructor(image, onClick) {
-        this.image = image;
+    constructor(product, onClick) {
+        this.product = product;
         this.onClick = onClick;
     }
 
     render() {
         const dom = imageTemplate.content.cloneNode(true);
         const image = dom.querySelector('img');
-        image.src = this.image;
+        image.src = this.product.image;
         image.addEventListener('click', () => {
-            console.log('click');
-            this.onClick(this.image);
+            this.onClick(this.product);
         });
         
         return dom;

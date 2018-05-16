@@ -11,8 +11,8 @@ class App {
     }
 
     showResults() {
-        
-        const resultSection = this.dom.getElementById('result');
+        const dom = appTemplate.content;
+        const resultSection = dom.getElementById('result');
         const resultComponent = new Result(this.list);
         resultSection.appendChild(resultComponent.render());
 
@@ -23,21 +23,17 @@ class App {
         const choiceSection = dom.getElementById('choice');
         
         const imagesArray = this.randomThreeObjects(this.list.length);
-        console.log('app:', imagesArray);
 
         const choiceComponent = new Choice(imagesArray, (product) => {
             product.clicks++;
             this.votes++;
-            choiceComponent.update(this.list);
+            choiceComponent.update([bag, bag, bag]);
             if(this.votes === 25) {
                 this.showResults();
             }
         });
         choiceSection.appendChild(choiceComponent.render());
 
-        const resultSection = dom.getElementById('result');
-        const resultComponent = new Result(this.list);
-        resultSection.appendChild(resultComponent.render());
  
         return dom;
     }
