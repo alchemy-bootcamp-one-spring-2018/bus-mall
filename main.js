@@ -4,9 +4,11 @@
 
 
 
-// loop for images, array nested within
+// loop for images
+const imagesArray = ['images/bag.jpg', 'images/banana.jpg', 'images/bathroom.jpg', 'images/boots.jpg', 'images/breakfast.jpg', 'images/bubblegum.jpg', 'images/chair.jpg', 'images/cthulhu.jpg', 'images/dog-duck.jpg', 'images/dragon.jpg', 'images/pen.jpg', 'images/pet-sweep.jpg', 'images/scissors.jpg', 'images/shark.jpg', 'images/sweep.png', 'images/tauntaun.jpg', 'images/unicorn.jpg', 'images/usb.gif', 'images/water-can.jpg', 'images/wine-glass.jpg'];
+
+// "for" loop for randomizing and appending images
 for(var i = 0; i < 3; i++) {
-    const imagesArray = ['images/bag.jpg', 'images/banana.jpg', 'images/bathroom.jpg', 'images/boots.jpg', 'images/breakfast.jpg', 'images/bubblegum.jpg', 'images/chair.jpg', 'images/cthulhu.jpg', 'images/dog-duck.jpg', 'images/dragon.jpg', 'images/pen.jpg', 'images/pet-sweep.jpg', 'images/scissors.jpg', 'images/shark.jpg', 'images/sweep.png', 'images/tauntaun.jpg', 'images/unicorn.jpg', 'images/usb.gif', 'images/water-can.jpg', 'images/wine-glass.jpg'];
 
     // get a random integer between 0 and length of images array
     var randomImage = Math.floor((Math.random() * imagesArray.length));
@@ -21,6 +23,11 @@ for(var i = 0; i < 3; i++) {
     imageSet.style.height = '200px';
     // splice out used images from imagesArray 
     imagesArray.splice(randomImage, 1);
+}
+document.getElementById('img').addEventListener('click', clickCount);
+    
+function clickCount() {
+    
 }
 
 
