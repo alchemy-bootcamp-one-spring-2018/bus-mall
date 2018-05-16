@@ -1,8 +1,12 @@
 //document.write('app.js is loading properly');
+/* exported totalClicks */
+
 'use strict';
+let totalClicks = 0;
 
 function voteForProduct(event){
     console.log('voteForProduct event', event.target);
+    totalClicks ++;
     event.preventDefault();
 }
 var recordVote = document.getElementById('prod1');
