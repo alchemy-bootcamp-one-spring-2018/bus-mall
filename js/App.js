@@ -6,7 +6,7 @@ const appTemplate = document.getElementById('app-template');
 class App {
     constructor() {
         this.list = productList;
-        this.votes = 0;
+        this.votes = 25;
         this.lastArray = [];
     }
 
@@ -16,8 +16,13 @@ class App {
         
         const imageIndices = this.randomImageIndices(this.list.length);
         console.log(imageIndices);
-
-        const choiceComponent = new Choice(this.list, imageIndices);
+        this.recordViews(imageIndices);
+        const choiceComponent = new Choice(this.list, imageIndices, (image) => {
+            // modify the data
+            this.list.clicks++;
+            // update with the new copy
+            choiceComponent.update(this.list);
+        });
         choiceSection.appendChild(choiceComponent.render());
 
 
@@ -42,6 +47,12 @@ class App {
         }
         this.lastArray = array;
         return array;
+    }
+
+    recordViews(array) {
+        for(let i in array) {
+            this.list[array[i]].views++; 
+        }
     }
 
 }
