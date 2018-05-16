@@ -5,16 +5,21 @@
     <title>Market Research</title>
 </head>
 <body>
-    <section id="image-display">
-        <ul id="image-list">
+    <div id="root"></div>
     
-        </ul>
-    </section>
+    <template id="app-template">
+        <h1>Survey</h1>
+        <section id="image-viewer"></section>
+        <section id="viewer-report"></section>
+    </template>
 
-    <section id="image-summary">
-        
-    </section>
-    <script src="ImageObject.js"></script>
+    <template id="image-viewer-template">
+        <h2></h2>
+    </template>
+
+    <script src="images.js"></script>
+    <script src="ImageViewer.js"></script>
+    <script src="App.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
