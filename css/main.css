@@ -1,3 +1,17 @@
+/* ANIMATIONS */
+
+@keyframes bus {
+    from {
+        left: 420%
+    } to {
+        left: 0%;
+    }
+}
+
+
+
+/* STYLING */
+
 html {
     padding: 0;
     margin: 0;
@@ -7,12 +21,20 @@ html {
 body {
     background: darkslategray;
     background-image: url('../assets/bg.png');
-    background-attachment: fixed;
 }
 
 img {
     height: fit-content;
     width: auto;
+}
+
+#bus {
+    position: relative;
+    /* margin: 3px; */
+    animation: bus 3s ease-out forwards;
+    margin: 0 33px 0 0;
+    z-index: 0;
+    /* border: 1px solid red; */
 }
 
 .image-vote {
@@ -29,7 +51,7 @@ img {
 }
 
 .flex-item {
-    margin: 13px auto;
+    margin: 13px auto 13px auto;
     /* border: 1px solid red; */
 }
 
@@ -51,11 +73,17 @@ img {
 }
 
 #body {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #nav {
     align-items: flex-end;
+    z-index: 1;
+}
+
+#header {
+    margin: 3px;
+    /* border: 1px solid red; */
 }
 
 #header a {
@@ -64,7 +92,7 @@ img {
     text-decoration: none;
     background: black;
     color: white;
-    padding: 13px 13px 33px 13px;
+    padding: 13px 13px 15px 13px;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
 }
@@ -85,10 +113,9 @@ img {
     line-height: 1.25;
     color: white;
     margin: auto;
+    padding: 13px;
     width: fit-content;
 }
-
-
 
 #vote {
     flex: 3;
@@ -106,4 +133,5 @@ img {
 
 #text {
     padding: 0 13px;
+    margin: 0;
 }
