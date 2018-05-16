@@ -1,5 +1,5 @@
 /* exported ImageChoices */
-/* globals getRandomObject */
+/* globals clearImages  */
 'use strict';
 
 const votingTemplate = document.getElementById('voting-template');
@@ -10,6 +10,14 @@ class ImageChoices {
         this.image3 = image3;
     }
 
+    update(randomImages) {
+        this.randomImages = randomImages;
+
+        while(this.imageVote.lastElement){
+            this.imageVote.lastElementChild.remove();
+
+        }
+    }
 
     render() {
         const dom = votingTemplate.content.cloneNode(true);
@@ -23,16 +31,18 @@ class ImageChoices {
         let displayImage3 = dom.getElementById('image-3');
         displayImage3.src = this.image3;
 
-        displayImage3.addEventListener('click', function() {
+        displayImage1.addEventListener('click', function() {
+            // clearImages(); 
             getRandomObject();
-            
         });
-        
-
-        // displayImage1.addEventListener('onclick', getRandomObject());
-        // displayImage2.addEventListener('onclick', getRandomObject());
-        // // displayImage3.addEventListener(this.);
-
+        displayImage2.addEventListener('click', function() {
+            // clearImages(); 
+            getRandomObject();
+        });
+        displayImage3.addEventListener('click', function() {
+            // clearImages(); 
+            getRandomObject();
+        });
         return dom;
     }
 }

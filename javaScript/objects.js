@@ -7,9 +7,7 @@ class ImageObjects {
         this.clicks = 0;
         this.imgSrc = img;
     }
-
 }
-
 let bag = new ImageObjects('Bag', 'assets/bag.jpg');
 let banana = new ImageObjects('Banana', 'assets/banana.jpg');
 let bathroom = new ImageObjects('Bathroom', 'assets/bathroom.jpg');
