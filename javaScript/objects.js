@@ -27,7 +27,7 @@ let shark = new ImageObjects('Shark', 'assets/shark.jpg');
 let sweep = new ImageObjects('Sweep', 'assets/sweep.png');
 let tauntaun = new ImageObjects('Tauntaun', 'assets/tauntaun.jpg');
 let unicorn = new ImageObjects('Unicorn', 'assets/unicorn.jpg');
-let usb = new ImageObjects('USB', 'assets/usb.jpg');
+let usb = new ImageObjects('USB', 'assets/usb.gif');
 let waterCan = new ImageObjects('Water-Can', 'assets/water-can.jpg');
 let wineGlass = new ImageObjects('Wine-Glass', 'assets/wine-glass.jpg');
 

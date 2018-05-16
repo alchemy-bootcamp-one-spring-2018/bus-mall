@@ -1,5 +1,5 @@
 /* exported ImageChoices */
-/* globals  */
+/* globals getRandomObject */
 'use strict';
 
 const votingTemplate = document.getElementById('voting-template');
@@ -14,15 +14,26 @@ class ImageChoices {
     render() {
         const dom = votingTemplate.content.cloneNode(true);
         
-        const displayImage1 = dom.getElementById('image-1');
+        let displayImage1 = dom.getElementById('image-1');
         displayImage1.src = this.image1;
 
-        const displayImage2 = dom.getElementById('image-2');
+        let displayImage2 = dom.getElementById('image-2');
         displayImage2.src = this.image2;
 
-        const displayImage3 = dom.getElementById('image-3');
+        let displayImage3 = dom.getElementById('image-3');
         displayImage3.src = this.image3;
+
+        displayImage3.addEventListener('click', function() {
+            getRandomObject();
+            
+        });
+        
+
+        // displayImage1.addEventListener('onclick', getRandomObject());
+        // displayImage2.addEventListener('onclick', getRandomObject());
+        // // displayImage3.addEventListener(this.);
 
         return dom;
     }
 }
+
