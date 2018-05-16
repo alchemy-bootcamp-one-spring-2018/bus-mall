@@ -36,7 +36,9 @@ class App {
         
         const choiceSection = dom.getElementById('choice');
         const randomProducts = this.randomize(this.list.length);
-        const choiceComponent = new ProductChoice(randomProducts);
+        const choiceComponent = new ProductChoice(randomProducts, (choice) => {
+            console.log(choice);
+        });
         choiceSection.appendChild(choiceComponent.render());
         
         const resultsSection = dom.getElementById('results');

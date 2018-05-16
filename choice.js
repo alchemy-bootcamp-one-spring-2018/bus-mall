@@ -1,26 +1,24 @@
-/* exported ProductChoice */
-const productTemplate = document.getElementById('choice-template');
+/* exported Choice*/
 
-class ProductChoice {
+const choiceTemplate = document.getElementById('choice-template');
+
+class Choice {
     
-    constructor(list) {
-        this.list = list;
+    constructor(choice, onSelect) {
+        this.choice = choice;
+        this.onSelect = onSelect;
     }
 
-    update() {
-        
-    }
 
     render() {
-        
-        const dom = productTemplate.content;
+        const dom = choiceTemplate.content.cloneNode(true);
 
-        for(let i = 0; i < this.list.length; i++) {
-            let product = dom.getElementById('product-' + i);
-            product.src = this.list[i];
-        
-        }
-        
+        const choice = dom.querySelector('img');
+        choice.src = this.choice;
+        choice.addEventListener('click', () => {
+            this.onSelect(this.choice);
+        });
+
         return dom;
     }
 }
