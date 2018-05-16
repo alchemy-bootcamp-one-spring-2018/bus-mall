@@ -14,7 +14,7 @@ class Choice {
         const dom = choiceTemplate.content.cloneNode(true);
 
         const choice = dom.querySelector('img');
-        choice.src = this.choice;
+        choice.src = this.choice.image;
         choice.addEventListener('click', () => {
             this.onSelect(this.choice);
         });

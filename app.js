@@ -19,11 +19,12 @@ class App {
         for(let i = 0; i < 3; i++) {
             const index = Math.floor(Math.random() * max);
             
-            if(productImages.includes(this.list[index].image) || this.lastDisplay.includes(this.list[index].image)) {
+            if(productImages.includes(this.list[index]) || this.lastDisplay.includes(this.list[index])) {
                 i--;
                 continue;
             }
-            productImages[i] = this.list[index].image;
+    
+            productImages[i] = this.list[index];
         }
         
         this.lastDisplay = productImages;
