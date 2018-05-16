@@ -2,12 +2,34 @@
 dragon pen petSweep scissors shark sweep tauntaun unicorn usb waterCan wineGlass */
 'use strict';
 
+const imageList = document.getElementById('image-list');
+
 class ImageObject {
     constructor(name, source, viewCount, selectCount) {
         this.name = name;
         this.source = source;
         this.viewCount = viewCount;
         this.selectCount = selectCount;
+    }
+
+    render() {
+        this.viewCount++;
+        // let imageList = document.getElementById('image-list');
+        let newImage = document.createElement('img');
+        newImage.setAttribute('src', this.source);
+        imageList.appendChild(newImage);
+        newImage.addEventListener('click', () => {
+            this.selectCount++;
+            this.update();
+        });
+    }
+
+    update() {
+        const ul = this.ul;
+        while(ul.lastElementChild) {
+            ul.lastElementChild.remove();
+        }
+        this.render();
     }
 }
 
