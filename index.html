@@ -11,14 +11,55 @@
     <div id="basecamp"> </div>
 
     <template id="app-template">
+
         <h1>BusMall Voting</h1>
-        <p>We need your input! Please vote and play a part in the products of the future!</p>
-        <section id="image-row">
+        
+        
+        <section id="image-viewer"></section>
+        <section id="product-selector"></section>
+
+    </template>
+
+    <template id="image-viewer-template">
+        <div class="viewer">
+            <h2></h2>
+            <img>
+        </div>
+    </template>
+
+    <template id="product-selector-template">
+        <ul></ul>
+    </template>
+
+    <template id="product-template">
+        <li class="product">
+            <h3></h3>
+        </li>
+    </template>
+
+    <template id="voting-report-template">
+        <h2 class="voting-report-header">Voting Report</h2>
+        <table class="hidden">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Vote Count</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </template>
+
+    <template id="product-report-template">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
     </template>
                     
-    
-  
 
+    <script src="js/ImageViewer.js"></script>
+    <script src="js/App.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
