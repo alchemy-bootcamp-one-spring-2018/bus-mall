@@ -12,9 +12,9 @@ class PictureItems {
         const itemName = dom.querySelector('p');
         const itemImage = dom.querySelector('img');
 
-        p.textContent = this.name;
-        img.setAttribute(this.image);
-    
+        p.textContent = this.name.name;
+        img.setAttribute(this.image.image);
+
         return dom;
     }
 }

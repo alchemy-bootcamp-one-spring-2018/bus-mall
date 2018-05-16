@@ -2,7 +2,7 @@
 
 const appTemplate = document.getElementById('app-template');
 
-class App{
+class App {
     constructor() {
         this.items = allItems;
     }
@@ -11,11 +11,15 @@ class App{
         const dom = appTemplate.content;
 
         const pictureSection = dom.getElementById('pictures');
-        const pictureComponent = new 
+
+        pictureSection.appendChild(pictureComponent.render());
+
+        return dom;
     }
 
-    pictureSection.appendChild(pictureComponent.render());
 }
+
+
 
 function getRandomNumber(max){
     return Math.floor(Math.random() * Math.floor(max));
@@ -27,16 +31,16 @@ console.log(getRandomNumber(5));
 // var clone = document.importNode(t.content, true)
 
 // function updateItems(){
-    //     for(var i = 0; i < 3; i++){
-        //         let generatedImage = fullItemList[getRandomNumber(fullItemList.length)].render();
-        //         imageHolder.update(generatedImage);
-        //     }
-        // }
-                        // function acquireItems(){
-                        //     for(var i = 0; i < 3; i++){
-                        //         let generatedImage = fullItemList[getRandomNumber(fullItemList.length)].render();
-                        //         imageHolder.appendChild(generatedImage);
-                        //     }
-                        // }
-                        
-                        // acquireItems();
+//     for(var i = 0; i < 3; i++){
+//         let generatedImage = fullItemList[getRandomNumber(fullItemList.length)].render();
+//         imageHolder.update(generatedImage);
+//     }
+// }
+// function acquireItems(){
+//     for(var i = 0; i < 3; i++){
+//         let generatedImage = fullItemList[getRandomNumber(fullItemList.length)].render();
+//         imageHolder.appendChild(generatedImage);
+//     }
+// }
+
+// acquireItems();
