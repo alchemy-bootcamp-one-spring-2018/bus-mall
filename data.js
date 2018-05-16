@@ -27,12 +27,11 @@ const imageArray = [
     new Image('Pet-Sweep', 'img/pet-sweep.jpg', '0', '0'),
     new Image('Scissors', 'img/scissors.jpg', '0', '0'),
     new Image('Shark', 'img/shark.jpg', '0', '0'),
-    new Image('Sweep', 'img/sweep.jpg', '0', '0'),
+    new Image('Sweep', 'img/sweep.png', '0', '0'),
     new Image('TaunTaun', 'img/tauntaun.jpg', '0', '0'),
     new Image('Unicorn', 'img/unicorn.jpg', '0', '0'),
     new Image('USB', 'img/usb.gif', '0', '0'),
     new Image('Water Can', 'img/water-can.jpg', '0', '0'),
     new Image('Wine Glass', 'img/wine-glass.jpg', '0', '0')
 ];
-
 
