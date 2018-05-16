@@ -1,8 +1,10 @@
+/* exported productList */
+
 class Product {
     constructor(name, image) {
         this.name = name;
         this.image = image;
-        this.view = 0;
+        this.views = 0;
         this.count = 0;
     }
 }
@@ -27,7 +29,12 @@ const usb = new Product('USB', './assets/usb.gif');
 const waterCan = new Product('Water Can', './assets/water-can.jpg');
 const wineGlass = new Product('Wine Glass', './assets/wine-glass.jpg');
 
-const 
+const productList = [bag, banana, bathroom, boots, breakfast, bubblegum, chair,
+    cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, tauntaun, unicorn,
+    usb, waterCan, wineGlass
+];
+
+
 
 
 
