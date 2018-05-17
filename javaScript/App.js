@@ -1,4 +1,4 @@
-/* globals  ResultsArea ImageArea objectArray*/
+/* globals   ImageArea objectArray*/
 /* exported vote App */
 let votes = 0;
 const appTemplate = document.getElementById('app-template');
@@ -9,14 +9,6 @@ class App {
         this.votes = votes;
     }
 
-    showResults() {
-        const resultsDom = appTemplate.content;
-        const resultsSection = resultsDom.getElementById('results-section');
-        const resultsData = new ResultsArea(this.list);
-        resultsSection.appendChild(resultsData.render());
-        return resultsDom;
-        
-    }
     render(){
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
@@ -29,7 +21,6 @@ class App {
             console.log(userChoice);
             console.log('votes = ' + votes);
         });
-        this.showResults();
         imageSection.appendChild(imageComponent.render());
         return dom;
     }
@@ -37,12 +28,17 @@ class App {
 
 let randomImageArray = [];
 function getRandomObject() {
+    let tempArray = [];
     randomImageArray.length = 0;
-    for(let i = 0; i < 3;i++){
-        var ranNum = Math.floor(Math.random() * objectArray.length);
-        randomImageArray.push(objectArray[ranNum]);
-        randomImageArray[i].views++;
-
+    for(let i = 0; i < 3;){
+        let ranNum = Math.floor(Math.random() * objectArray.length);
+        if(tempArray.includes(ranNum) === false && randomImageArray.includes(objectArray[ranNum]) === false){
+            randomImageArray.push(objectArray[ranNum]);
+            randomImageArray[i].views++;
+            i++;
+        }
     }
+    tempArray = randomImageArray;
     console.log(randomImageArray);
+    console.log(tempArray);
 }
