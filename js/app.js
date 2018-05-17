@@ -7,9 +7,22 @@ const  appTemplate = document.getElementById('app-template');
 class App {
     constructor() {
 
+
     }
 
     render() {
+        const dom = appTemplate.content;
+        const selectedImages = threeRandomProducts(productList.length);
+
+        const productVoteSection = dom.getElementById('product-vote');
+        const productVoteComponent = new ProductVote(
+            productList[selectedImages[0]].image ,
+            productList[selectedImages[1]].image ,
+            productList[selectedImages[2]].image ,
+        );
+        const productDom = productVoteComponent.render();
+       
+        productVoteSection.appendChild(productDom);
 
         const productIndexes = threeRandomProducts(productList.length);
         const image0 = productList[productIndexes[0]];
@@ -18,6 +31,7 @@ class App {
 
         
         
+        return dom;
     } 
 }
 

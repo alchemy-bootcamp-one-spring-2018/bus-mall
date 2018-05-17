@@ -1,3 +1,7 @@
-#voting-template img {
-    display: inline-block;
+#product-vote-template img {
+    display: inline;
+}
+
+img {
+max-width: 200px;
 }
