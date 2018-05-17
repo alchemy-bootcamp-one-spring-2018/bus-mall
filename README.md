@@ -1,0 +1,1 @@
+This program was made by Robert Thompson. It displays three images and their object names, and you can click on them to vote for them. It was supposed to update what items were there, however I didn't get that far. The votes do total though.

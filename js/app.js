@@ -14,7 +14,7 @@ class App {
 
         const displayImageSelection = dom.getElementById('displayed-images');
         const imageViewerComponent = new ItemDisplay(acquireRandomItems(), (items) => {
-            
+
         });
         const imageDom = imageViewerComponent.render();
         displayImageSelection.appendChild(imageDom);
