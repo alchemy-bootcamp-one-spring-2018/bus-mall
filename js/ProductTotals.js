@@ -1,8 +1,8 @@
-/*  */
+/* exported ProductTotals */
 
 const productTotalsTemplate = document.getElementById('product-totals-report-template').content;
 
-class productTotals {
+class ProductTotals {
     constructor(product) {
         this.product = product;
     }
