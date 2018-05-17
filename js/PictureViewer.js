@@ -9,13 +9,13 @@ class PictureViewer {
         this.onSelect = onSelect;
     }
 
-    update(picture) {
+    update() {
         const ul = this.ul;
         while(ul.lastElementChild) {
             ul.lastElementChild.remove();
         }
 
-        let arrayCopy = picture.slice();
+        let arrayCopy = this.picture.slice();
         for(let i = 0; i < 3; i++) {
             let index = this.random(arrayCopy.length);
             const pictureComponent = new Picture(arrayCopy[index], this.onSelect);

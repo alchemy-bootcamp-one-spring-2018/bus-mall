@@ -3,7 +3,7 @@
 const picturesData = window.localStorage.getItem('pictures');
 
 window.onbeforeunload = () => {
-    window.localStorage.setItem('channels', JSON.stringify(pictures));
+    window.localStorage.setItem('pictures', JSON.stringify(pictures));
 };
 
 let pictures;
