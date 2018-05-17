@@ -14,15 +14,16 @@ class Random {
         
             console.log('number', randomNum);
         
-            var currentImage = new Image(imageObjectsArray[randomNum]);
+            // var currentImage = new Image(imageObjectsArray[randomNum]);
         
             // splice out used images from imagesArray 
-            imagesArray.splice(randomNum, 1);
+            // imagesArray.splice(randomNum, 1);
         }
-        document.getElementById('img').addEventListener('click', clickCount);
+        // document.getElementById('img').addEventListener('click', clickCount);
             
-        function clickCount() {
+        // function clickCount() {
             
-        }
+        // }
+        
     }
 }
