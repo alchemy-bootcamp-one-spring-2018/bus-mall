@@ -14,7 +14,19 @@ class ImageVote {
         img2.src = 'img/' + this.products[1].image;
         const img3 = dom.getElementById('img-3');
         img3.src = 'img/' + this.products[2].image;
+
+        img1.addEventListener('click', function(event) {
+            console.log(products.click);
+        });
+        img2.addEventListener('click', function(event) {
+            console.log('clicked');
+        });
+        img3.addEventListener('click', function(event) {
+            console.log('clicked');
+        });
+
         return dom;
     }
 }
+
 
