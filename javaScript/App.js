@@ -1,10 +1,17 @@
-/* globals  ImageArea objectArray*/
+/* globals  ResultsArea ImageArea objectArray*/
 /* exported vote App */
 let votes = 0;
 const appTemplate = document.getElementById('app-template');
 
 class App {
-
+    showResults() {
+        const resultsDom = appTemplate.content;
+        const resultsSection = resultsDom.getElementById('results-section');
+        const resultsData = new ResultsArea();
+        resultsSection.appendChild(resultsData.render());
+        return resultsDom;
+        
+    }
     render(){
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
@@ -18,7 +25,7 @@ class App {
             imageComponent.update(randomImageArray);
         });
         imageSection.appendChild(imageComponent.render());
-
+        this.showResults();
         return dom;
     }
 }

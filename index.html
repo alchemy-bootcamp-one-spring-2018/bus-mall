@@ -17,10 +17,10 @@
     <template id="app-template">
         <h1>App template</h1>
         <section id="image-vote"></section>
-        <section id="results"></section>
+        <section id="results-section"></section>
     </template>
 
-    <!-- image choice area-->
+    <!-- image templates-->
     <template id="voting-template">
         <section id="image-area"></section>
     </template>
@@ -28,12 +28,27 @@
     <template id="image-template">
         <img>
     </template>
-    <!-- <template id="results-template">
-        <h1>Table Template</h1>
-        <table id="results-table">
 
+    <!--result templates-->
+    <template id="results-template">
+        <h1>Results Template</h1>
+        <table id="results-table">
+            <tr>
+                <th>Product</th>
+                <th>Times Views</th>
+                <th>Times Selected</th>
+                <tb></tb>
+            </tr>
         </table>
-    </template> -->
+    </template>
+
+    <template id="results-data-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
     <!--Instruction Area-->
     <div>
     <p>One for all and all for one, Muskehounds are always ready. One for all and all for one, helping everybody. One for all and all for one, it's a pretty story. Sharing everything with fun, that's the way to be. One for all and all for one, Muskehounds are always ready. One for all and all for one, helping everybody. One for all and all for one, can sound pretty corny. If you've got a problem chum, think how it could be.
@@ -43,6 +58,7 @@
     <footer>
         <h2>I'm a foot</h2>
     </footer>
+    <script src="javaScript/ResultsArea.js"></script>
     <script src="javaScript/ImageMaker.js"></script>
     <script src="javaScript/objects.js"></script>
     <script src="javaScript/ImageArea.js"></script>

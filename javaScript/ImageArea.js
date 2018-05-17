@@ -1,5 +1,5 @@
 /* exported ImageArea  */
-/* globals ImageMaker imgSection  */
+/* globals ImageMaker */
 'use strict';
 
 const votingTemplate = document.getElementById('voting-template');
