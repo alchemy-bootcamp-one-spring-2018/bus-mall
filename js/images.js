@@ -1,4 +1,5 @@
-//document.write('images.js is loading properly');
+'use strict';
+/* exported productOption */
 
 const productOption = [
     {
