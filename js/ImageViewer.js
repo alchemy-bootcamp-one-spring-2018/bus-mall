@@ -11,15 +11,15 @@ class ImageViewer {
     update(product) {
         this.product = product;
 
-        this.header.textContent - this.product.name;
-        this.imageViewer.src = this.product.img;
+        this.header.textContent = this.product.name;
+        this.imageMaker.src = this.product.img;
     }
 
     render() {
         const dom = imageViewerTemplate;
 
         this.header = dom.querySelector('h2');
-        this.imageViewer = dom.querySelector('img');
+        this.imageMaker = dom.querySelector('img');
 
         this.update(this.product);
 

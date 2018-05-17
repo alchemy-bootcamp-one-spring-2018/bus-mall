@@ -1,5 +1,5 @@
 /* globals ImageViewer, ProductSelector, productArray, VotingReport */
-/* Exported App */
+/* exported App */
 
 const appTemplate = document.getElementById('app-template');
 
@@ -9,7 +9,7 @@ class App {
         this.totalVotes = 0;
     }
 
-    showReport(){
+    showReport() {
         if(!this.votingReportComponent) {
             this.votingReportComponent = new VotingReport(this.productArray);
             const votingReportDom = this.votingReportComponent.render();

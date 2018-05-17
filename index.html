@@ -8,7 +8,7 @@
     <title>BusMall Voting</title>
 </head>
 <body>
-    <div id="basecamp"> </div>
+    <div id="basecamp"></div>
 
     <template id="app-template">
 
@@ -17,13 +17,18 @@
         
         <section id="image-viewer"></section>
         <section id="product-selector"></section>
+        <section id="voting-report"></section>
 
     </template>
 
+
+    <!--Need to figure out how Marty's use of "screen" class translates and if img tag is correct in place of video tag -->
     <template id="image-viewer-template">
         <div class="viewer">
             <h2></h2>
-            <img>
+            <div class="screen">
+                <img>
+            </div>
         </div>
     </template>
 
@@ -64,6 +69,6 @@
     <script src="js/ProductSelector.js"></script>
     <script src="js/ImageViewer.js"></script>
     <script src="js/App.js"></script>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
