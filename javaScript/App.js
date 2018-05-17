@@ -9,7 +9,7 @@ class App {
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
         getRandomObject();
-        const imageComponent = new ImageChoices(randomImageArray[0].imgSrc, randomImageArray[1].imgSrc, randomImageArray[2].imgSrc);
+        const imageComponent = new ImageArea(randomImageArray);
         imageSection.appendChild(imageComponent.render());
         return dom;
     }
