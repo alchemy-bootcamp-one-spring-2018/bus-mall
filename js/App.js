@@ -7,7 +7,7 @@ const rootResults = document.getElementById('result-root');
 class App {
 
     constructor() {
-        this.productsToShow = 4;
+        this.productsToShow = 3;
         this.maxClicks = 10;
         this.totalClicks = 0;
         this.products = products;
