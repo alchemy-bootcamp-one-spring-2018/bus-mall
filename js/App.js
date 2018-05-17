@@ -11,9 +11,6 @@ class App {
     }
 
     setPictures() {
-        if(this.completed) {
-            return;
-        }
         const pics = this.random.randomize();
         for(let i = 0; i < pics.length; i++) {
             pics[i].shown++;
@@ -21,16 +18,17 @@ class App {
 
         if(!this.pictureDisplay) {
             this.pictureDisplay = new PictureDisplay(pics, pic => {
+                if(this.completed) {
+                    return;
+                }
                 this.totalVotes++;
                 pic.votes++;
+                this.results = new Results(this.pictures);
+                this.results.tally();
                 if(this.totalVotes === 25) {
                     this.completed = true;
-                    this.results = new Results(this.pictures);
-                    this.resultsSection.appendChild(this.results.render());
                 }
-                else {
-                    this.setPictures();
-                }
+                this.setPictures();
             });
             this.picturesSection.appendChild(this.pictureDisplay.render());
         }

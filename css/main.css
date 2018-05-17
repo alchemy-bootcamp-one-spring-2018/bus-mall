@@ -103,7 +103,6 @@ img {
 }
 
 #results-section {
-    flex: 1;
     margin: auto;
     background: black;
     height: auto;
@@ -111,18 +110,10 @@ img {
 }
 
 #results-section span {
-    /* top: 50%;
-    transform: translate(0, -50%); */
-    font-size: .75rem;
-    line-height: 1.25;
-    color: black;
-    margin: auto;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
     padding: 13px;
-    margin: auto;
-}
-
-#picture-section {
-    flex: 4;
 }
 
 #text {
