@@ -3,6 +3,7 @@
 const appTemplate = document.getElementById('app-template');
 
 class App {
+
     constructor() {
         this.pictures = pictures;
         this.random = new Random(this.pictures);
@@ -20,7 +21,6 @@ class App {
 
         if(!this.pictureDisplay) {
             this.pictureDisplay = new PictureDisplay(pics, pic => {
-                // console.log(pic);
                 this.totalVotes++;
                 pic.votes++;
                 if(this.totalVotes === 25) {
