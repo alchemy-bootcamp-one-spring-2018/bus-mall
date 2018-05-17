@@ -11,6 +11,7 @@ function find3images() {
     for(let i = 0; i < 3; i++) {
         
         let imageOne = randomImage(copy);
+        // imageOne.views++;
         holderArray.push(imageOne);
 
     }
@@ -18,7 +19,6 @@ function find3images() {
 }
 
 find3images();
-
 
 function randomImage(imagesData) {
 

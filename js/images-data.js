@@ -125,7 +125,7 @@ let imagesData = [
     }
 ];
 
-
+console.log(imagesData);
 
 //NOT DELETING THIS IN CASE I CHANGE MY MIND AND SWITCH APPROACHES
 //list of images - keeping this just in case

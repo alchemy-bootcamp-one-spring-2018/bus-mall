@@ -9,6 +9,7 @@ class App {
         //initialization logic
         //state containers
         this.imagesData = imagesData;
+        this.totalViews = 0;
         // still need to add results section
         // this.results = results;
     }
@@ -23,6 +24,12 @@ class App {
             console.log(image.name + ' has ' + image.votes + ' votes.');
             
             imageComponent.update(find3images());
+
+            this.totalViews++;
+            if(this.totalViews > 25) {
+                alert('Thanks for participating, you have maxed out your votes.');
+            }
+            
         });
         imageDisplaySection.appendChild(imageComponent.render());
 

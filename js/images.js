@@ -16,6 +16,7 @@ class ProductDisplay {
         for(let i = 0; i < 3; i++) {
             const img = this.container.querySelector('#img' + i);
             img.src = this.imagesData[i].imageSrc;
+            imagesData[i].views++;
         }
     }
 
