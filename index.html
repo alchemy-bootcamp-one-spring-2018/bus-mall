@@ -8,18 +8,34 @@
     <title>Bus Mall</title>
 </head>
 <body>
-    <h1>Welcome to Bus Mall</h1>
+    <div id="root"></div>
+    <!-- <h1>Welcome to Bus Mall</h1>
     
-    <h2>Pick your favorite image!</h2>
+    <h2>Pick your favorite image!</h2> -->
+
     <!-- // display images // -->
-    <div id="images">
-        
-        
-    </div>
+    
+    <template id="app-template">
+        <h1>Bus Mall!</h1>
+
+        <section id="add-display"></section>
+    </template>
+
+    <template id="image-template">
+        <h2>Image Template</h2>
+        <img id="image-1">
+    </template>
+
+    
+
+
+     <!-- new elements for appending 3 images -->
     
     
-    <script src="images.js"></script>    
-    <script src="app.js"></script>    
+     <script src="images.js"></script>    
+     <script src="random.js"></script>    
+     <script src="ImageDisplay.js"></script>    
+     <script src="App.js"></script>    
     <script src="main.js"></script>    
 </body>
 </html>
