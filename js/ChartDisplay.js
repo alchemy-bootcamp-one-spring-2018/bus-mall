@@ -5,26 +5,24 @@ const chartTemplate = document.getElementById('chart-template');
 class ChartDisplay {
 
     constructor(dataList) {
-        this.dataList = JSON.parse(dataList);
+        this.dataList = dataList;
     }
 
     render() {
         const dom = chartTemplate.content;
         const message = dom.querySelector('span');
-        if(localStorage) {
+        if(localStorage.length !== 0) {
             const chart = dom.getElementById('myChart');
-            console.log(this.dataList);
             message.textContent = '';
-            console.log(chart);
             new Chart(chart, {
                 type: 'horizontalBar',
                 data: {
-                    labels: this.dataList[0],
+                    labels: this.dataList.map(a => a[0]),
                     datasets: [
                         {
                             label: '%',
-                            backgroundColor: this.dataList[2],
-                            data: this.dataList[1]
+                            backgroundColor: this.dataList.map(a => a[2]),
+                            data: this.dataList.map(a => a[1])
                         }
                     ]
                 },

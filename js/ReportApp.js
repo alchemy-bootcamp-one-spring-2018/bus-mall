@@ -5,7 +5,6 @@ const appTemplate = document.getElementById('app-template');
 class ReportApp {
 
     constructor() {
-        this.dataList = window.localStorage.getItem('dataList');
     }
 
     render() {
@@ -13,6 +12,9 @@ class ReportApp {
 
         this.resultsSection = dom.getElementById('results-section');
 
+        if(localStorage !== 0) {
+            this.dataList = JSON.parse(localStorage.getItem('dataList'));
+        }
         this.ChartDisplay = new ChartDisplay(this.dataList);
         this.resultsSection.appendChild(this.ChartDisplay.render());
 
