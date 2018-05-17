@@ -1,6 +1,6 @@
 /* exported Product */
 
-const productTemplate = document.getElementById('product-template').cotent;
+const productTemplate = document.getElementById('product-template').content;
 
 class Product {
     constructor(product, onSelect) {
