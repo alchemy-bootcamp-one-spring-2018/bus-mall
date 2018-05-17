@@ -4,17 +4,17 @@ const rowTemplate = document.getElementById('result-row-template').content;
 
 class ReportItem {
 
-    constructor(image) {
-        this.image = image;
+    constructor(product) {
+        this.product = product;
     }
 
-    // create a new report row for this image and append it to rootElement
+    // create a new report row for this product and append it to rootElement
     render(rootElement) {
         const newRow = rowTemplate.cloneNode(true);
         const columns = newRow.querySelectorAll('td');
-        columns[0].textContent = this.image.productName;
-        columns[1].textContent = this.image.timesPresented;
-        columns[2].textContent = this.image.timesChosen;
+        columns[0].textContent = this.product.productName;
+        columns[1].textContent = this.product.timesPresented;
+        columns[2].textContent = this.product.timesChosen;
         rootElement.appendChild(newRow);
 
     }

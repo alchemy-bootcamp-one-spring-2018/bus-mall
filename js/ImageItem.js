@@ -2,20 +2,20 @@
 
 class ImageItem {
 
-    constructor(image) {
-        this.image = image;
+    constructor(product) {
+        this.product = product;
     }
 
     // render this image and append it to rootElement
     render(rootElement) {
-        this.image.timesPresented++; // increment presented
+        this.product.timesPresented++; // increment presented
         let newImageElement = document.createElement('img');
-        newImageElement.src = 'img/' + this.image.imageName;
+        newImageElement.src = 'img/' + this.product.imageName;
         newImageElement.style.height = '200px';
         newImageElement.classList.add('pic');
         rootElement.appendChild (newImageElement);
         newImageElement.addEventListener('click', () => {
-            this.image.timesChosen++; // increment chosen
+            this.product.timesChosen++; // increment chosen
         });
     }
 }

@@ -1,4 +1,4 @@
-/* globals images getRandomNumberSet ReportItem ImageItem*/
+/* globals products getRandomNumberSet ReportItem ImageItem*/
 /* exported App */
 
 const rootPictures = document.getElementById('picture-root');
@@ -7,16 +7,16 @@ const rootResults = document.getElementById('result-root');
 class App {
 
     constructor() {
-        this.imagesToShow = 3;
-        this.maxClicks = 2;
+        this.productsToShow = 3;
+        this.maxClicks = 10;
         this.totalClicks = 0;
-        this.images = images;
+        this.products = products;
     }
 
     drawPictures() {
 
-        // get set of random numbers to choose images
-        var randomNumberSet = getRandomNumberSet(this.imagesToShow, this.images.length);
+        // get set of random numbers to choose products
+        var randomNumberSet = getRandomNumberSet(this.productsToShow, this.products.length);
         console.log('random number set:', randomNumberSet);
 
         // delete existing pictures, if any
@@ -24,10 +24,10 @@ class App {
             rootPictures.lastElementChild.remove();
         }
         
-        // write the images
-        for(let loopIndex = 0; loopIndex < this.imagesToShow; loopIndex ++) {
+        // render the image for each product
+        for(let loopIndex = 0; loopIndex < this.productsToShow; loopIndex ++) {
             var randomIndex = randomNumberSet[loopIndex];
-            let imageItem = new ImageItem(images[randomIndex]);
+            let imageItem = new ImageItem(products[randomIndex]);
             imageItem.render(rootPictures);
         }
 
@@ -42,11 +42,12 @@ class App {
                     this.totalClicks++;
                     this.drawPictures();
                 } else if(this.totalClicks === this.maxClicks) {
-                    // report results
-                    for(let index = 0; index < images.length; index++) {
-                        let reportItem = new ReportItem (images[index]);
+                    // fill the table with result rows
+                    for(let index = 0; index < products.length; index++) {
+                        let reportItem = new ReportItem (products[index]);
                         reportItem.render(rootResults);
                     }
+                    // reveal the table
                     let hiddenElements = document.querySelectorAll('.hidden');
                     for(let i = 0; i < hiddenElements.length; i++) {
                         hiddenElements[i].classList.toggle('hidden');
