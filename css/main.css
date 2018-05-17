@@ -1,10 +1,14 @@
 /* ANIMATIONS */
 
 @keyframes bus {
-    from {
+    0% {
         left: 420%
-    } to {
+    } 80% {
         left: 0%;
+    } 91% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -101,6 +105,9 @@ img {
 #results-section {
     flex: 1;
     margin: auto;
+    background: black;
+    height: auto;
+    width: 100%;
 }
 
 #results-section span {
