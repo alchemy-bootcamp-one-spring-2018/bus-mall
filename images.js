@@ -1,4 +1,4 @@
-/* exported imageObjectsArray */
+/* exported imageObjectsArray randomize*/
 
 const imageObjectsArray = [
     { name: 'images/bag.jpg',
@@ -49,7 +49,7 @@ const imageObjectsArray = [
         chosen: 0,
         displayed: 0
     }, {
-        name: 'images/images/scissors.jpg',
+        name: 'images/scissors.jpg',
         chosen: 0,
         displayed: 0
     }, {
@@ -82,16 +82,34 @@ const imageObjectsArray = [
         displayed: 0
     }];
 
+function randomize() {  
+    const threeImages = [];
 
     for(let i = 0; i < 3; i++) {
-
-        // get a random integer between 0 and length of images array
         var randomNum = Math.floor((Math.random() * imageObjectsArray.length));
-    
-        console.log('number', randomNum);
-    
-        // var currentImage = new Image(imageObjectsArray[randomNum]);
-    
-        // splice out used images from imagesArray 
-        // imagesArray.splice(randomNum, 1);
+ 
+        const randomImage = imageObjectsArray[randomNum];
+        threeImages.push(randomImage);
+        imageObjectsArray.splice(randomNum, 1);
     }
+
+    return threeImages;
+}
+     
+    
+    
+    
+    // function randomize {
+
+    
+    //         // get a random integer between 0 and length of images array
+        
+        
+        
+    //         // splice out used images from imagesArray 
+    //         // imagesArray.splice(randomNum, 1);
+    //     }
+
+        
+    // }
+    

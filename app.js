@@ -1,4 +1,4 @@
-/* globals ImageDisplay imageObjectsArray */
+/* globals ImageDisplay imageObjectsArray randomize*/
 /* exported App */
 
 
@@ -13,7 +13,11 @@ class App {
         const dom = picTemplate.content;
 
         const addImageSection = dom.getElementById('add-display');
-        const addDisplayComponent = new ImageDisplay(this.images);
+        const threeImages = randomize();
+        console.log('threeImages', threeImages);
+        
+
+        const addDisplayComponent = new ImageDisplay(threeImages);
         addImageSection.appendChild(addDisplayComponent.render());
 
         
