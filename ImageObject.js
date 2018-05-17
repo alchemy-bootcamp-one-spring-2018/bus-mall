@@ -9,8 +9,3 @@ class ImageObject {
         this.selectCount = selectCount;
     }
 }
-
-// function getRandomIndex(max) {
-//     let random = Math.floor(Math.random() * Math.floor(max));
-//     return random;
-// }

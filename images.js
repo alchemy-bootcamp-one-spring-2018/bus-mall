@@ -1,15 +1,6 @@
 /* exported imageArray */
 /* globals ImageObject */
 
-// class ImageObject {
-//     constructor(name, source, viewCount, selectCount) {
-//         this.name = name;
-//         this.source = source;
-//         this.viewCount = viewCount;
-//         this.selectCount = selectCount;
-//     }
-// }
-
 let bag = new ImageObject('bag', '/img/bag.jpg', 0, 0);
 let banana = new ImageObject('banana', '/img/banana.jpg', 0, 0);
 let bathroom = new ImageObject('bathroom', '/img/bathroom.jpg', 0, 0);
