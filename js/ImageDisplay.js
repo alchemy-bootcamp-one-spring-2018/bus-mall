@@ -33,7 +33,7 @@ class ImageDisplay {
             cell.appendChild(imgTag);
             this.row.appendChild(cell);
         }
-
+        
     }
 
     render() {

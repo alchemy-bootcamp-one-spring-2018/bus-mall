@@ -24,7 +24,7 @@ class App {
     
     render() {
         const dom = appTemplate.content;
-
+        
         // Image Display rendering
         const addDisplaySection = dom.getElementById('image-display');
         const addDisplayComponent = new ImageDisplay(this.getThreeRandomImages(), (image) => {
@@ -32,12 +32,13 @@ class App {
             this.totalVotes++;
             image.timesVoted++;
             addDisplayComponent.update(this.getThreeRandomImages());
+            addResultsComponent.update(this.products);
             console.log('userVoted - totals, thisImage', this.totalVotes, image);
-
+            
         });
         addDisplaySection.appendChild(addDisplayComponent.render());
-
-
+        
+        
         
         // Results Display rendering
         const addResultsSection = dom.getElementById('results-display');
