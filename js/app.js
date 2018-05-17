@@ -1,27 +1,42 @@
 /* globals Vote itemArray */
 /* exported App */
 
-const appTemplate = document.getElementById('app-template');
 
 class App {
     constructor() {
-
+        this.itemArray = this.itemArray;
+        this.totalVotes = 0;
+        console.log('totalVotes:', this.totalVotes);
     }
     
+    onImageVote(itemName) {
+    }
+    
+    
+    
+    
+    
     render() {
-        const dom = appTemplate.content;
-
+        
+        const dom = document.getElementById('app-template').content;
+        
         const voteSection = dom.getElementById('vote');
-
+        
         const imageIndexes = threeRandomItems(itemArray.length);
-
-        const image0 = itemArray[imageIndexes[0]].image;
-        const image1 = itemArray[imageIndexes[1]].image;
-        const image2 = itemArray[imageIndexes[2]].image;
-
-
-        const voteComponent = new Vote(image0, image1, image2);
+        const image0 = itemArray[imageIndexes[0]];
+        const image1 = itemArray[imageIndexes[1]];
+        const image2 = itemArray[imageIndexes[2]];
+        
+        const voteComponent = new Vote(image0, image1, image2, (itemName) => {
+            console.log('itemName :', itemName);
+            this.totalVotes++;
+            console.log('totalVotes:', this.totalVotes);
+            
+        });
         voteSection.appendChild(voteComponent.render());
+
+        
+
 
 
 
