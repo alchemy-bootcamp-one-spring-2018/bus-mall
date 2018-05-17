@@ -10,7 +10,6 @@ function find3images() {
     
     for(let i = 0; i < 3; i++) {
         
-        
         let imageOne = randomImage(copy);
         holderArray.push(imageOne);
 

@@ -21,7 +21,8 @@ class App {
         const imageComponent = new ProductDisplay(find3images(), (image) => {
             
             // can't figure this section out:
-            // image.votes++;
+            image.votes++;
+            imageComponent.update(find3images());
             // console.log('click happened', event.target);
             
         });

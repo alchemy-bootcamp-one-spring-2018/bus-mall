@@ -10,20 +10,25 @@ class ProductDisplay {
         this.onSelect = onSelect;
     }
 
-    //add update()
+    update(imagesData) {
+        this.imagesData = imagesData;
+
+        for(let i = 0; i < 3; i++) {
+            const img = this.container.querySelector('#img' + i);
+            img.addEventListener('click', () => {
+                this.onSelect(this.imagesData[i]);
+                // this.imagesData[i].votes++;
+                console.log(this.imagesData[i].votes);
+            });
+            img.src = this.imagesData[i].imageSrc;
+        }
+    }
 
     render() {
         const dom = imageDisplayTemplate.content.cloneNode(true);
+        this.container = dom.querySelector('div');
         
-        for(let i = 0; i < 3; i++) {
-            this.img = dom.getElementById('img' + i);
-            this.img.addEventListener('click', () => {
-                this.onSelect(this.imagesData);
-                this.imagesData[i].votes++;
-                console.log(this.imagesData[i].votes);
-            });
-            this.img.src = this.imagesData[i].imageSrc;
-        }
+        this.update(this.imagesData);
         
         return dom;
 
