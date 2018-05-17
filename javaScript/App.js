@@ -1,5 +1,5 @@
-/* globals  ImageChoices objectArray*/
-/* exported vote clearImages App */
+/* globals  ImageArea objectArray*/
+/* exported vote App */
 let vote = 0;
 const appTemplate = document.getElementById('app-template');
 
@@ -9,8 +9,14 @@ class App {
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
         getRandomObject();
-        const imageComponent = new ImageArea(randomImageArray);
+        const imageComponent = new ImageArea(randomImageArray, (userChoice) => {
+            userChoice.clicks++;
+            console.log(userChoice);
+            getRandomObject();
+            imageComponent.update(randomImageArray);
+        });
         imageSection.appendChild(imageComponent.render());
+
         return dom;
     }
 }

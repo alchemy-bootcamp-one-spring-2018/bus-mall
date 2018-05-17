@@ -1,28 +1,33 @@
-/* exported ImageChoices */
-/* globals randomImageArray getRandomObject  */
+/* exported ImageArea  */
+/* globals ImageMaker imgSection  */
 'use strict';
 
 const votingTemplate = document.getElementById('voting-template');
 class ImageArea {
-    constructor(imageArray){
+    constructor(imageArray, onClick){
         this.imageArray = imageArray;
+        this.onClick = onClick;
 
     }
 
-    // update(image1, image2, image3){
-    //     this.image1 = image1;
-    //     this.image2 = image2;
-    //     this.image3 = image3;
-        
-    //     this.img1.src = this.image1.imgSrc;
-    // }
+    update(imageArray) {
+        this.ImageArray = imageArray;
+        while(this.imgSection.lastElementChild){
+            this.imgSection.lastElementChild.remove();
+        }
+        for(let i in this.imageArray){
+            this.imgComponent = new ImageMaker(this.imageArray[i], this.onClick);
+            this.imgSection.appendChild(this.imgComponent.render());
+        }
+    }
     render() {
         const dom = votingTemplate.content.cloneNode(true);
-        const imgSection = dom.querySelector('section');
+        this.imgSection = dom.querySelector('section');
         for(let i in this.imageArray){
-            const imgComponent = new ImageMaker(this.imageArray[i]);
-            imgSection.appendChild(imgComponent.render());
+            this.imgComponent = new ImageMaker(this.imageArray[i], this.onClick);
+            this.imgSection.appendChild(this.imgComponent.render());
         }
+
         return dom;
     }
 }

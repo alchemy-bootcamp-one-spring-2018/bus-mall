@@ -5,12 +5,11 @@ img {
 body {
     background-color: steelblue;
 }
-#image-vote{
+#image-area{
     background-color: grey;
     display: flex;
-
-    align-content: center;
-    justify-content:;
+    flex-wrap: wrap;
+    justify-content: space-around;
     border-style: solid;
     border-width: 5px;
     border-color: rgb(255, 255, 255);
