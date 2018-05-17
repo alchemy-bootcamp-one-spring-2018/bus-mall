@@ -28,8 +28,6 @@ class App {
         const image0 = productList[productIndexes[0]];
         const image1 = productList[productIndexes[1]];
         const image2 = productList[productIndexes[2]];
-
-        
         
         return dom;
     } 
@@ -42,6 +40,7 @@ return Math.floor(Math.random() * max);
 function threeRandomProducts(max) {
     let arrayOfThreeProducts = [];
     for(let i=0; i<3; i++) {
+    //put logic from hangman about checking against existing stuff 
         arrayOfThreeProducts[i] = randomInt(max);
     }
     return arrayOfThreeProducts;
