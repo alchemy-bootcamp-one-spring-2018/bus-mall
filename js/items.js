@@ -10,44 +10,31 @@ class ItemDisplay {
         this.onSelect = onSelect;
     }
 //Trying to figure out how the update works, can't get it to do anything.
-    update() {
+    update(items) {
+        this.items = items;
+
         this.items = items;
 
         for(let i = 0; i < 3; i++){
-            this.header = dom.getElementById('head-' + i);
-            this.header.textContent = this.items[i].name;
 
-            this.image = dom.getElementById('img-' + i);
-            this.image.src = this.items[i].image;
+            const image = this.container.querySelector('#img-' + i);
+            image.src = this.items[i].image;
 
-            this.image.addEventListener('click', () => {
-                this.onSelect(this.items);
+            image.addEventListener('click', () => {
+                this.onSelect(this.items[i]);
+                console.log(this.items[i].votes);
             });
-
         }
-
     }
 
     render() {
         const dom = itemTemplate;
+        this.container = dom.querySelector('div');
 
-        for(let i = 0; i < 3; i++){
-            this.header = dom.getElementById('head-' + i);
-            this.header.textContent = this.items[i].name;
-
-            this.image = dom.getElementById('img-' + i);
-            this.image.src = this.items[i].image;
-
-            this.image.addEventListener('click', () => {
-                this.onSelect(this.items);
-                this.items[i].votes++;
-                console.log(this.items[i].votes);
-            });
-        }
+        this.update(this.items);
 
         console.log(this.items);
 
         return dom;
-
     }
 }
