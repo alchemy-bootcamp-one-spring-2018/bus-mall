@@ -1,16 +1,22 @@
-/* globals products getRandomNumberSet ReportItem ImageItem*/
+/* globals products getRandomNumberSet ReportItem ImageItem  ViewingChart*/
 /* exported App */
 
 const rootPictures = document.getElementById('picture-root');
 const rootResults = document.getElementById('result-root');
+const rootChart = document.getElementById('chart-root')
 
 class App {
 
     constructor() {
         this.productsToShow = 3;
-        this.maxClicks = 10;
+        this.maxClicks = 25;
         this.totalClicks = 0;
         this.products = products;
+    }
+
+    drawChart() {
+        const myChart = new ViewingChart (products);
+        myChart.render();
     }
 
     drawTable() {
@@ -49,6 +55,7 @@ class App {
                     this.drawPictures();
                 } else if(this.totalClicks === this.maxClicks) {
                     this.drawTable();
+                    this.drawChart();
                 }
             });
             imageItem.render(rootPictures);
