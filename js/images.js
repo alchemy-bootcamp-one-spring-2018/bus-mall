@@ -10,13 +10,15 @@ class ProductDisplay {
         this.onSelect = onSelect;
     }
 
+    //add update()
+
     render() {
         const dom = imageDisplayTemplate.content.cloneNode(true);
         
         for(let i = 0; i < 3; i++) {
             this.img = dom.getElementById('img' + i);
             this.img.addEventListener('click', () => {
-                this.onSelect(this.image);
+                this.onSelect(this.imagesData);
                 this.imagesData[i].votes++;
                 console.log(this.imagesData[i].votes);
             });
@@ -27,8 +29,3 @@ class ProductDisplay {
 
     }
 }
-
-//comments for planning out next steps
-//need render image method
-//random method that will come before render image
-//event listener waiting for clicks on images

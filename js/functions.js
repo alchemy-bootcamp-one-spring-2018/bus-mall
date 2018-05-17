@@ -3,8 +3,6 @@
 'use strict';
 
 
-
-
 //function - pick three index values
 function find3images() {
     let copy = imagesData.slice();
@@ -15,12 +13,10 @@ function find3images() {
         
         let imageOne = randomImage(copy);
         holderArray.push(imageOne);
-        
-        // document.getElementById('img-' + i).src = imageOne;
+
     }
     return holderArray;
 }
-
 
 find3images();
 
@@ -35,7 +31,6 @@ function randomImage(listOfImages) {
 
     return image;
 }
-
 
 //source: mdn math.random
 function getRandomIndex(max) {

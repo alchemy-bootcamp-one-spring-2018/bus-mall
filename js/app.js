@@ -9,7 +9,6 @@ class App {
         //initialization logic
         //state containers
         this.imagesData = imagesData;
-        // this.image = image;
         // still need to add results section
         // this.results = results;
     }
@@ -21,18 +20,12 @@ class App {
         const imageDisplaySection = dom.getElementById('add-image-display');
         const imageComponent = new ProductDisplay(find3images(), (image) => {
             
-            //can't figure this out:
+            // can't figure this section out:
             // image.votes++;
-            // console.log(image.votes);
-            // this.imagesData.votes++;
-            // alert('clicked');
             // console.log('click happened', event.target);
-            // console.log(this.imagesData[i].votes);
- 
+            
         });
         imageDisplaySection.appendChild(imageComponent.render());
-
-
 
         //results displayed - to be written
         
@@ -40,11 +33,3 @@ class App {
     }
 
 }
-
-// find3images();
-
-//call randomizer function
-//callback functions
-//call Products
-//component has two parts: presentation and behavior assoc'd with that presentation
-//dependency tree --> script order
