@@ -17,18 +17,12 @@ function selectImages(productOption) {
         let selectedImage = productOption[index];
         productOption[index].viewed ++;
         
-        console.log('product option views value = ', productOption[index].viewed);
-        console.log(selectedImage.name);
-        
-        
         imageArray[i] = selectedImage.image;
         productNameArray[i] = selectedImage.name;
         //remove the selected item to avoid duplication
         productOption.splice(index, 1);
     }
-    console.log('image zero  = ' + imageArray[1]);
-    console.log('image one  = ' + productNameArray[1]);
-    console.log('image two  = ' + imageArray[2]);
+    
 }
 selectImages(productOption);
 
