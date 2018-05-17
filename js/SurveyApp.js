@@ -1,27 +1,29 @@
-/* globals Choice, Result, productList*/
-/* exported App */
+/* globals Choice, productList*/
+/* exported SurveyApp */
 
 const appTemplate = document.getElementById('app-template');
 
-class App {
+class SurveyApp {
     constructor() {
         this.list = productList;
         this.votes = 0;
         this.lastArray = [];
     }
 
-    showResults() {
-        const resultComponent = new Result(this.list);
-        this.resultSection.appendChild(resultComponent.render());
+    showThanks() {
         while(this.choiceSection.lastElementChild) {
             this.choiceSection.lastElementChild.remove();
         }
+
+        const thankComponent = document.createElement('h2');
+        thankComponent.id = 'thanks-message';
+        thankComponent.textContent = 'Thanks for participating!';
+        this.choiceSection.appendChild(thankComponent);
     }
 
     render() {
         const dom = appTemplate.content;
         this.choiceSection = dom.getElementById('choice');
-        this.resultSection = dom.getElementById('result');
 
         const imagesArray = this.randomThreeObjects(this.list.length);
 
@@ -30,8 +32,8 @@ class App {
             this.votes++;
             const imagesArray = this.randomThreeObjects(this.list.length);
             choiceComponent.update(imagesArray);
-            if(this.votes === 25) {
-                this.showResults();
+            if(this.votes === 5) {
+                this.showThanks();
             }
         });
         this.choiceSection.appendChild(choiceComponent.render());

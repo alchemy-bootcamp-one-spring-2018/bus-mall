@@ -1,11 +1,13 @@
 body {
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1, h2, h3 {
     font-family: 'Fjalla One', sans-serif;
+    /* margin: 0px; */
 }
 
 h1 {
@@ -27,21 +29,30 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-#instructions {
     text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    padding: 20px;
 }
+
 #root {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
     font-family: 'Average', serif;
-    
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-img {
-    max-width: 300px;
+.image-container img {
+    width: 300px;
     cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
 }
 
 .image-container {
@@ -81,5 +92,19 @@ td{
     margin-top: 50px;
 }
 
+#thanks-message {
+    margin-top: 250px;
+}
 
+img {
+    margin: 50px;
+    width: 100%;
+}
 
+#motto {
+    color: white;
+    font-size: 6em;
+    position: absolute;
+    font-family: 'Fjalla One', sans-serif;
+    top: 300px;
+}

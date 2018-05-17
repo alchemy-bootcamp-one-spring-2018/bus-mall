@@ -11,7 +11,7 @@ class Choice {
     }
 
     update(array) {
-        
+        this.randomProductsArray = array;
         while(this.imageSection.lastElementChild) {
             this.imageSection.lastElementChild.remove();
         }
