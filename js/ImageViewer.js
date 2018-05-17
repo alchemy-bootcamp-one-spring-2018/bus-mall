@@ -1,5 +1,15 @@
 /* exported ImageViewer */
 
+// note for Sarah
+// create image code from fruit stand project below. 
+// incorporate in place of existing code?
+
+// createImg: function() {
+//     var img = document.createElement('img');
+//     img.setAttribute('src', this.image);
+//     return img;
+// }
+
 const imageViewerTemplate = document.getElementById('image-viewer-template').content;
 
 class ImageViewer {
@@ -12,7 +22,7 @@ class ImageViewer {
         this.product = product;
 
         this.header.textContent = this.product.name;
-        this.imageMaker.src = this.product.img;
+        this.imageMaker.src = this.product.image;
     }
 
     render() {
@@ -26,3 +36,4 @@ class ImageViewer {
         return dom;
     }
 }
+
