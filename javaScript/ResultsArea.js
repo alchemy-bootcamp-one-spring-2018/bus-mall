@@ -8,9 +8,11 @@ class ResultsArea {
     }
     render() {
         const dom = resultsTemplate.content.cloneNode(true);
-        const tableBody = dom.querySelector('tbody');
-        const resultComponent = new SurveyResult(this.list[10]);
-        tableBody.appendChild(resultComponent.render());
+        for(let i = 0; i < this.list.length; i++){
+            const tableBody = dom.querySelector('tbody');
+            const resultComponent = new SurveyResult(this.list[i]);
+            tableBody.appendChild(resultComponent.render());
+        }
         return dom;
     }
 
