@@ -14,16 +14,16 @@ function acquireRandomItems() {
     for(var i = 0; i < 3; i++){
         var itemOne = getRandomItem(copy);
         holderArray.push(itemOne);
-        console.log(itemOne);
+
         // itemOne = document.getElementById('img-' + i).src;
 
     }
-    console.log(holderArray);
+
     return holderArray;
 }
 
 acquireRandomItems();
-console.log(acquireRandomItems);
+
 
 
 function getRandomItem(listOfItems){

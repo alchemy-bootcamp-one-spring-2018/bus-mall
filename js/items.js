@@ -5,9 +5,9 @@ const itemTemplate = document.getElementById('item-template').content;
 
 class ItemDisplay {
 
-    constructor (items) {
+    constructor (items, onSelect) {
         this.items = items;
-
+        this.onSelect = onSelect;
     }
 
     render() {
@@ -19,9 +19,14 @@ class ItemDisplay {
             
             this.image = dom.getElementById('img-' + i);
             this.image.src = this.items[i].image;
-            console.log(this.items);
+            
+            this.image.addEventListener('click', () => {
+                this.onSelect(this.items);
+            });
         }
+        
         console.log(this.items);
+
         return dom;
         // this.header = dom.querySelector('h2');
         // this.header.textContent = this.items.name;
