@@ -9,13 +9,12 @@ class Choice {
         this.onSelect = onSelect;
     }
 
-
     render() {
         const dom = choiceTemplate.content.cloneNode(true);
 
-        const choice = dom.querySelector('img');
-        choice.src = this.choice.image;
-        choice.addEventListener('click', () => {
+        const domChoice = dom.querySelector('img');
+        domChoice.src = this.choice.image;
+        domChoice.addEventListener('click', () => {
             this.onSelect(this.choice);
         });
 

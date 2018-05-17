@@ -1,6 +1,6 @@
 /* exported App */
 
-/* globals ProductChoice Results productList*/
+/* globals ProductChoices Results productList*/
 
 'use strict';
 
@@ -25,6 +25,7 @@ class App {
             }
     
             productImages[i] = this.list[index];
+            productImages[i].views++;
         }
         
         this.lastDisplay = productImages;
@@ -35,9 +36,11 @@ class App {
         
         const dom = appTemplate.content;
         
-        const choiceSection = dom.getElementById('choice');
+        const choiceSection = dom.getElementById('choices');
         const randomProducts = this.randomize(this.list.length);
-        const choiceComponent = new ProductChoice(randomProducts, (choice) => {
+        const choiceComponent = new ProductChoices(randomProducts, (choice) => {
+            choiceComponent.update(this.randomize(this.list.length));
+            choice.count++;
             console.log(choice);
         });
         choiceSection.appendChild(choiceComponent.render());
