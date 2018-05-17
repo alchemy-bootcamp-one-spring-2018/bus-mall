@@ -4,10 +4,13 @@ let votes = 0;
 const appTemplate = document.getElementById('app-template');
 
 class App {
+    constructor() {
+        this.list = objectArray;
+    }
     showResults() {
         const resultsDom = appTemplate.content;
         const resultsSection = resultsDom.getElementById('results-section');
-        const resultsData = new ResultsArea();
+        const resultsData = new ResultsArea(this.list);
         resultsSection.appendChild(resultsData.render());
         return resultsDom;
         
