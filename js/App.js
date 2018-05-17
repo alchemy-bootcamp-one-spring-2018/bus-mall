@@ -30,7 +30,7 @@ class App {
             this.votes++;
             const imagesArray = this.randomThreeObjects(this.list.length);
             choiceComponent.update(imagesArray);
-            if(this.votes === 25) {
+            if(this.votes === 5) {
                 this.showResults();
             }
         });
