@@ -1,9 +1,9 @@
 /* globals PictureViewer, pictureArray */
-/* exported App */
+/* exported PictureApp */
 
 const appTemplate = document.getElementById('app-template');
 
-class App {
+class PictureApp {
     constructor() {
         this.pictureArray = pictureArray;
     }
