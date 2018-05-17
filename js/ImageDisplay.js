@@ -1,5 +1,5 @@
 'use strict';
-/* globals imageArray */
+/* globals */
 /* exported ImageDisplay */
 
 
@@ -8,33 +8,22 @@ const imageDisplayTemplate = document.getElementById('image-display-template').c
 
 class ImageDisplay {
 
-    constructor(userVoted) {
+    constructor(displayImages, userVoted) {
         this.userVoted = userVoted;
-        this.products = imageArray;
+        this.displayImages = displayImages;
     }
 
-    /*     getThreeMoreImages() {
-        const displayImages = [];
-
-        for(var i = 0; i < 3; i++) {
-            displayImages.push(getRandomImage(this.products));
+    update(displayImages) {
+        this.displayImages = displayImages;
+        while(this.row.lastElementChild) {
+            this.row.lastElementChild.remove();
         }
-        return displayImages;
-    } */
 
-    render(displayImages) {
-        const dom = imageDisplayTemplate;
-        
-        const tbl = document.createElement('table');
-        tbl.setAttribute('id', 'image-table');
-        const row = document.createElement('tr');
-
-        for(var i = 0; i < displayImages.length; i++) {
+        for(var i = 0; i < this.displayImages.length; i++) {
             const cell = document.createElement('td');
             const imgTag = document.createElement('img');
-            imgTag.setAttribute('src', displayImages[i].imageURL);
-            const displayImage = displayImages[i];
-            displayImage.timesShown++;
+            imgTag.setAttribute('src', this.displayImages[i].imageURL);
+            const displayImage = this.displayImages[i];
         
             imgTag.addEventListener('click', () => {
                 this.userVoted(displayImage);
@@ -42,10 +31,20 @@ class ImageDisplay {
             });
             
             cell.appendChild(imgTag);
-            row.appendChild(cell);
+            this.row.appendChild(cell);
         }
 
-        tbl.appendChild(row);
+    }
+
+    render() {
+        const dom = imageDisplayTemplate;
+        
+        const tbl = document.createElement('table');
+        tbl.setAttribute('id', 'image-table');
+        this.row = document.createElement('tr');
+        this.update(this.displayImages);
+
+        tbl.appendChild(this.row);
         dom.appendChild(tbl);
         return dom;
     }
