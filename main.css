@@ -1,7 +1,53 @@
 body {
-    background-color: rgb(170, 216, 243)
+    background-color: rgba(175, 130, 233, 0.699);
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-table {
+#root {
+    background-color: white;
+    width: 850px;
+    height: 700px;
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-image: url(img/bg_polka38.png);
+}
+h1 {
+    font-family: 'Cookie', cursive;
+    font-size: 50px;
+}
+h2 {
+    font-family: 'Rancho', cursive;
+    font-size: 30px;
+    margin: 0px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+h3 {
+    font-family: 'Rancho', cursive;
+    font-size: 30px;
+    margin: 35px;
+    text-align: center;
+}
+
+img {
+    height: 135px;
+}
+
+#image-table {
+    border: 0px solid black;
+    border-spacing: 10px 0px;
+}
+
+#image-table td {
     border: 1px solid black;
+    border-radius: 20%;
+    padding: 20px;
+    background-color: white;
+}
+td {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }

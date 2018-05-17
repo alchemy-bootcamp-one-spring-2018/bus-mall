@@ -5,10 +5,10 @@
 
 class Image {
     
-    constructor(name, image) {
+    constructor(name, imageURL) {
         
         this.name = name;
-        this.imageURL = image;
+        this.imageURL = imageURL;
         this.timesVoted = 0;
         this.timesShown = 0;
     }
