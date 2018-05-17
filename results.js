@@ -1,5 +1,3 @@
-/* globals productList */
-
 /* exported Results */
 
 'use strict';
