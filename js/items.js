@@ -9,7 +9,7 @@ class ItemDisplay {
         this.items = items;
         this.onSelect = onSelect;
     }
-
+//Trying to figure out how the update works, can't get it to do anything.
     update() {
         this.items = items;
 
