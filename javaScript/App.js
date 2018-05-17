@@ -1,13 +1,12 @@
 /* globals   ImageArea objectArray*/
 /* exported vote App */
-let votes = 0;
 const appTemplate = document.getElementById('app-template');
-
 class App {
     constructor() {
         this.list = objectArray;
         this.randomImageArray = [];
         this.tempArray = [];
+        this.votes = 0;
     }
 
     render(){
@@ -16,15 +15,16 @@ class App {
         this.getRandomObject();
         const imageComponent = new ImageArea(this.randomImageArray, (userChoice) => {
             userChoice.clicks++;
-            votes++;
+            this.votes++;
             this.getRandomObject();
             imageComponent.update(this.randomImageArray);
-            console.log('votes = ' + votes);
+            console.log('votes = ' + this.votes);
         });
         imageSection.appendChild(imageComponent.render());
         return dom;
 
     }
+
 
     getRandomObject(){
         this.randomImageArray = [];
