@@ -11,7 +11,7 @@ class ImageArea {
     }
 
     update(imageArray) {
-        this.ImageArray = imageArray;
+        this.imageArray = imageArray;
         while(this.imgSection.lastElementChild){
             this.imgSection.lastElementChild.remove();
         }
@@ -23,7 +23,7 @@ class ImageArea {
     render() {
         const dom = votingTemplate.content.cloneNode(true);
         this.imgSection = dom.querySelector('section');
-        this.update(this.ImageArray);
+        this.update(this.imageArray);
 
         return dom;
     }

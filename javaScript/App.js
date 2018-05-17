@@ -17,9 +17,7 @@ class App {
         const imageComponent = new ImageArea(this.randomImageArray, (userChoice) => {
             userChoice.clicks++;
             votes++;
-            console.log(this.tempArray[0]);
             this.getRandomObject();
-            console.log(this.randomImageArray[0]);
             imageComponent.update(this.randomImageArray);
             console.log('votes = ' + votes);
         });
@@ -29,7 +27,7 @@ class App {
     }
 
     getRandomObject(){
-        this.randomImageArray.length = [];
+        this.randomImageArray = [];
 
         for(let i = 0; i < 3;){
             let ranNum = Math.floor(Math.random() * this.list.length);
