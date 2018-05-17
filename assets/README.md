@@ -15,8 +15,3 @@ They are currently set as:
 
         this.productsToShow = 3;
         this.maxClicks = 10;
-
-
-To do:
-It's separated into components, and only App has direct access to the data.
-But I didn't figure out how to have App send a function that the child classes respond to.

@@ -7,10 +7,23 @@ const rootResults = document.getElementById('result-root');
 class App {
 
     constructor() {
-        this.productsToShow = 3;
+        this.productsToShow = 4;
         this.maxClicks = 10;
         this.totalClicks = 0;
         this.products = products;
+    }
+
+    drawTable() {
+        // fill the table with result rows
+        for(let index = 0; index < products.length; index++) {
+            let reportItem = new ReportItem (products[index]);
+            reportItem.render(rootResults);
+        }
+        // reveal the table
+        let hiddenElements = document.querySelectorAll('.hidden');
+        for(let i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].classList.toggle('hidden');
+        }
     }
 
     drawPictures() {
@@ -27,35 +40,19 @@ class App {
         // render the image for each product
         for(let loopIndex = 0; loopIndex < this.productsToShow; loopIndex ++) {
             var randomIndex = randomNumberSet[loopIndex];
-            let imageItem = new ImageItem(products[randomIndex]);
-            imageItem.render(rootPictures);
-        }
-
-        // there must be a more graceful way to do this, but I can't figure it out.
-        // attach another event listener to all existing pictures, and use it to increment totalClicks
-        // totalClicks determines whether we keep presenting new pictures, or we stop and show the report.
-        let pics = document.getElementsByClassName('pic');
-        for(let index = 0; index < pics.length; index++) {
-            let pic = pics[index];
-            pic.addEventListener('click', () => {
+            products[randomIndex].timesPresented++; // increment presented
+            let imageItem = new ImageItem(products[randomIndex], (product) => {
+                // this callback function handles when the picture is clicked
+                product.timesChosen++;
+                this.totalClicks++;
                 if(this.totalClicks < this.maxClicks) {
-                    this.totalClicks++;
                     this.drawPictures();
                 } else if(this.totalClicks === this.maxClicks) {
-                    // fill the table with result rows
-                    for(let index = 0; index < products.length; index++) {
-                        let reportItem = new ReportItem (products[index]);
-                        reportItem.render(rootResults);
-                    }
-                    // reveal the table
-                    let hiddenElements = document.querySelectorAll('.hidden');
-                    for(let i = 0; i < hiddenElements.length; i++) {
-                        hiddenElements[i].classList.toggle('hidden');
-                    }
+                    this.drawTable();
                 }
             });
+            imageItem.render(rootPictures);
         }
-    
     }
 
 }

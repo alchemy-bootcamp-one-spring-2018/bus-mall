@@ -21,7 +21,7 @@ const products = [
     new Product ('Cthulhu Monster', 'cthulhu.jpg'),
     new Product ('Doggie Duck Bill', 'dog-duck.jpg'),
     new Product ('Dragon Meat', 'dragon.jpg'),
-    new Product ('Flatwear Pens', 'pen.jpg'),
+    new Product ('Flatware Pens', 'pen.jpg'),
     new Product ('Pet Sweep', 'pet-sweep.jpg'),
     new Product ('Pizza Scissors', 'scissors.jpg'),
     new Product ('Shark Sleeping Bag', 'shark.jpg'),
