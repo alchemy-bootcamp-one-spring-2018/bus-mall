@@ -8,16 +8,13 @@
 //function - pick three index values
 function find3images() {
     let copy = imagesData.slice();
-    let holderArray=[];
+    let holderArray = [];
     
     for(let i = 0; i < 3; i++) {
         
         
         let imageOne = randomImage(copy);
         holderArray.push(imageOne);
-        
-        //push into empty array
-        
         
         // document.getElementById('img-' + i).src = imageOne;
     }

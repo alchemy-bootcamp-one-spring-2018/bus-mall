@@ -19,11 +19,16 @@ class App {
 
         //image displayed
         const imageDisplaySection = dom.getElementById('add-image-display');
-        const imageComponent = new ProductDisplay(find3images(), (imagesData) => {
-            this.imagesData.votes++;
-            alert('clicked');
-            // console.log(this.imagesData.votes);
-           
+        const imageComponent = new ProductDisplay(find3images(), (image) => {
+            
+            //can't figure this out:
+            // image.votes++;
+            // console.log(image.votes);
+            // this.imagesData.votes++;
+            // alert('clicked');
+            // console.log('click happened', event.target);
+            // console.log(this.imagesData[i].votes);
+ 
         });
         imageDisplaySection.appendChild(imageComponent.render());
 
