@@ -1,11 +1,11 @@
-/* globals ViewingReport, pictureArray */
+/* globals ViewingReport, pictures */
 /* exported ReportApp */
 
 const appTemplate = document.getElementById('app-template');
 
 class ReportApp {
     constructor() {
-        this.pictureArray = pictureArray;
+        this.pictures = pictures;
         this.totalViews = 0;
     }
 
@@ -13,7 +13,7 @@ class ReportApp {
         const dom = appTemplate.content;
 
         const viewingReportSection = dom.getElementById('viewing-report');
-        const viewingReportComponent = new ViewingReport(this.pictureArray);
+        const viewingReportComponent = new ViewingReport(this.pictures);
         const viewingReportDom = viewingReportComponent.render();
         viewingReportSection.appendChild(viewingReportDom);
 

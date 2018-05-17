@@ -14,7 +14,7 @@ class Picture {
         img.src = this.picture.source;
         this.picture.viewCount++;
         img.addEventListener('click', () => {
-            this.onSelect(this.picture, this.picture.selectCount);
+            this.onSelect(this.picture);
         });
         
         return dom;

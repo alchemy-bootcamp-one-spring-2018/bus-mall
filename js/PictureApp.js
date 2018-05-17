@@ -1,20 +1,20 @@
-/* globals PictureViewer, pictureArray */
+/* globals PictureViewer, pictures */
 /* exported PictureApp */
 
 const appTemplate = document.getElementById('app-template');
 
 class PictureApp {
     constructor() {
-        this.pictureArray = pictureArray;
+        this.pictures = pictures;
     }
 
     render() {
         const dom = appTemplate.content;
 
         const pictureViewerSection = dom.getElementById('picture-viewer');
-        const pictureViewerComponent = new PictureViewer(this.pictureArray, (selected) => {
-            selected.selectCount++;
-            pictureViewerComponent.update(this.pictureArray);
+        const pictureViewerComponent = new PictureViewer(this.pictures, (picture) => {
+            picture.selectCount++;
+            pictureViewerComponent.update(this.pictures);
         });
         const pictureDom = pictureViewerComponent.render();
         pictureViewerSection.appendChild(pictureDom);
