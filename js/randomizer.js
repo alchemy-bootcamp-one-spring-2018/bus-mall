@@ -1,6 +1,5 @@
-document.write('randomizer.js is loading properly');
-
 'use strict';
+/* global productOption */
 
 /* exported displaySets, selectImages, selectedImage */
 

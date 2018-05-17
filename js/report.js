@@ -1,8 +1,8 @@
 'use strict';
-/* globals productOption */
-/* exported ViewingReport */
+/* exported ViewingReport ViewsVotesReport */
 
 const viewingReportTemplate = document.getElementById('report-container-template').content;
+let ViewsVotesReport = '';
 
 class ViewingReport {
     constructor(productOption) {
@@ -15,7 +15,7 @@ class ViewingReport {
         while(this.tableBody.lastElementChild) {
             this.tableBody.lastElementChild.remove();
         }
-        for (let i = 0; i < this.productOption.length; i++) {
+        for(let i = 0; i < this.productOption.length; i++) {
             const reportComponent = new ViewsVotesReport(this.productOption[i]);
             this.tableBody.appendChild(reportComponent.render());
         }
