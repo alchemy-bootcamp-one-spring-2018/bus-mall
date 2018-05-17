@@ -29,6 +29,7 @@ class App {
             console.log(userChoice);
             console.log('votes = ' + votes);
         });
+        this.showResults();
         imageSection.appendChild(imageComponent.render());
         return dom;
     }
