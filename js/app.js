@@ -12,7 +12,7 @@ class App {
 
         const displayImageSelection = dom.getElementById('displayed-images');
         const imageViewerComponent = new ItemDisplay(acquireRandomItems(), (items) => {
-//My this.update was inside of here, but it never worked. 
+        //My this.update was inside of here, but it never worked.
         });
         const imageDom = imageViewerComponent.render();
         displayImageSelection.appendChild(imageDom);

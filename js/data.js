@@ -31,3 +31,5 @@ const wineGlass = new ItemToShow('wine-glass', 'assets/wine-glass.jpg', 0);
 let items = [bag, banana, bathroom, boots, breakfast, bubblegum,
     chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep,
     tauntaun, unicorn, usb, waterCan, wineGlass];
+
+console.log(items);
