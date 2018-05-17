@@ -1,52 +1,34 @@
 /* exported images */
-
 class ImageRecord {
 
-    constructor(imageName) {
+    constructor(productName, imageName) {
+        this.productName = productName;
         this.imageName = imageName;
         this.timesPresented = 0;
         this.timesChosen = 0;
     }
 
-    render(rootElement) {
-        this.timesPresented++;
-        let newImage = document.createElement('img');
-        newImage.src = 'img/' + this.imageName;
-        newImage.style.height = '200px';
-        newImage.classList.add('pic');
-        rootElement.appendChild (newImage);
-        newImage.addEventListener('click', () => {
-            this.timesChosen++;
-        });
-    }
-
-    reportResults(rootElement) {
-        let newParagraph = document.createElement('p');
-        newParagraph.textContent = 'Image ' + this.imageName + ' presented ' + this.timesPresented + ' time(s), chosen ' + this.timesChosen + ' times.';
-        rootElement.appendChild (newParagraph);
-    }
-
 }
 
 const images = [
-    new ImageRecord ('bag.jpg'),
-    new ImageRecord ('banana.jpg'),
-    new ImageRecord ('bathroom.jpg'),
-    new ImageRecord ('boots.jpg'),
-    new ImageRecord ('breakfast.jpg'),
-    new ImageRecord ('bubblegum.jpg'),
-    new ImageRecord ('chair.jpg'),
-    new ImageRecord ('cthulhu.jpg'),
-    new ImageRecord ('dog-duck.jpg'),
-    new ImageRecord ('dragon.jpg'),
-    new ImageRecord ('pen.jpg'),
-    new ImageRecord ('pet-sweep.jpg'),
-    new ImageRecord ('scissors.jpg'),
-    new ImageRecord ('shark.jpg'),
-    new ImageRecord ('sweep.png'),
-    new ImageRecord ('tauntaun.jpg'),
-    new ImageRecord ('unicorn.jpg'),
-    new ImageRecord ('usb.gif'),
-    new ImageRecord ('water-can.jpg'),
-    new ImageRecord ('wine-glass.jpg')
+    new ImageRecord ('R2 Luggage', 'bag.jpg'),
+    new ImageRecord ('Banana Slicer', 'banana.jpg'),
+    new ImageRecord ('iPad Holder', 'bathroom.jpg'),
+    new ImageRecord ('Toeless Boots', 'boots.jpg'),
+    new ImageRecord ('Mini Kitchen', 'breakfast.jpg'),
+    new ImageRecord ('Meatball Gum', 'bubblegum.jpg'),
+    new ImageRecord ('Strange Chair', 'chair.jpg'),
+    new ImageRecord ('Cthulhu Monster', 'cthulhu.jpg'),
+    new ImageRecord ('Doggie Duck Bill', 'dog-duck.jpg'),
+    new ImageRecord ('Dragon Meat', 'dragon.jpg'),
+    new ImageRecord ('Flatwear Pens', 'pen.jpg'),
+    new ImageRecord ('Pet Sweep', 'pet-sweep.jpg'),
+    new ImageRecord ('Pizza Scissors', 'scissors.jpg'),
+    new ImageRecord ('Shark Sleeping Bag', 'shark.jpg'),
+    new ImageRecord ('Baby Sweeper', 'sweep.png'),
+    new ImageRecord ('Tauntaun Sleeping Bag', 'tauntaun.jpg'),
+    new ImageRecord ('Unicorn Meat', 'unicorn.jpg'),
+    new ImageRecord ('USB Tentacle', 'usb.gif'),
+    new ImageRecord ('Escher\'s Watering Can', 'water-can.jpg'),
+    new ImageRecord ('Challenging Wine Glass', 'wine-glass.jpg')
 ];

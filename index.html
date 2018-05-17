@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Document</title>
+    <title>Product Survey</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <h1>Pick your favorite!</h1> 
     <div id="picture-root"></div>
-
-    <!-- <h2>Selections remaining: <span id="selections-remaining"></span></h2> -->
     
-    <h2>Results</h2>
-    <div id="result-root"></div>
+    <h2 class="hidden">Results</h2>
+    <table class="hidden">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Times Presented</th>
+                <th>Times Chosen</th>
+            </tr>
+        </thead>
+        <tbody id="result-root"></tbody>
+    </table>
+
+    <template id="result-row-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
 
 
     <script src="js/data.js"></script>
-    <script src="js/chooser.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/getRandomNumberSet.js"></script>
+    <script src="js/ReportItem.js"></script>
+    <script src="js/ImageItem.js"></script>
+    <script src="js/App.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

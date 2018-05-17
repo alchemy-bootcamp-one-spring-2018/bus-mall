@@ -1,0 +1,26 @@
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 75%;
+    text-align: center;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px solid rgb(207, 207, 207);
+    padding: 3px 4px;
+    color: black;
+}
+
+table thead {
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 4px solid #333333;
+}
