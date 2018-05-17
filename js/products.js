@@ -15,7 +15,7 @@ class Product {
     calcPercentage() {
         this.percentage = this.clicks / this.views;
         this.percentage = this.percentage.toFixed(2) * 100;
-        this.percentage = this.percentage + '%';
+        this.percentage = this.percentage.toFixed(0) + '%';
     }
 }
 

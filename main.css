@@ -1,10 +1,50 @@
+h1, h2 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    letter-spacing: .2em;
+}
+
+#root {
+    font-family: 'Average', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 img {
-    max-width: 100%;
+    max-width: 300px;
     cursor: pointer;
+
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid lightgray;
+    padding: 50px;
+    height: 400px;
+    
+}
+
+.image-container>section {
+    text-align: center;
+}
+
+#choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #image-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
+
 }
+
+
+
