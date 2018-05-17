@@ -16,6 +16,7 @@ html {
     padding: 0;
     margin: 0;
     display: block;
+    overflow-x: hidden;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 }
 
 img {
-    height: fit-content;
+    height: 200px;
     width: auto;
 }
 
@@ -37,16 +38,11 @@ img {
     /* border: 1px solid red; */
 }
 
-.image-vote {
-    height: 200px;
-    width: auto;
-}
-
 .container {
     display: flex;
     /* margin: 0 0 13px 0; */
     justify-content: space-between;
-    background: white;
+    /* background: white; */
     /* border: 1px solid red; */
 }
 
@@ -62,18 +58,15 @@ img {
     border-left: 3px solid gray;
 }
 
-.underline {
-    text-decoration: underline;
-}
-
 #main {
+    background: white;
     margin: 0 33px;
     padding: 13px;
     flex-direction: column;
 }
 
-#body {
-    /* border: 1px solid red; */
+#picture-section img {
+    cursor: pointer;
 }
 
 #nav {
@@ -92,46 +85,39 @@ img {
     text-decoration: none;
     background: black;
     color: white;
-    padding: 13px 13px 15px 13px;
+    padding: 13px 13px 17px 13px;
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
 }
 
-#res-holder {
-    flex: 1;
-    margin: 0;
-    justify-content: space-between;
-    background: darkslategray;
-    display: none;
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#results {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
+#results-section {
+    flex: 1;
+    margin: auto;
+}
+
+#results-section span {
+    /* top: 50%;
+    transform: translate(0, -50%); */
     font-size: .75rem;
     line-height: 1.25;
-    color: white;
+    color: black;
     margin: auto;
     padding: 13px;
-    width: fit-content;
+    margin: auto;
 }
 
-#vote {
-    flex: 3;
-    flex-flow: column;
-}
-
-#images {
-    border-bottom: 1px solid black;
-    box-shadow: 0 0 3px black;
-}
-
-#images .container {
-    flex-direction: column;
+#picture-section {
+    flex: 4;
 }
 
 #text {
-    padding: 0 13px;
     margin: 0;
+    padding: 13px;
 }
