@@ -22,12 +22,6 @@ class App {
         return dom;
     }
 }
-    
-
-
-
-
-
 
 // gets random item out of the image array
 function getRandomImage() {
@@ -36,3 +30,8 @@ function getRandomImage() {
 
 getRandomImage();
 console.log(getRandomImage());
+    
+
+
+
+

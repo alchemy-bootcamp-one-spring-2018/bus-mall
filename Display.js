@@ -1,3 +1,5 @@
+/* globals images getRandomImage */
+/* exported images */
 'use strict';
 
 const imageTemplate = document.getElementById('image-template').content;
@@ -11,22 +13,17 @@ class Display {
         const dom = imageTemplate;
 
         const domImage = dom.querySelector('#pic1');
-        domImage.src = this.list[0].path;
+        domImage.src = this.list[1].path;
         dom.appendChild(domImage);
 
         
+        const Random = imageTemplate;
         
-
+        const coolImage = Random.querySelector('#pic2');
+        coolImage.src = getRandomImage(images);
+        Random.appendChild(coolImage);
 
         console.log(this.list);
         return dom;
     }
 }
-
-// function displayHeader() {
-//     var thead = document.getElementById('thead');
-//     var child = document.createElement('tr');
-//     var locationTitle = document.createElement('td');
-//     thead.appendChild(child);
-//     child.appendChild(locationTitle);
-//     locationTitle.textContent = 'Locations';
