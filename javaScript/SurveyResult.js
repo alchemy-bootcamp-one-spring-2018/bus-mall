@@ -1,3 +1,4 @@
+/* exported SurveyResult */
 'use strict';
 const resultDataTemplate = document.getElementById('results-data-template');
 

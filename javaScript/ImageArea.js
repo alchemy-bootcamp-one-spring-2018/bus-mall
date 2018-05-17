@@ -23,10 +23,7 @@ class ImageArea {
     render() {
         const dom = votingTemplate.content.cloneNode(true);
         this.imgSection = dom.querySelector('section');
-        for(let i in this.imageArray){
-            this.imgComponent = new ImageMaker(this.imageArray[i], this.onClick);
-            this.imgSection.appendChild(this.imgComponent.render());
-        }
+        this.update(this.ImageArray);
 
         return dom;
     }

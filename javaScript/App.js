@@ -23,17 +23,13 @@ class App {
         getRandomObject();
         const imageComponent = new ImageArea(randomImageArray, (userChoice) => {
             userChoice.clicks++;
-            this.votes++;
-            console.log('votes = ' + votes);
-            console.log(userChoice);
+            votes++;
             getRandomObject();
             imageComponent.update(randomImageArray);
-            // if(this.votes === 2){
-            //     this.showResults();
-            // }
+            console.log(userChoice);
+            console.log('votes = ' + votes);
         });
         imageSection.appendChild(imageComponent.render());
-        this.showResults();
         return dom;
     }
 }
@@ -49,17 +45,3 @@ function getRandomObject() {
     }
     console.log(randomImageArray);
 }
-
-
-
-
-
-// if(vote === 25){
-//     displayResults();
-// }
-
-// function clearImages() {
-//     const imageSection = document.getElementById('image-vote');
-//     imageSection.parentNode.removeChild(imageSection);
-//     getRandomObject();
-// }
