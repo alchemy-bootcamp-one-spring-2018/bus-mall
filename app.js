@@ -1,10 +1,13 @@
-
-/* exported productArray */
-
-const productArray = [{
+var productArray = [{
     name: 'bag',
     image: 'images/bag.jpg',
-    count: 0
+    count: 0,
+
+    createImage: function() {
+        var img = document.createElement('img');
+        img.setAttribute('src', this.image);
+        return img;
+    }
 }, {
     name: 'banana',
     image: 'images/banana.jpg',
@@ -82,3 +85,33 @@ const productArray = [{
     image: 'images/wine-glass.jpg',
     count: 0
 }];
+
+//productArray displays in console
+console.log(productArray);
+
+class Product {
+    constructor(name, image, count) {
+        this.name = name;
+        this.image = image;
+        this.count = count;
+    }
+}
+
+// function createImage() {
+//     var img = document.createElement('img');
+//     for(var i = 0; i < productArray.length; i++) {
+//         img.setAttribute('src', this.image);
+//         return img;
+    
+
+
+
+function showImage() {
+    var row = document.getElementById('images-displayed');
+    for(var j = 0; j < productArray.length; j++) {
+        var img = productArray[j].createImage();
+        row.appendChild(img);
+    }
+}
+
+showImage();
