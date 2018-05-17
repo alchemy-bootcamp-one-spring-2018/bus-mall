@@ -24,6 +24,7 @@
         <h1>BUSMALL</h1>
         <h4>The Ultimate Shopping Experience</h4>
         <section id="result"></section>
+        <section id="result-chart"></section>
     </template>
 
     <template id="result-template">
@@ -55,11 +56,19 @@
         </tr>
     </template>
 
+    <template id="result-chart-template">
+        <h2>Result Chart</h2>
+        <div id="chart-container">
+            <canvas width="600"></canvas>
+        </div>
+    </template>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script src="./js/products.js"></script>
+    <script src="./js/ResultChart.js"></script>
     <script src="./js/ProductResult.js"></script>
     <script src="./js/Result.js"></script>
     <script src="./js/ResultApp.js"></script>
-    <script src="result.js"></script>
+    <script src="mainResult.js"></script>
 </body>
 </html>
