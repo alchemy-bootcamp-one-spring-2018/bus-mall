@@ -12,8 +12,8 @@ class App {
         const dom = appTemplate.content;
 
         const pictureViewerSection = dom.getElementById('picture-viewer');
-        const pictureViewerComponent = new PictureViewer(this.pictureArray, (picture, selectCount) => {
-            picture.selectCount = selectCount;
+        const pictureViewerComponent = new PictureViewer(this.pictureArray, (selected) => {
+            selected.selectCount++;
             pictureViewerComponent.update(this.pictureArray);
         });
         const pictureDom = pictureViewerComponent.render();

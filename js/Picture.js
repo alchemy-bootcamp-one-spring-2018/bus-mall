@@ -12,8 +12,9 @@ class Picture {
         const dom = pictureTemplate.content.cloneNode(true);
         const img = dom.querySelector('img');
         img.src = this.picture.source;
+        this.picture.viewCount++;
         img.addEventListener('click', () => {
-            this.onSelect(this.picture, this.picture.selectCount++);
+            this.onSelect(this.picture, this.picture.selectCount);
         });
         
         return dom;

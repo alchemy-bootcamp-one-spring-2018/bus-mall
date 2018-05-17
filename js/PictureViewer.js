@@ -15,11 +15,12 @@ class PictureViewer {
             ul.lastElementChild.remove();
         }
 
+        let arrayCopy = picture.slice();
         for(let i = 0; i < 3; i++) {
-            let index = this.random(picture.length);
-            const pictureComponent = new Picture(picture[index], this.onSelect);
+            let index = this.random(arrayCopy.length);
+            const pictureComponent = new Picture(arrayCopy[index], this.onSelect);
             ul.appendChild(pictureComponent.render());
-            picture.splice(index, 1);
+            arrayCopy.splice(index, 1);
         }
     }
 
