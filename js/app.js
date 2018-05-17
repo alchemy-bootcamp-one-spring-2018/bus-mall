@@ -6,15 +6,29 @@ const  appTemplate = document.getElementById('app-template');
 
 class App {
     constructor() {
-
-
+        //this.? = ?;
+        //this.totalVotes = 0;
     }
+
+    //showVoteResults() {
+        //if total vote count is less than 25 don't display
+        //else total vote count is equal to 25, display UL
+
+        // const VoteResultsDom = this.VoteResults.render();
+        // this.resultsSection.appendChild(VoteResultsDom);
+
+    // Put update stuff here    
+
+    //}
 
     render() {
         const dom = appTemplate.content;
+        
+        const productVoteSection = dom.getElementById('product-vote');
+        
+        
         const selectedImages = threeRandomProducts(productList.length);
 
-        const productVoteSection = dom.getElementById('product-vote');
         const productVoteComponent = new ProductVote(
             productList[selectedImages[0]].image ,
             productList[selectedImages[1]].image ,

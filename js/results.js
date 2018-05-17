@@ -6,13 +6,13 @@
 
 const resultsTemplate = document.getElementById('results-template');
 
-class Result {
+class VoteResults {
     constructor(){
 
     }
     render() {
-        const resultTest = resultsTemplate.content.cloneNode(true);
+        const voteResults = resultsTemplate.content.cloneNode(true);
 
-        return resultTest;
+        return voteResults;
     }
 }

@@ -23,9 +23,16 @@ class ProductVote {
         secondProduct.src = this.image1;
         thirdProduct.src = this.image2;
         
+        firstProduct.addEventListener('click',()=> {
+            console.log('event listener working?', this.image0 );
+         } )
+        secondProduct.addEventListener('click',()=> {
+            console.log('event listener working?', secondProduct );
+         } )
+        thirdProduct.addEventListener('click',()=> {
+            console.log('event listener working?', thirdProduct );
+         } )
        
-        console.log('product vote render function' , randomProductImages);
-        console.log(this.image1 , this.image0)
         return randomProductImages;
     }
 }
