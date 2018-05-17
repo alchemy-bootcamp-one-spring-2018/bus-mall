@@ -10,6 +10,7 @@ class App {
     
     constructor() {
         this.list = productList;
+        this.vote = 0;
         this.lastDisplay = [];
     }
 
@@ -41,15 +42,28 @@ class App {
         const choiceComponent = new ProductChoices(randomProducts, (choice) => {
             choiceComponent.update(this.randomize(this.list.length));
             choice.count++;
-            console.log(choice);
+            this.vote++;
+            
+            if(this.vote === 25) {
+                const resultsComponent = new Results(productList);
+                this.resultsSection.appendChild(resultsComponent.render());
+                choiceComponent.clear();
+            }
+              
         });
+        
         choiceSection.appendChild(choiceComponent.render());
         
-        const resultsSection = dom.getElementById('results');
-        const resultsComponent = new Results(productList);
-        resultsSection.appendChild(resultsComponent.render());
-
+        this.resultsSection = dom.getElementById('results');
+        
         return dom;
     }
+    
+    results() {
+        
+    }
+    
+        
 }
+
 

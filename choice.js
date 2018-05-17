@@ -17,7 +17,7 @@ class Choice {
         domChoice.addEventListener('click', () => {
             this.onSelect(this.choice);
         });
-
+        
         return dom;
     }
 }

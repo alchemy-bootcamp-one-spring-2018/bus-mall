@@ -11,23 +11,30 @@ class ProductChoices {
         this.onSelect = onSelect;
     }
 
+    clear() {
+        while(this.div.lastElementChild) {
+            this.div.lastElementChild.remove();
+        }
+    }
+
     update(list) {
         this.list = list;
-        while(this.ul.lastElementChild) {
-            this.ul.lastElementChild.remove();
+        
+        while(this.div.lastElementChild) {
+            this.div.lastElementChild.remove();
         }
         
         for(let i = 0; i < this.list.length; i++) {
             const choiceComponent = new Choice(this.list[i], this.onSelect);
             const choiceDom = choiceComponent.render();
-            this.ul.appendChild(choiceDom);
+            this.div.appendChild(choiceDom);
         }
     }
 
     render() {
 
         const dom = productTemplate.content.cloneNode(true);
-        this.ul = dom.querySelector('ul');
+        this.div = dom.querySelector('div');
 
         this.update(this.list);
         
