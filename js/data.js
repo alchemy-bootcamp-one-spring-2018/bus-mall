@@ -1,5 +1,7 @@
 'use strict';
+/* globals */
 /* exported imageArray */
+
 
 class Image {
     

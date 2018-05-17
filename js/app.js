@@ -16,24 +16,25 @@ class App {
         for(var i = 0; i < 3; i++) {
             displayImages.push(getRandomImage(this.products));
         }
-       //console.log('displayImages ', displayImages);
         return displayImages;
     }
 
     render() {
         const dom = appTemplate.content;
 
+        // Image Display rendering
         const addDisplaySection = dom.getElementById('image-display');
         const addDisplayComponent = new ImageDisplay((image) => {
             // Anonymous functions becomes userVoted inside of ImageDisplay.js
-            console.log('this is add to timesVoted', image);
             this.totalVotes++;
             image.timesVoted++;
-            console.log('userVoted - totals, thisImage',this.totalVotes,image);
+            console.log('userVoted - totals, thisImage', this.totalVotes, image);
         });
         addDisplaySection.appendChild(addDisplayComponent.render(this.getThreeRandomImages()));
 
+
         
+        // Results Display rendering
         const addResultsSection = dom.getElementById('results-display');
         const addResultsComponent = new ResultsDisplay();
         addResultsSection.appendChild(addResultsComponent.render());

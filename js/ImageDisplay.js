@@ -1,5 +1,5 @@
 'use strict';
-/* globals imageArray */
+/* globals */
 /* exported ImageDisplay */
 
 
@@ -28,6 +28,7 @@ class ImageDisplay {
             imgTag.setAttribute('height', '200px');
             imgTag.addEventListener('click', () => {
                 this.userVoted(displayImage);
+
             });
             
             cell.appendChild(imgTag);
