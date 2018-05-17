@@ -29,10 +29,16 @@
     <p><strong>It's up to you</strong> to help select the best products for our BusMall catalog. You can vote for your favorite just by clicking on one of the three images above. Once you vote, we'll show you three more products - you can vote up to 25 times!</p>
 
     <template id = "report-container-template">
-        <div class = "hidden">
-            <h2>Product Voting Results</h2>
-            <p></p>
-        </div>
+            <h2 class = "views-votes-report-header">Product Voting Results</h2>
+            <table class = "hidden">
+                <thead><tr>
+                    <th>Product Name</th>
+                    <th>View Count</th>
+                    <th>Vote Count</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            </table>   
     </template>
 
 
@@ -41,7 +47,7 @@
     <section id = "report-container"></section>
 </template>
     
-    <script src = "js/images.js"></script>
+    <script src = "js/productoption.js"></script>
     <script src = "js/randomizer.js"></script>
     <script src = "js/report.js"></script>
     <script src = "js/App.js"></script>
