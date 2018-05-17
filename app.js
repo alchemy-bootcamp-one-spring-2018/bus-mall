@@ -15,8 +15,8 @@ class App {
 
         const imageDisplaySection = dom.getElementById('pictures');
         const imageDisplayComponent = new Display(this.images);
-        const imageDom = imageDisplayComponent.render();
-        imageDisplaySection.appendChild(imageDom);
+        const imageDom = imageDisplayComponent;
+        imageDisplaySection.appendChild(imageDom.render());
 
 
         return dom;

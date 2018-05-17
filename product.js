@@ -14,7 +14,7 @@ class ImageDisplay {
 }
 
 //****YOU NEED MORE ITEMS HERE!!!
-let bag = new ImageDisplay('bag.jpg', 'bag');
+let bag = new ImageDisplay('./img/bag.jpg', 'bag');
 let banana = new ImageDisplay('banana.jpg', 'banana');
 let bathroom = new ImageDisplay('bathroom.jpg', 'bathroom');
 let boots = new ImageDisplay('boots.jpg', 'boots');
