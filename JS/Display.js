@@ -11,10 +11,15 @@ class Display {
 
     render() {
         const dom = imageTemplate;
-        console.log(imageTemplate);
-        const domImage = dom.querySelector('#pic1');
-        domImage.src = this.list[1].path;
-        dom.appendChild(domImage);
+        
+        
+        
+        for(let i = 0; i < 3; i++) {
+            const domImage = dom.querySelector('img');
+            domImage.src = this.list[i].path;
+            dom.appendChild(domImage);
+
+        }
         
         // const Random = imageTemplate;
         
