@@ -6,39 +6,41 @@ const appTemplate = document.getElementById('app-template');
 class App {
     constructor() {
         this.list = objectArray;
-        this.votes = votes;
+        this.randomImageArray = [];
+        this.tempArray = [];
     }
 
     render(){
         const dom = appTemplate.content;
         const imageSection = dom.getElementById('image-vote');
-        getRandomObject();
-        const imageComponent = new ImageArea(randomImageArray, (userChoice) => {
+        this.getRandomObject();
+        const imageComponent = new ImageArea(this.randomImageArray, (userChoice) => {
             userChoice.clicks++;
             votes++;
-            getRandomObject();
-            imageComponent.update(randomImageArray);
-            console.log(userChoice);
+            console.log(this.tempArray[0]);
+            this.getRandomObject();
+            console.log(this.randomImageArray[0]);
+            imageComponent.update(this.randomImageArray);
             console.log('votes = ' + votes);
         });
         imageSection.appendChild(imageComponent.render());
         return dom;
-    }
-}
 
-let randomImageArray = [];
-function getRandomObject() {
-    let tempArray = [];
-    randomImageArray.length = 0;
-    for(let i = 0; i < 3;){
-        let ranNum = Math.floor(Math.random() * objectArray.length);
-        if(tempArray.includes(ranNum) === false && randomImageArray.includes(objectArray[ranNum]) === false){
-            randomImageArray.push(objectArray[ranNum]);
-            randomImageArray[i].views++;
-            i++;
-        }
     }
-    tempArray = randomImageArray;
-    console.log(randomImageArray);
-    console.log(tempArray);
+
+    getRandomObject(){
+        this.randomImageArray.length = [];
+
+        for(let i = 0; i < 3;){
+            let ranNum = Math.floor(Math.random() * this.list.length);
+
+            if(this.tempArray.includes(this.list[ranNum]) === false && this.randomImageArray.includes(this.list[ranNum]) === false){
+                this.randomImageArray.push(this.list[ranNum]);
+                this.randomImageArray[i].views++;
+                i++;
+            }
+        }
+
+        this.tempArray = this.randomImageArray;
+    }
 }
