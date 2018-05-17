@@ -1,6 +1,6 @@
 /* globals  ImageArea objectArray*/
 /* exported vote App */
-let vote = 0;
+let votes = 0;
 const appTemplate = document.getElementById('app-template');
 
 class App {
@@ -11,6 +11,8 @@ class App {
         getRandomObject();
         const imageComponent = new ImageArea(randomImageArray, (userChoice) => {
             userChoice.clicks++;
+            votes++;
+            console.log('votes = ' + votes);
             console.log(userChoice);
             getRandomObject();
             imageComponent.update(randomImageArray);
@@ -30,7 +32,6 @@ function getRandomObject() {
         randomImageArray[i].views++;
 
     }
-    vote++;
     console.log(randomImageArray);
 }
 
