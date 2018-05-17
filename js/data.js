@@ -32,8 +32,7 @@ let items = [bag, banana, bathroom, boots, breakfast, bubblegum,
     chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep,
     tauntaun, unicorn, usb, waterCan, wineGlass];
 
-
-
+    console.log(items);
 // const allItems = [{
 //     name: 'bag',
 //     image: 'assets/bag.jpg'

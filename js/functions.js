@@ -14,7 +14,6 @@ function acquireRandomItems() {
     for(var i = 0; i < 3; i++){
         var itemOne = getRandomItem(copy);
         holderArray.push(itemOne);
-
         // itemOne = document.getElementById('img-' + i).src;
 
     }
@@ -40,6 +39,4 @@ function getRandomItem(listOfItems){
 function getRandomNumber(max){
     return Math.floor(Math.random() * Math.floor(max));
 }
-
-console.log(getRandomNumber(5));
 
