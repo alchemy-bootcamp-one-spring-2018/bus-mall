@@ -19,12 +19,10 @@ class App {
         //image displayed
         const imageDisplaySection = dom.getElementById('add-image-display');
         const imageComponent = new ProductDisplay(find3images(), (image) => {
-            
-            // can't figure this section out:
             image.votes++;
-            imageComponent.update(find3images());
-            // console.log('click happened', event.target);
+            console.log(image.name + ' has ' + image.votes + ' votes.');
             
+            imageComponent.update(find3images());
         });
         imageDisplaySection.appendChild(imageComponent.render());
 

@@ -19,14 +19,14 @@ function find3images() {
 
 find3images();
 
-//function - generate random number for above
-function randomImage(listOfImages) {
 
-    let index = getRandomIndex(listOfImages.length);
+function randomImage(imagesData) {
 
-    let image = listOfImages[index];
+    let index = getRandomIndex(imagesData.length);
 
-    listOfImages.splice(index, 1);
+    let image = imagesData[index];
+
+    imagesData.splice(index, 1);
 
     return image;
 }

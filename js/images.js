@@ -12,14 +12,9 @@ class ProductDisplay {
 
     update(imagesData) {
         this.imagesData = imagesData;
-
+        
         for(let i = 0; i < 3; i++) {
             const img = this.container.querySelector('#img' + i);
-            img.addEventListener('click', () => {
-                this.onSelect(this.imagesData[i]);
-                // this.imagesData[i].votes++;
-                console.log(this.imagesData[i].votes);
-            });
             img.src = this.imagesData[i].imageSrc;
         }
     }
@@ -27,7 +22,14 @@ class ProductDisplay {
     render() {
         const dom = imageDisplayTemplate.content.cloneNode(true);
         this.container = dom.querySelector('div');
-        
+
+        for(let i = 0; i < 3; i++) {
+            const img = this.container.querySelector('#img' + i);
+            img.addEventListener('click', () => {
+                this.onSelect(this.imagesData[i]);
+            });
+        }
+
         this.update(this.imagesData);
         
         return dom;
