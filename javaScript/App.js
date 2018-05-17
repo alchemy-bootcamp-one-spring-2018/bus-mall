@@ -6,7 +6,9 @@ const appTemplate = document.getElementById('app-template');
 class App {
     constructor() {
         this.list = objectArray;
+        this.votes = votes;
     }
+
     showResults() {
         const resultsDom = appTemplate.content;
         const resultsSection = resultsDom.getElementById('results-section');
@@ -21,11 +23,14 @@ class App {
         getRandomObject();
         const imageComponent = new ImageArea(randomImageArray, (userChoice) => {
             userChoice.clicks++;
-            votes++;
+            this.votes++;
             console.log('votes = ' + votes);
             console.log(userChoice);
             getRandomObject();
             imageComponent.update(randomImageArray);
+            // if(this.votes === 2){
+            //     this.showResults();
+            // }
         });
         imageSection.appendChild(imageComponent.render());
         this.showResults();
