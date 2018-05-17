@@ -1,35 +1,38 @@
-/* globals randomImg imageArray */
-/* exported pictureBox Prod */
+/* globals images Display */
+/* exported App Prod */
 'use strict';
 
+const appTemplate = document.getElementById('app-template').content;
 
-// creates a variable that references the "picture-box element in index.html"
-// const pictureBox = document.getElementById('picture-box');
+class App {
+    constructor() {
+        this.images = images;
+        this.views = 0;
+    }
+    render() {
+        
+        const dom = appTemplate;
+
+        const imageDisplaySection = dom.getElementById('pictures');
+        const imageDisplayComponent = new Display(this.images);
+        const imageDom = imageDisplayComponent.render();
+        imageDisplaySection.appendChild(imageDom);
 
 
-
-
-
-
-
-
-
-
-
+        return dom;
+    }
+}
     
 
-//     showImage() {
-//         let displayImage;
-//         displayImage = this.image;
-//     }
-// }
-
-// function getRandomImage(array) {
-//     return Math.floor(Math.random() * imageArray.length);
-// }
-
-// console.log(randomImg);
-// console.log(imageArray.length);
 
 
-// getRandomImage(dvds);
+
+
+
+// gets random item out of the image array
+function getRandomImage() {
+    return Math.floor(Math.random() * images.length);
+}
+
+getRandomImage();
+console.log(getRandomImage());
