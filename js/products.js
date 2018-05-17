@@ -8,6 +8,14 @@ class Product {
         this.image = 'image/' + image;
         this.views = 0;
         this.clicks = 0;
+        
+        
+    }
+
+    calcPercentage() {
+        this.percentage = this.clicks / this.views;
+        this.percentage = this.percentage.toFixed(2) * 100;
+        this.percentage = this.percentage + '%';
     }
 }
 

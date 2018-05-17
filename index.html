@@ -31,14 +31,17 @@
 
     <template id="result-template">
         <h2>Results:</h2>
-        <table id="result-list">
+        <table>
             <thead>
                 <tr>
-                    <td></td>
+                    <th>Name</th>
+                    <th>Clicks</th>
+                    <th>Views</th>
+                    <th>Percent</th>
                 </tr>
             </thead>
-            <tbody>
-
+            <tbody id="result-tbody">
+                
             </tbody>
             <tfoot>
 
@@ -46,7 +49,17 @@
         </table>
     </template>
 
+    <template id="product-result-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
     <script src="./js/products.js"></script>
+    <script src="./js/ProductResult.js"></script>
     <script src="./js/Image.js"></script>
     <script src="./js/Choice.js"></script>
     <script src="./js/Result.js"></script>

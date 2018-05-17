@@ -28,10 +28,7 @@ class Choice {
         const dom = choiceTemplate.content.cloneNode(true);
         this.imageSection = dom.getElementById('image-section');
 
-        for(let i = 0; i < this.randomProductsArray.length; i++) {
-            const imageComponent = new Image(this.randomProductsArray[i], this.onClick);
-            this.imageSection.appendChild(imageComponent.render());
-        }
+        this.update(this.randomProductsArray);
         
         return dom;
     }
