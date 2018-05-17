@@ -1,5 +1,5 @@
 /* exported App */
-/* globals Product, imagesData, find3images */
+/* globals ProductDisplay, imagesData, find3images */
 'use strict';
 
 const appTemplate = document.getElementById('app-template');
@@ -9,6 +9,7 @@ class App {
         //initialization logic
         //state containers
         this.imagesData = imagesData;
+        // this.image = image;
         // still need to add results section
         // this.results = results;
     }
@@ -18,7 +19,12 @@ class App {
 
         //image displayed
         const imageDisplaySection = dom.getElementById('add-image-display');
-        const imageComponent = new ProductDisplay(find3images());
+        const imageComponent = new ProductDisplay(find3images(), (imagesData) => {
+            this.imagesData.votes++;
+            alert('clicked');
+            // console.log(this.imagesData.votes);
+           
+        });
         imageDisplaySection.appendChild(imageComponent.render());
 
 
