@@ -15,13 +15,13 @@ acquireRandomItems();
 
 
 
-function getRandomItem(listOfItems){
+function getRandomItem(items){
 
-    let index = getRandomNumber(listOfItems.length);
+    let index = getRandomNumber(items.length);
 
-    let item = listOfItems[index];
+    let item = items[index];
 
-    listOfItems.splice(index, 1);
+    items.splice(index, 1);
 
     return item;
 }

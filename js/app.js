@@ -11,9 +11,10 @@ class App {
         const dom = appTemplate;
 
         const displayImageSelection = dom.getElementById('displayed-images');
-        const imageViewerComponent = new ItemDisplay(acquireRandomItems(), (items) => {
+        const imageViewerComponent = new ItemDisplay(acquireRandomItems(), (item) => {
         //My this.update was inside of here, but it never worked.
-            items.votes++;
+            item.votes++;
+            console.log(item.name + ' has ' + item.votes + ' votes');
             imageViewerComponent.update(acquireRandomItems());
         });
         const imageDom = imageViewerComponent.render();
