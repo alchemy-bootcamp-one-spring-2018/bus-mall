@@ -15,6 +15,8 @@ class ProductChoices {
         while(this.div.lastElementChild) {
             this.div.lastElementChild.remove();
         }
+
+        this.div.textContent = 'Thanks for taking the survey!';
     }
 
     update(list) {

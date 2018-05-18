@@ -1,6 +1,6 @@
 /* exported App */
 
-/* globals ProductChoices Results productList*/
+/* globals ProductChoices productList*/
 
 'use strict';
 
@@ -43,27 +43,17 @@ class App {
             choiceComponent.update(this.randomize(this.list.length));
             choice.count++;
             this.vote++;
+            console.log(choiceComponent);
             
-            if(this.vote === 25) {
-                const resultsComponent = new Results(productList);
-                this.resultsSection.appendChild(resultsComponent.render());
+            if(this.vote === 5) {
                 choiceComponent.clear();
             }
-              
         });
         
         choiceSection.appendChild(choiceComponent.render());
         
-        this.resultsSection = dom.getElementById('results');
-        
         return dom;
     }
-    
-    results() {
-        
-    }
-    
-        
 }
 
 

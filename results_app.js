@@ -1,6 +1,6 @@
 /* exported App */
 
-/* globals ProductChoices Results productList*/
+/* globals Results productList clearProductData ViewingChart*/
 
 'use strict';
 
@@ -10,60 +10,30 @@ class App {
     
     constructor() {
         this.list = productList;
-        this.vote = 0;
-        this.lastDisplay = [];
-    }
-
-    randomize(max) {
-        const productImages = [];
-        
-        for(let i = 0; i < 3; i++) {
-            const index = Math.floor(Math.random() * max);
-            
-            if(productImages.includes(this.list[index]) || this.lastDisplay.includes(this.list[index])) {
-                i--;
-                continue;
-            }
-    
-            productImages[i] = this.list[index];
-            productImages[i].views++;
-        }
-        
-        this.lastDisplay = productImages;
-        return productImages;
     }
 
     render() {
         
         const dom = appTemplate.content;
-        
-        const choiceSection = dom.getElementById('choices');
-        const randomProducts = this.randomize(this.list.length);
-        const choiceComponent = new ProductChoices(randomProducts, (choice) => {
-            choiceComponent.update(this.randomize(this.list.length));
-            choice.count++;
-            this.vote++;
-            
-            if(this.vote === 25) {
-                const resultsComponent = new Results(productList);
-                this.resultsSection.appendChild(resultsComponent.render());
-                choiceComponent.clear();
-            }
-              
+
+        const button = dom.querySelector('button');
+        button.addEventListener('click', () => {
+            clearProductData();
+            window.location.reload();
         });
-        
-        choiceSection.appendChild(choiceComponent.render());
-        
-        this.resultsSection = dom.getElementById('results');
+
+
+        const resultsSection = dom.getElementById('results');
+        const resultsComponent = new Results(this.list);
+        resultsSection.appendChild(resultsComponent.render());
+
+        const viewingChartSection = dom.getElementById('viewing-chart');
+        const viewingChartComponent = new ViewingChart(this.list);
+        const viewingChartDom = viewingChartComponent.render();
+        viewingChartSection.appendChild(viewingChartDom);
         
         return dom;
-    }
-    
-    results() {
-        
-    }
-    
-        
+    }  
 }
 
 

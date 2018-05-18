@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,29 +15,17 @@
     </div>
 
     <template id="app-template">
-        <h1>BusMall</h1>
-
-        <section id="choices">
-        
-        </section>
+        <h1>BusMall Results!</h1>
+        <button>Clear Data</button>
 
         <section id="results">
 
         </section>
 
-    </template>
+        <section id="viewing-chart">
 
-    <template id="choices-template">
-        <h2>product choice</h2>
-        <div>
+        </section>
 
-        </div>
-       
-    </template>
-
-    <template id="choice-template">
-        <span><img class="product-choice"></span>
-        
     </template>
 
     <template id="results-template">
@@ -46,11 +35,18 @@
 
         </div>
     </template>
+
+    <template id="viewing-chart-template">
+        <h2>Chart</h2>
+        <div id="chart-container">
+            <canvas width="400"></canvas>
+        </div>
+    </template>
     
-    <script src="choice.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="ViewingChart.js"></script>
     <script src="products.js"></script>
     <script src="results.js"></script>
-    <script src="choices.js"></script> 
     <script src="results_app.js"></script>
     <script src="main_results.js"></script>
 
