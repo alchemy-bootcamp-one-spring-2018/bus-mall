@@ -36,7 +36,11 @@ class App {
 
         const imageDisplaySection = dom.getElementById('pictures');
         const randomObjArray = this.randomize(this.list.length);
-        const imageDisplayComponent = new Display(randomObjArray);
+        const imageDisplayComponent = new Display(randomObjArray, (product) => {
+            // onClick() for Selected
+            product.voteCount++;
+            console.log('onClick', product);
+        });
         imageDisplaySection.appendChild(imageDisplayComponent.render());
 
 
