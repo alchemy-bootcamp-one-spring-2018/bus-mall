@@ -1,21 +1,21 @@
 'use strict';
-/* globals Chart */
+/* globals Chart imageArray */
 /* exported ReportApp */
 
 const appTemplate = document.getElementById('app-template');
 
 class ReportApp {
-    constructor(imageArray) {
+    constructor() {
         this.products = imageArray;
     }
 
     render() {
         const dom = appTemplate.content;
 
-        const viewingChartSection = dom.getElementById('chart-display');
-        const viewingChartComponent = new Chart(this.channels);
-        const viewingChartDom = viewingChartComponent.render();
-        viewingChartSection.appendChild(viewingChartDom);
+        const addChartSection = dom.getElementById('chart-display');
+        const addChartComponent = new Chart();
+        addChartComponent.render();
+        addChartSection.appendChild(addChartComponent);
 
 
         return dom;

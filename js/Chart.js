@@ -9,7 +9,8 @@ class Chart {
         this.products = imageArray;
     }
 
-    render() {
+    render(imageArray) {
+        this.products = imageArray;
         const dom = viewingChartTemplate;
         const canvas = dom.querySelector('canvas');
         const ctx = canvas.getContext('2d');
