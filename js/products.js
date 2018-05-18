@@ -2,6 +2,15 @@
 /* exported productList, clearProductsData */
 'use strict';
 
+class Product {
+    constructor(name, image) {
+        this.name = name;
+        this.image = 'image/' + image;
+        this.views = 0;
+        this.clicks = 0;
+        this.percentage = 0;
+    }
+}
 
 const productData = window.localStorage.getItem('productList');
 
@@ -21,17 +30,7 @@ else {
 
 
 function initializeProducts() {
-    class Product {
-        constructor(name, image) {
-            this.name = name;
-            this.image = 'image/' + image;
-            this.views = 0;
-            this.clicks = 0;
-            this.percentage = 0;
-        }
     
-        
-    }
     const bag = new Product('R2D2 Rolling Suitcase', 'bag.jpg');
     const banana = new Product('Banana Slicer', 'banana.jpg');
     const bathroom = new Product('Bathroom Tablet Pedestal', 'bathroom.jpg');

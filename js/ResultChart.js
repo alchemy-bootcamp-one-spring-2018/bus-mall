@@ -1,4 +1,5 @@
 /* exported ResultChart */
+/* globals Chart */
 'use strict';
 
 const resultChartTemplate = document.getElementById('result-chart-template');
@@ -16,21 +17,24 @@ class ResultChart {
         const sortedList = this.list;
         this.bubbleSort(sortedList, 'clicks');
         let labels = [];
-        let data = [];
-        console.log(sortedList);
+        let clicks = [];
+        let views = [];
+        let percentage = [];
         for(let i in sortedList) {
             const product = sortedList[i];
             labels.push(product.name);
-            data.push(product.clicks);
+            clicks.push(product.clicks);
+            views.push(product.views);
+            percentage.push(product.percentage);
         }
 
         this.chart = new Chart(ctx, {
-            type: 'bar',
+            type: 'horizontalBar',
             data: {
                 labels: labels,
                 datasets: [{
                     label: '# of Clicks',
-                    data: data,
+                    data: clicks,
                     backgroundColor: [
                         'rgba(4, 192, 255, .5)',
                         'rgba(255, 202, 0, .5)',
@@ -51,18 +55,56 @@ class ResultChart {
                         'rgba(4, 192, 255, .5)',
                         'rgba(255, 202, 0, .5)',
                         'rgba(0, 110, 147, .5)',
-                        'rgba(255, 0, 50, .5)',
+                        'rgba(255, 0, 50, .5)'
                         
                     ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)'
-                    ],
+                    
                     borderWidth: 0,
                     hoverBackgroundColor: [
-                        'rgba(0, 0, 0, 1)'
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)',
+                        'rgba(255, 255, 255, 1)'
                     ],
+                    hoverBorderColor: [
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                        'rgba(0, 0, 0, .5)',
+                    ],
+                    hoverBorderWidth: 2
                 }]
             },
             options: {

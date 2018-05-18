@@ -32,7 +32,7 @@ class SurveyApp {
             this.votes++;
             const imagesArray = this.randomThreeObjects(this.list.length);
             choiceComponent.update(imagesArray);
-            if(this.votes === 10) {
+            if(this.votes === 25) {
                 this.showThanks();
             }
         });

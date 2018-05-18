@@ -11,11 +11,15 @@
 </head>
 <body>
     <header>
-        <a href="index.html">About</a>
-        <a href="#">Shop</a>
-        <a href="result.html">Results</a>
-        <a href="#">News</a>
-        <a href="#">Contact</a>
+        <div>
+            <a href="index.html">About</a>
+            <a href="#">Shop</a>
+            <a href="result.html">Results</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </div>
+        <h1>BUSMALL</h1>
+        <h4>The Ultimate Shopping Experience</h4>
     </header>
     <div id="root"></div>
     <div id="instructions">
@@ -24,17 +28,19 @@
         </div>
     <footer>
         <hr>
-        &copy; BusMall 2018. All rights reserved.
+        <p>&copy; BusMall 2018. All rights reserved.</p>
     </footer>
 
     <template id="app-template">
-        <h1>BUSMALL</h1>
-        <h4>The Ultimate Shopping Experience</h4>
+        
         <section id="choice">
             
         </section>
     </template>
-
+    <template id="choice-template">
+            <h2>Which do you desire?</h2>
+            <div id="image-section"></div>
+        </template>
     <template id="choice-template">
         <h2>Which do you desire?</h2>
         <div id="image-section"></div>
