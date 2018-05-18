@@ -1,5 +1,5 @@
 'use strict';
-/* globals imageArray */
+/* globals imageArray clearVotingResults */
 /* exported ResultsDisplay */
 
 const resultsDisplayTemplate = document.getElementById('results-display-template').content;
@@ -27,9 +27,17 @@ class ResultsDisplay {
 
     render() {
         const dom = resultsDisplayTemplate;
+
+        const button = dom.querySelector('button');
+        button.addEventListener('click', () => {
+            clearVotingResults();
+            window.location.reload();
+        });
+
         const tbl = document.createElement('table');
         tbl.setAttribute('id', 'results-table');
         this.row = document.createElement('tr');
+        this.row.setAttribute('id', 'results-row');
         this.update(this.products);
 
         tbl.appendChild(this.row);

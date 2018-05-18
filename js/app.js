@@ -21,7 +21,6 @@ class App {
         return displayImages;
     }
 
-    
     render() {
         const dom = appTemplate.content;
         

@@ -6,9 +6,8 @@ body {
 
 #root {
     background-color: white;
-    width: 850px;
-    height: 700px;
-    border-radius: 50%;
+    width: 800px;
+    height: 900px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -28,7 +27,7 @@ h2 {
 h3 {
     font-family: 'Rancho', cursive;
     font-size: 30px;
-    margin: 35px;
+    margin: 10px;
     text-align: center;
 }
 
@@ -51,4 +50,9 @@ img {
 td {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 14px;
+}
+
+#results-row {
+    display: flex;
+    flex-flow: column wrap;
 }

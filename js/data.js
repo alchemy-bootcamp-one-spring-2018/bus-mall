@@ -1,6 +1,6 @@
 'use strict';
 /* globals */
-/* exported imageArray */
+/* exported imageArray clearVotingResults */
 
 
 class Image {
@@ -29,8 +29,6 @@ else {
     imageArray = JSON.parse(productData);
 }
 
-console.log('JSON PARSE ', JSON.parse(productData));
-
 function initImageArray() {
 
     imageArray = [
@@ -58,4 +56,7 @@ function initImageArray() {
 }
 
 
-    
+function clearVotingResults() {
+    window.localStorage.clear();
+    initImageArray();
+}
