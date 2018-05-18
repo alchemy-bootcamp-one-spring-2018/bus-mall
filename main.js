@@ -1,6 +1,6 @@
 /* globals Product */
 
-const app = new Product();
+const app = new App();
 
 const dom = app.render();
 
