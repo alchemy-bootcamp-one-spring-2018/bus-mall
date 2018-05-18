@@ -23,7 +23,7 @@ img:hover {
     transform: scale(1.1);
 }
 body {
-    background-color: steelblue;
+    background-image: url('/assets/street.jpg');
     text-align: center;
 }
 #image-area{
@@ -70,23 +70,24 @@ td {
     align-content: flex-start;
 }
 a {
-    color:lightgrey;
+    color:rgb(204, 148, 65);
     text-decoration: none;
     text-transform: uppercase;
     
 }
 a:hover {
     cursor: pointer;
-    color: gray;
+    color: lightgray;
 }
 button {
     height: 3em;
-    width:10em;
-    color: white;
-    background-color: grey;
+    width:8em;
+    color: rgb(196, 145, 69);
+    background-color: rgb(117, 116, 116);
     border-style: none;
     font-family: 'Bungee Shade', cursive;
     border-radius: 3px;
+    font-size: 15px
 }
 button:hover {
     background-color: rgb(105, 127, 160);
@@ -116,10 +117,11 @@ footer{
 }
 h2 {
     font-size: 18px;
-    margin-top: 3px;;
+    margin-top: 3px;
 
 }
+
 h1 {
     font-family: 'Bungee Shade', cursive;
-    color: grey;
+    color: rgb(204, 148, 65);
 }
