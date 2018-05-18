@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BusMall Home</title>
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css?family=Average|Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Average|Fjalla+One|Rajdhani:300" rel="stylesheet">
     <link rel="icon" type="image/png" href="image/BM-favicon.png">
     
 </head>
 <body>
     <header>
+        <a href="index.html"><h1>BUSMALL</h1></a>
+        <h4>The Ultimate Shopping Experience</h4>
+        <hr>
         <div>
             <a href="#">About</a>
             <a href="#">Shop</a>
@@ -19,16 +23,21 @@
             <a href="#">News</a>
             <a href="#">Contact</a>
         </div>
-        <h1>BUSMALL</h1>
-        <h4>The Ultimate Shopping Experience</h4>
+        <hr>
     </header>
-    <img src="image/feature.jpeg">
+    <img id="splash" src="image/feature.jpeg">
     <span id="motto">Ride. Shop. Live.</span>
-
-    <button>Take a Survey</button>
+    <div class="survey">
+        <img id="cat-pod" src="image/catpod.jpg" alt="serenity cat pod">
+        <div>
+            <p>Want to be a part of the future of BusMall? Take a quick survey to let us know products you'd be interested in seeing in our catalogs.</p>
+            <button id="survey-button">Take a Survey</button>
+        </div>
+    </div>
     <footer>
         <hr>
         <p>&copy; BusMall 2018. All rights reserved.</p>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>

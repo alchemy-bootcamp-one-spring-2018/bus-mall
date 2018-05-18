@@ -56,7 +56,6 @@ class ResultChart {
                         'rgba(255, 202, 0, .5)',
                         'rgba(0, 110, 147, .5)',
                         'rgba(255, 0, 50, .5)'
-                        
                     ],
                     
                     borderWidth: 0,
