@@ -1,9 +1,19 @@
 /* exported PictureObject, pictures, clearPicturesData */
 
+class PictureObject {
+    constructor(name, source, viewCount, selectCount) {
+        this.name = name;
+        this.source = source;
+        this.viewCount = viewCount;
+        this.selectCount = selectCount;
+    }
+}
+
 const picturesData = window.localStorage.getItem('pictures');
 
 window.onbeforeunload = () => {
     window.localStorage.setItem('pictures', JSON.stringify(pictures));
+    window.localStorage.setItem('totalCount', 0);
 };
 
 let pictures;
@@ -15,14 +25,7 @@ else {
 }
 
 function initPictures() {
-    class PictureObject {
-        constructor(name, source, viewCount, selectCount) {
-            this.name = name;
-            this.source = source;
-            this.viewCount = viewCount;
-            this.selectCount = selectCount;
-        }
-    }
+
     let bag = new PictureObject('bag', '/img/bag.jpg', 0, 0);
     let banana = new PictureObject('banana', '/img/banana.jpg', 0, 0);
     let bathroom = new PictureObject('bathroom', '/img/bathroom.jpg', 0, 0);

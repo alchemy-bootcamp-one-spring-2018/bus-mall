@@ -6,7 +6,7 @@ const appTemplate = document.getElementById('app-template');
 class PictureApp {
     constructor() {
         this.pictures = pictures;
-        this.totalCount = 0;
+        this.totalCount = parseInt(window.localStorage.getItem('totalCount'));
     }
 
     render() {
@@ -16,8 +16,7 @@ class PictureApp {
         const pictureViewerComponent = new PictureViewer(this.pictures, (picture) => {
             picture.selectCount++;
             this.totalCount++; // put it in where it's happening!
-            if(this.totalCount > 24) {
-                console.log('stop!');
+            if(this.totalCount > 9) {
                 pictureViewerComponent.stop();
             }
             else {

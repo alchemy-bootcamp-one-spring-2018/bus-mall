@@ -10,13 +10,15 @@ class Picture {
 
     render() {
         const dom = pictureTemplate.content.cloneNode(true);
-        const img = dom.querySelector('img');
-        img.src = this.picture.source;
-        this.picture.viewCount++;
-        img.addEventListener('click', () => {
-            this.onSelect(this.picture);
-        });
-        
+        for(let i = 0; i < this.picture.length; i++) {
+            const img = dom.querySelectorAll('img');
+            img[i].src = this.picture[i].source;
+            this.picture[i].viewCount++;
+            img[i].addEventListener('click', () => {
+                this.onSelect(this.picture[i]);
+            });
+        }
         return dom;
+        
     }
 }
