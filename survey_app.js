@@ -45,7 +45,7 @@ class App {
             this.vote++;
             console.log(choiceComponent);
             
-            if(this.vote === 5) {
+            if(this.vote === 25) {
                 choiceComponent.clear();
             }
         });

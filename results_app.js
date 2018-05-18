@@ -27,7 +27,7 @@ class App {
         const resultsComponent = new Results(this.list);
         resultsSection.appendChild(resultsComponent.render());
 
-        const viewingChartSection = dom.getElementById('viewing-chart');
+        const viewingChartSection = dom.getElementById('results');
         const viewingChartComponent = new ViewingChart(this.list);
         const viewingChartDom = viewingChartComponent.render();
         viewingChartSection.appendChild(viewingChartDom);

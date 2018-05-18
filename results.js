@@ -19,10 +19,29 @@ class Results {
         
         for(let i = 0; i < this.list.length; i++) {
 
-            const list = document.createElement('p');
-            list.textContent = this.list[i].name;
-            resultsList.appendChild(list);
+            const row = document.createElement('tr');
+            let product = this.list[i];
+            const nameData = document.createElement('td');
+            nameData.textContent = product.name;
+            row.appendChild(nameData);
+            //resultsList.appendChild(row);
+            
+            const viewsData = document.createElement('td');
+            viewsData.textContent = product.views;
+            row.appendChild(viewsData);
+            
+            const countData = document.createElement('td');
+            countData.textContent = product.count;
+            row.appendChild(countData);
+            resultsList.appendChild(row);
+        
+            //resultsList.appendChild(row);
+            /*const views = document.createElement('td');
+            views.textContent = this.list[i].views;
+            resultsList.appendChild(views); */
+
         }
+        //this.list[i].count.toString();//this.list[i].views.toString();
 
         return dom;
 

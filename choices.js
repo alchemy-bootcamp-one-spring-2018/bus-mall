@@ -16,6 +16,7 @@ class ProductChoices {
             this.div.lastElementChild.remove();
         }
 
+
         this.div.textContent = 'Thanks for taking the survey!';
     }
 
@@ -37,10 +38,7 @@ class ProductChoices {
 
         const dom = productTemplate.content.cloneNode(true);
         this.div = dom.querySelector('div');
-
-
         this.update(this.list);
-        
         return dom;
     }
 }

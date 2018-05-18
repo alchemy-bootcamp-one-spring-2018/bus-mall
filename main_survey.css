@@ -1,0 +1,24 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif; font-size: 4em;
+}
+
+a {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
+    margin-right: 1em;
+  
+}
+
+#product-display {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
