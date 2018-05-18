@@ -15,10 +15,8 @@ class App {
         const resultsSection = dom.getElementById('results-section');
         const resultsData = new ResultsArea(this.list);
         resultsSection.appendChild(resultsData.render());
-
-        const chartSection = dom.getElementById('chart-section');
         const chartArea = new ViewingChart(this.list);
-        chartSection.appendChild(chartArea.render());
+        resultsSection.appendChild(chartArea.render());
         return dom;
     }
 }
