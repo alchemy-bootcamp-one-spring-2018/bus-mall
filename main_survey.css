@@ -1,7 +1,11 @@
+html {
+    background-color: lightblue;
+}
 h1 {
     display: flex;
     justify-content: center;
     font-family: 'Work Sans', sans-serif; font-size: 4em;
+    color: maroon;
 }
 
 a {
