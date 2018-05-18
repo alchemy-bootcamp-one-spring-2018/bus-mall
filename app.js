@@ -1,93 +1,6 @@
-var productArray = [{
-    name: 'bag',
-    image: 'images/bag.jpg',
-    count: 0,
+'use strict';
+const appTemplate = document.getElementById('app-template');
 
-    createImage: function() {
-        var img = document.createElement('img');
-        img.setAttribute('src', this.image);
-        return img;
-    }
-}, {
-    name: 'banana',
-    image: 'images/banana.jpg',
-    count: 0
-}, {
-    name: 'bathroom',
-    image: 'images/bathroom.jpg',
-    count: 0
-}, {
-    name: 'boots',
-    image: 'images/boots.jpg',
-    count: 0
-}, {
-    name: 'breakfast',
-    image: 'images/breakfast.jpg',
-    count: 0
-}, {
-    name: 'bubblegum',
-    image: 'images/bubblegum.jpg',
-    count: 0
-}, {
-    name: 'chair',
-    image: 'images/chair.jpg',
-    count: 0
-}, {
-    name: 'cthulhu',
-    image: 'images/cthulhu.jpg',
-    count: 0
-}, {
-    name: 'dog duck',
-    image: 'images/dog-duck.jpg',
-    count: 0
-}, {
-    name: 'dragon',
-    image: 'images/dragon.jpg',
-    count: 0
-}, {
-    name: 'pen',
-    image: 'images/pen.jpg',
-    count: 0
-}, {
-    name: 'pet sweep',
-    image: 'images/pet-sweep.jpg',
-    count: 0
-}, {
-    name: 'scissors',
-    image: 'images/scissors.jpg',
-    count: 0
-}, {
-    name: 'shark',
-    image: 'images/shark.png',
-    count: 0
-}, {
-    name: 'sweep',
-    image: 'images/sweep.png',
-    count: 0
-}, {
-    name: 'tauntaun', 
-    image: 'images/tauntaun.jpg',
-    count: 0
-}, {
-    name: 'unicorn',
-    image: 'images/unicorn.jpg',
-    count: 0
-}, {
-    name: 'usb',
-    image: 'images/usb.gif',
-    count: 0
-}, {
-    name: 'water can',
-    image: 'images/water-can.jpg',
-    count: 0
-}, {
-    name: 'wine glass',
-    image: 'images/wine-glass.jpg',
-    count: 0
-}];
-
-//productArray displays in console
-console.log(productArray);
 
 class Product {
     constructor(name, image, count) {
@@ -97,21 +10,34 @@ class Product {
     }
 }
 
-// function createImage() {
-//     var img = document.createElement('img');
-//     for(var i = 0; i < productArray.length; i++) {
-//         img.setAttribute('src', this.image);
-//         return img;
-    
+var bag = new Product('bag', 'images/bag.jpg', 0);
+var banana = new Product('banana', 'images/banana.jpg', 0);
+var bathroom = new Product('bathroom', 'images/bathroom.jpg', 0);
+var boots = new Product('boots', 'images/boots.jpg', 0);
+var breakfast = new Product('breakfast', 'images/breakfast.jpg', 0);
+var bubblegum = new Product('bubblegum', 'images/bubblegum.jpg', 0);    
+var chair = new Product('chair', 'images/chair.jpg', 0);   
+var cthulhu = new Product('cthulhu', 'images/cthulhu.jpg', 0);    
+var dogDuck = new Product('dog duck', 'images/dog-duck.jpg', 0);     
+var dragon = new Product('dragon', 'images/dragon.jpg', 0);
+var pen = new Product('pen', 'images/pen.jpg', 0);
+var petSweep = new Product('pet sweep', 'images/pet-sweep.jpg', 0);
+var scissors = new Product('scissors', 'images/scissors.jpg', 0);
+var shark = new Product('shark', 'images/shark.png', 0);
+var sweep = new Product('sweep', 'images/sweep.png', 0);
+var tauntaun = new Product('tauntaun', 'images/tauntaun.jpg', 0);
+var unicorn = new Product('unicorn', 'images/unicorn.jpg', 0);
+var usb = new Product('usb', 'images/usb.gif', 0);
+var waterCan = new Product('water can', 'images/water-can.jpg', 0);
+var wineGlass = new Product('wine glass', 'images/wine-glass.jpg', 0);
 
 
+var arrayOfProducts = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
 
-function showImage() {
-    var row = document.getElementById('images-displayed');
-    for(var j = 0; j < productArray.length; j++) {
-        var img = productArray[j].createImage();
-        row.appendChild(img);
-    }
+
+render() {
+    const dom = appTemplate.content;
+
+    return dom;
+
 }
-
-showImage();
