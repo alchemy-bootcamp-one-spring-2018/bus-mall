@@ -67,7 +67,7 @@ img {
     margin: 0 33px;
     padding: 13px;
     flex-direction: column;
-    width: 1174px;
+    width: 1186px;
 }
 
 #picture-section img {
@@ -103,17 +103,40 @@ img {
 }
 
 #results-section {
+    display: flex;
     margin: auto;
-    background: black;
-    height: auto;
+    background: white;
+    color: black;
     width: 100%;
+    justify-content: center;
 }
 
-#results-section span {
-    font-size: 4rem;
+#results-section table {
+    border-collapse: collapse;
+}
+
+#results-section td {
+    padding: 0 33px;
+    border: 1px solid black;
     text-align: center;
+}
+
+#results-section tr:nth-child(even) {
+    background: rgb(188, 255, 248);
+}
+
+#results-section tr:nth-child(odd) {
+    background: #FFF
+}
+
+#title-row {
+    font-weight: bold;
+    background: black !important;
     color: white;
-    padding: 13px;
+}
+
+#title-item {
+    font-weight: bold;
 }
 
 #text {

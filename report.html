@@ -31,7 +31,7 @@
                     <a class="tab" href="#">REPORT</a>
                 </span>
                 <span class="flex-item">
-                    <a class="tab" href="#">CONTACT</a>
+                    <a class="tab" id="clear" href="#">CLEAR</a>
                 </span>        
             </div>
         </div>
@@ -40,13 +40,17 @@
     <div id="root"></div>
     
     <template id="app-template" class="container">
-        <section id="results-section"></section>
         <section id="chart-section"></section>
+        <section id="results-section"></section>
     </template>
 
     <template id="results-template">
         <table>
-            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
         </table>
     </template>
 
@@ -61,6 +65,7 @@
 <!-- CHART.JS -->
 <script src="/js/chart.js"></script>
 <!--  -->
+<script src="js/ResultsDisplay.js"></script>
 <script src="js/ChartDisplay.js"></script>
 <script src="js/ReportApp.js"></script>
 <script src="report.js"></script>

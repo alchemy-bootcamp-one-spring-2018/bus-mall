@@ -1,10 +1,6 @@
 /* globals */
 /* exported pictures */
 
-
-// MAKE LITERAL
-
-
 class Picture {
 
     constructor(fileName) {
@@ -37,6 +33,19 @@ function setObjects() {
     let WaterCan = new Picture('Water-Can.jpg');
     let WineGlass = new Picture('Wine-Glass.jpg');
 
-    pictures = [Bag, Banana, Bathroom, Boots, Breakfast, Bubblegum, Chair, DogDuck, Dragon, Pen, PetSweep, Scissors, Shark, Sweep, Tauntaun, Unicorn, USB, WaterCan, WineGlass];
+    let list = [Bag, Banana, Bathroom, Boots, Breakfast, Bubblegum, Chair, DogDuck, Dragon, Pen, PetSweep, Scissors, Shark, Sweep, Tauntaun, Unicorn, USB, WaterCan, WineGlass];
+    if(localStorage.length !== 0) {
+        let resultsList = JSON.parse(localStorage.getItem('resultsList'));
+        resultsList.forEach(a => list.forEach((b, i) => {
+            if(b.name === a.name) {
+                list.splice(i, 1);
+            }
+        }));
+
+        pictures = list.concat(resultsList);
+    }
+    else {
+        pictures = list;
+    }
 }
 setObjects();

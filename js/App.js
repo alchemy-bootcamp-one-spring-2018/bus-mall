@@ -8,6 +8,7 @@ class App {
         this.pictures = pictures;
         this.random = new Random(this.pictures);
         this.totalVotes = 0;
+        this.completed = window.localStorage.getItem('completed');
     }
 
     setPictures() {
@@ -23,10 +24,11 @@ class App {
                 }
                 this.totalVotes++;
                 pic.votes++;
-                this.results = new Results(this.pictures);
+                this.results = new Results(this.pictures, this.totalVotes);
                 this.results.tally();
-                if(this.totalVotes === 25) {
+                if(this.totalVotes >= 25) {
                     this.completed = true;
+                    window.localStorage.setItem('completed', this.completed);
                 }
                 this.setPictures();
             });
@@ -39,8 +41,6 @@ class App {
 
     render() {
         const dom = appTemplate.content;
-
-        this.resultsSection = dom.getElementById('results-section');
 
         this.picturesSection = dom.getElementById('picture-section');
 

@@ -8,37 +8,47 @@ class ChartDisplay {
         this.dataList = dataList;
     }
 
-    render() {
-        const dom = chartTemplate.content;
-        const message = dom.querySelector('span');
-        if(localStorage.length !== 0) {
-            const chart = dom.getElementById('myChart');
-            message.textContent = '';
-            new Chart(chart, {
+    setChart() {
+        if(this.dataList.length !== 0) {
+            // Draw chart
+            new Chart((this.chart), {
                 type: 'horizontalBar',
+                responsive: true,
                 data: {
                     labels: this.dataList.map(a => a[0]),
                     datasets: [
                         {
-                            label: '%',
+                            label: 'Percentages voted',
                             backgroundColor: this.dataList.map(a => a[2]),
                             data: this.dataList.map(a => a[1])
                         }
                     ]
                 },
                 options: {
-                    legend: { display: false },
+                    scales: {
+                        xAxes: [{ ticks: { max: 100, min: 0 } }]
+                    },
+                    legend: {
+                        display: false,
+                    },
                     title: {
+                        labels: {
+                            fontColor: '#FFF'
+                        },
                         display: true,
-                        text: 'Percentges of pictures voted on based on how many times they were shown'
+                        text: 'Percentages of times voted base on how many times shown'
                     }
                 }
             });
-            dom.appendChild(message);
-            return dom;
         }
-        message.textContent = 'PLEASE VOTE ON SOME PICTURES TO SEE RESULTS';
-        dom.appendChild(message);
+    }
+
+    render() {
+        const dom = chartTemplate.content;
+        this.chart = dom.getElementById('myChart');
+
+        this.setChart();
+
         return dom;
     }
 }
