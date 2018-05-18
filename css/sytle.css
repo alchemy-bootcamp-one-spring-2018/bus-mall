@@ -49,3 +49,6 @@ td {
     flex-direction: column;
 
 }
+#chart-container {
+    height: 350px;
+}

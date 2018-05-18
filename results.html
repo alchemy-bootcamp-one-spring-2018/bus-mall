@@ -17,6 +17,7 @@
     <template id="app-template">
         <h1>App template</h1>
         <section id="results-section"></section>
+        <section id="chart-section"></section>
     </template>
     <!--result templates-->
     <template id="results-template">
@@ -29,20 +30,31 @@
                 <tbody></tbody>
             </tr>
         </table>
+
     </template>
 
     <template id="results-data-template">
         <tr>
-            <td>test1</td>
-            <td>test2</td>
-            <td>test3</td>
+            <td></td>
+            <td></td>
+            <td></td>
         </tr>
+    </template>
+    <template id="chart-template">
+        <h2>CHART</h2>
+        <div id="chart-container">
+            <canvas width="400"></canvas>
+        </div>
     </template>
     <footer>
         <h2>I'm a foot</h2>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script src="javaScript/objects.js"></script>
     <script src="javaScript/SurveyResult.js"></script>
+    <script src="javaScript/chart.js"></script>
+    <script src="javaScript/ChartArea.js"></script>
     <script src="javaScript/ResultsArea.js"></script>
     <script src="javaScript/ReportApp.js"></script>
     <script src="javaScript/main.js"></script>
