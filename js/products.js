@@ -72,6 +72,6 @@ function initProducts() {
 }
 
 function clearProductsArray() {
-    window.localStorage.clear('products');
+    window.localStorage.clear('productArray');
     initProducts();
 }

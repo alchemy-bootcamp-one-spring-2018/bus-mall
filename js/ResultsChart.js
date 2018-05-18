@@ -1,14 +1,15 @@
-/* exported ResultsChart */
+/* exported productArray ResultsChart  */
+/* globals clearProductsArray  */
 'use strict';
-const dom = document.getElementById('results-chart-template').content;
+const chartTemplate = document.getElementById('results-chart-template').content;
 
 class ResultsChart {
     constructor(resultsList) {
         this.resultsList = resultsList;
     }
-
+    
     render() {
-  
+        const dom = chartTemplate;
         const canvas = dom.querySelector('canvas');
         const ctx = canvas.getContext('2d');
 
@@ -74,3 +75,8 @@ class ResultsChart {
         return dom;
     }
 }
+
+const clearButton = document.getElementById('clear-button');
+clearButton.addEventListener('click', (productArray) => {
+    clearProductsArray();
+});
