@@ -7,37 +7,41 @@ class App {
         this.list = objectArray;
         this.randomImageArray = [];
         this.tempArray = [];
-        this.votes = 0;
+        this.votes = window.localStorage.getItem('votes');
     }
 
     endSurvey() {
         while(this.imageSection.lastElementChild) {
             this.imageSection.lastElementChild.remove();
         }
-        window.localStorage.setItem('votes', JSON.stringify(this.votes));
         const endNote = document.createElement('h1');
         endNote.id = 'end-survey-message';
         endNote.textContent = 'Thank you for your time! Check results with the button above.';
         this.imageSection.appendChild(endNote);
     }
     render(){
-
         const dom = appTemplate.content;
         this.imageSection = dom.getElementById('image-vote');
-        this.getRandomObject();
-        const imageComponent = new ImageArea(this.randomImageArray, (userChoice) => {
-            if(this.votes >= 25) {
-                window.localStorage.setItem('objectArray', JSON.stringify(objectArray));
-                this.endSurvey();
-
-            }
-            userChoice.clicks++;
-            this.votes++;
+        if(this.votes >= 25){
+            this.endSurvey();
+        }
+        else {
             this.getRandomObject();
-            imageComponent.update(this.randomImageArray);
-            console.log('votes = ' + this.votes);
-        });
-        this.imageSection.appendChild(imageComponent.render());
+            const imageComponent = new ImageArea(this.randomImageArray, (userChoice) => {
+                if(this.votes >= 25) {
+                    window.localStorage.setItem('votes', this.votes);
+                    this.endSurvey();
+
+                }
+                userChoice.clicks++;
+                this.votes++;
+                this.getRandomObject();
+                imageComponent.update(this.randomImageArray);
+                console.log('votes = ' + this.votes);
+            });
+            this.imageSection.appendChild(imageComponent.render());
+        }
+
         return dom;
 
     }
