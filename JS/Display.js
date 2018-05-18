@@ -7,6 +7,7 @@ const imageTemplate = document.getElementById('image-template').content;
 class Display {
     constructor(list) {
         this.list = list;
+        
     }
 
     render() {
@@ -16,21 +17,13 @@ class Display {
         
         for(let i = 0; i < 3; i++) {
             const selectedImage = new Selected(this.list[i]);
+            const whatever = selectedImage.object.path;
+            console.log(whatever);
+            // console.log(selectedImage.object.name);
             imageSection.appendChild(selectedImage.render());
-
+            console.log('in display.js');
         }
         return dom;
 
-        // const chooseItem = dom.querySelector('image-template').content;
-
-        // const clickedPic = dom.addEventListener('image-template').content;
-
-    
-        
-        // const Random = imageTemplate;
-        
-        // const coolImage = Random.querySelector('#pic2');
-        // coolImage.src = getRandomImage(images);
-        // Random.appendChild(coolImage);
     }
 }

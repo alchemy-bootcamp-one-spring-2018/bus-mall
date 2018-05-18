@@ -43,14 +43,6 @@ class App {
         return dom;
     }
 }
-
-// gets random item out of the image array
-// function getRandomImage() {
-//     return Math.floor(Math.random() * images.length);
-// }
-
-// getRandomImage();
-// console.log(getRandomImage());
     
 
 

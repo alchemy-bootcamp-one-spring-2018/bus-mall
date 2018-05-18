@@ -1,4 +1,4 @@
-/* globals */
+/* globals App */
 /* exported images App randomImg */
 'use strict';
 

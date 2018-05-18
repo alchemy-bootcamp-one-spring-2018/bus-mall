@@ -15,12 +15,12 @@ class Selected {
             
            
         const domImage = dom.querySelector('img');
-        domImage.src = this.object.path;
+        // domImage.addEventListener('click', () => {
+        //     this.onClick(this.object);
+        //     console.log('in clicked.js');
+        // });
+
 
         return dom;
     }
-
 }
-    
-// document.getElementById('pic1').addEventListener('click', function(){
-//     document.getElementById('demo').innerHTML = 'Hello World';
