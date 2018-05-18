@@ -19,6 +19,9 @@ img {
  margin-bottom: 10px;
 
 }
+img:hover {
+    transform: scale(1.1);
+}
 body {
     background-color: steelblue;
     text-align: center;
@@ -115,4 +118,8 @@ h2 {
     font-size: 18px;
     margin-top: 3px;;
 
+}
+h1 {
+    font-family: 'Bungee Shade', cursive;
+    color: grey;
 }

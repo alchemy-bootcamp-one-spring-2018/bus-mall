@@ -1,5 +1,5 @@
-/* exported objectArray */
-/* globals  */
+/* exported clearObjectsData objectArray */
+/* globals   */
 const objectData = window.localStorage.getItem('objectArray');
 
 window.onbeforeunload = () => {
