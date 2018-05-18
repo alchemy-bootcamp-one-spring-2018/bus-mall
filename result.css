@@ -1,0 +1,115 @@
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Fjalla One', sans-serif;
+    /* margin: 0px; */
+}
+
+h1 {
+    font-size: 4em;
+    letter-spacing: .2em;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 2.5em;
+
+}
+
+h4 {
+    font-style: italic;
+}
+
+#instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#root {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Average', serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+canvas {
+    
+}
+
+.image-container img {
+    width: 300px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    border-left: .5px solid lightgray;
+    border-right: .5px solid lightgray;
+    padding: 50px;
+    height: 400px;
+}
+
+td{
+    padding: 10px 20px 10px 20px;
+}
+
+.image-container>section {
+    text-align: center;
+}
+
+#choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+#result {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#thanks-message {
+    margin-top: 250px;
+}
+
+img {
+    margin: 50px;
+    width: 100%;
+}
+
+#motto {
+    color: white;
+    font-size: 6em;
+    position: absolute;
+    font-family: 'Fjalla One', sans-serif;
+    top: 300px;
+}
