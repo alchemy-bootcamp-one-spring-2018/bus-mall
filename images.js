@@ -95,21 +95,3 @@ function randomize() {
 
     return threeImages;
 }
-     
-    
-    
-    
-    // function randomize {
-
-    
-    //         // get a random integer between 0 and length of images array
-        
-        
-        
-    //         // splice out used images from imagesArray 
-    //         // imagesArray.splice(randomNum, 1);
-    //     }
-
-        
-    // }
-    
