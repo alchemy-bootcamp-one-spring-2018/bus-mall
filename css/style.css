@@ -4,3 +4,7 @@ ul {
     align-items: center;
     justify-content: center;
 }
+
+#chart-container {
+    height: 350px;
+}
