@@ -12,6 +12,7 @@ img {
  width: 250px;
  height: 250px;
  border-style: solid;
+ cursor: pointer;
 
 }
 body {
@@ -56,4 +57,23 @@ td {
 #result-box {
     display: flex;
     align-content: flex-start;
+}
+a {
+    color:grey;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+button {
+    height: 3em;
+    width:10em;
+    color: white;
+    background-color: grey;
+    border-style: none
+}
+button:hover {
+    background-color: rgb(105, 127, 160);
+    cursor: pointer;
+    border-style: solid;
+    border-color: white;
 }

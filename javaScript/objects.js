@@ -49,7 +49,7 @@ function initObjects(){
     objectArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
 }
 
-// function clearObjectsData() {
-//     window.localStorage.clear('objectArray');
-//     initObjects();
-// }
+function clearObjectsData() {
+    window.localStorage.clear('objectArray');
+    initObjects();
+}
