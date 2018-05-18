@@ -12,37 +12,34 @@
 
     <template id="app-template">
         <h1>BusMall Voting Results</h1>
-        <section id="result"></section>
-        <section id="result-chart"></section>
+        <section id="results"></section>
+        <section id="results-chart"></section>
     </template>
 
-    <template id="result-template">
+    <template id="results-template">
         <table>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Clicks</th>
-                    <th>Views</th>
+                    <th>Product</th>
+                    <th>Votes</th>
+                    <th>Viewed</th>
                 </tr>
             </thead>
-            <tbody id="result-tbody">    
+            <tbody>    
             </tbody>
-            <tfoot>
-            </tfoot>
         </table>
     </template>
 
-    <template id="product-result-template">
+    <template id="product-results-template">
         <tr>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
         </tr>
     </template>
 
-    <template id="result-chart-template">
-        <div id="chart-container">
+    <template id="results-chart-template">
+        <div>
             <canvas width="800"></canvas>
         </div>
     </template>
@@ -50,11 +47,12 @@
     <a href="index.html">Back to Product Selector</a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    
     <script src="js/products.js"></script>
-    <script src="js/ResultChart.js"></script>
-    <script src="js/ProductResult.js"></script>
-    <script src="js/Result.js"></script>
-    <script src="js/ResultApp.js"></script>
+    <script src="js/ResultsChart.js"></script>
+    <script src="js/ProductResults.js"></script>
+    <script src="js/Results.js"></script>
+    <script src="js/ResultReportApp.js"></script>
     <script src="report.js"></script>
 </body>
 </html>
