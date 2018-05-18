@@ -32,7 +32,6 @@ class App {
             image.timesVoted++;
             addDisplayComponent.update(this.getThreeRandomImages());
             addResultsComponent.update(this.products);
-            console.log('userVoted - totals, thisImage', this.totalVotes, image);
             
         });
         addDisplaySection.appendChild(addDisplayComponent.render());
