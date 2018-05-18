@@ -1,5 +1,5 @@
-/* globals ViewingChart ResultsArea  objectArray*/
-/* exported vote  App */
+/* globals ViewingChart ResultsArea  clearObjectsData objectArray*/
+/* exported vote   App */
 let votes = 0;
 const appTemplate = document.getElementById('app-template');
 
