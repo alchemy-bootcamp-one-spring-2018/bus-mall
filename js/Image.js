@@ -13,6 +13,7 @@ class Image {
         const dom = imageTemplate.content.cloneNode(true);
         const image = dom.querySelector('img');
         image.src = this.product.image;
+        
         image.addEventListener('click', () => {
             this.onClick(this.product);
         });

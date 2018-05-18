@@ -19,6 +19,15 @@ class SurveyApp {
         thankComponent.id = 'thanks-message';
         thankComponent.textContent = 'Thanks for participating!';
         this.choiceSection.appendChild(thankComponent);
+
+        const resultButton = document.createElement('button');
+        resultButton.textContent = 'See Results';
+        resultButton.addEventListener('click', () => {
+            window.open('result.html', '_self', false);
+        });
+        this.choiceSection.appendChild(resultButton);
+
+
     }
 
     render() {

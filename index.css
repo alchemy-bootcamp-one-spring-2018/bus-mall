@@ -34,31 +34,6 @@ a:link, a:visited {
     text-decoration: none;
 }
 
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-header>div>a {
-    font-family: 'Rajdhani', sans-serif;
-    text-transform: uppercase;
-    margin: 10px 30px 10px 30px;
-    font-size: 1.25em;
-}
-
-header>div {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-hr {
-    width: 100%;
-    border: none;
-    border-top: 1px solid lightgrey;
-}
 
 
 .image-container {
