@@ -30,8 +30,14 @@ class App {
             // Anonymous functions becomes userVoted inside of ImageDisplay.js
             this.totalVotes++;
             image.timesVoted++;
-            addDisplayComponent.update(this.getThreeRandomImages());
-            addResultsComponent.update(this.products);
+            if(this.totalVotes >= 25) {
+                alert('Thanks for voting!');
+                window.location.href = 'results.html';
+            } else {
+                
+                addDisplayComponent.update(this.getThreeRandomImages());
+                addResultsComponent.update(this.products);
+            }
             
         });
         addDisplaySection.appendChild(addDisplayComponent.render());

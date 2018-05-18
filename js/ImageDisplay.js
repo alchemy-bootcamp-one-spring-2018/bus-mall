@@ -35,7 +35,7 @@ class ImageDisplay {
         }
         
     }
-
+    
     render() {
         const dom = imageDisplayTemplate;
         

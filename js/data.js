@@ -18,6 +18,7 @@ const productData = window.localStorage.getItem('imageArray');
 
 window.onbeforeunload = () => {
     window.localStorage.setItem('imageArray', JSON.stringify(imageArray));
+    window.localStorage.setItem('votes', imageArray.timesVoted);
 };
 
 let imageArray;

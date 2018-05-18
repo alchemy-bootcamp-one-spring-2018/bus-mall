@@ -13,9 +13,8 @@ class ReportApp {
         const dom = appTemplate.content;
 
         const addChartSection = dom.getElementById('chart-display');
-        const addChartComponent = new Chart();
-        addChartComponent.render();
-        addChartSection.appendChild(addChartComponent);
+        const addChartComponent = new Chart(this.products);
+        addChartSection.appendChild(addChartComponent.render());
 
 
         return dom;
