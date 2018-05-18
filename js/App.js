@@ -9,7 +9,7 @@ class App {
 
     constructor() {
         this.productsToShow = 3;
-        this.maxClicks = 25;
+        this.maxClicks = 10;
         this.totalClicks = 0;
         this.products = products;
     }
