@@ -11,8 +11,8 @@ class ProductTotals {
         const dom = productTotalsTemplate.cloneNode(true);
         const columns = dom.querySelectorAll('td');
         columns[0].textContent = this.product.name;
-        columns[1].textContent = this.product.views;
-        columns[2].textContent = this.product.votes;
+        columns[1].textContent = this.product.votes;
+        columns[2].textContent = this.product.views;
         return dom;
     }
 }

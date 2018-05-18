@@ -1,4 +1,4 @@
-/* exported imagesData,  */
+/* exported imagesData  */
 /* globals */
 'use strict';
 
@@ -15,7 +15,6 @@ if(ProductsData) {
 else {
     initImages();
 }
-
 
 function initImages() {
     imagesData = [
@@ -144,7 +143,7 @@ function initImages() {
 
 console.log(imagesData);
 
-// function clearProductsData() {
-//     window.localStorage.clear('imagesData');
-//     initImages();
-// }
+function clearProductsData() {
+    window.localStorage.clear('imagesData');
+    initImages();
+}

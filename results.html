@@ -15,6 +15,7 @@
         <h2>Results</h2>
         <section>
             <a href="index.html">Go Back To Product Voting Page</a>
+            <button>Clear Data</button>
         </section><br />
         <section id="product-table-report-section"></section>
         <section id="chart-section"></section>
@@ -25,8 +26,8 @@
             <thead>
                 <tr>
                     <th>Product</th>
-                    <th>View Count</th>
                     <th>Vote Count</th>
+                    <th>View Count</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -41,12 +42,21 @@
         </tr>
     </template>
 
+    <template id="product-chart-template">
+        <h2>Chart</h2>
+        <div id="chart-container">
+            <canvas width="400" height="400"></canvas>
+        </div>
+    </template>
+
     <footer></footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
     <script src="js/images-data.js"></script>
     <script src="js/images.js"></script>
     <script src="js/ProductTotals.js"></script>
     <script src="js/ProductTable.js"></script>
+    <script src="js/ProductChart.js"></script>
     <script src="js/ResultsApp.js"></script>
     <script src="results.js"></script>
 </body>

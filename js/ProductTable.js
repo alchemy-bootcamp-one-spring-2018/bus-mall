@@ -12,7 +12,7 @@ class ProductTable {
 
     render() {
         const dom = productTableTemplate;
-        console.log('dom', dom);
+        console.log('table dom', dom);
 
         this.tableBody = dom.querySelector('tbody');
 
