@@ -50,5 +50,10 @@ td {
 
 }
 #chart-container {
-    height: 350px;
+    height: 200px;
+}
+#result-box {
+    display: flex;
+
+    
 }
