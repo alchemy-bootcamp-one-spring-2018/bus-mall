@@ -2,6 +2,10 @@
 /* exported App */
 const appTemplate = document.getElementById('app-template');
 
+window.onunload = function() {
+    localStorage.setItem('lastPic', true);
+};
+
 class App {
 
     constructor() {
@@ -12,16 +16,23 @@ class App {
     }
 
     setPictures() {
-        const pics = this.random.randomize();
-        for(let i = 0; i < pics.length; i++) {
-            pics[i].shown++;
+        if(localStorage.getItem('lastPic') === 'true') {
+            this.pics = JSON.parse(localStorage.getItem('pics'));
+        }
+        else {
+            this.pics = this.random.randomize();
+        }
+
+        for(let i = 0; i < this.pics.length; i++) {
+            this.pics[i].shown++;
         }
 
         if(!this.pictureDisplay) {
-            this.pictureDisplay = new PictureDisplay(pics, pic => {
+            this.pictureDisplay = new PictureDisplay(this.pics, pic => {
                 if(this.completed) {
                     return;
                 }
+                localStorage.setItem('lastPic', false);
                 this.totalVotes++;
                 pic.votes++;
                 this.results = new Results(this.pictures, this.totalVotes);
@@ -35,7 +46,7 @@ class App {
             this.picturesSection.appendChild(this.pictureDisplay.render());
         }
         else {
-            this.pictureDisplay.update(pics);
+            this.pictureDisplay.update(this.pics);
         }
     }
 

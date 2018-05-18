@@ -16,6 +16,7 @@ class Random {
             temp.splice(tempRand, 1);
         }
         this.last = random;
+        localStorage.setItem('pics', JSON.stringify(random));
         return random;
     }
 }

@@ -14,7 +14,7 @@ class Results {
         for(let i = 0; i < tempList.length; i++) {
             let pic = tempList[i];
             let percentage = parseInt((pic.votes / pic.shown).toFixed(2) * 100);
-// FANCY SHIT
+            // FANCY SHIT
             let color;
             if(percentage < 33) {
                 color = '#FF0000';
@@ -32,7 +32,6 @@ class Results {
             // console.log('r', randomR, 'g', randomG, 'b', randomB);
             // dataList.push([pic.name, percentage, '#' + randomR + randomG + randomB]);
         }
-
         window.localStorage.setItem('resultsList', JSON.stringify(tempList));
         window.localStorage.setItem('dataList', JSON.stringify(dataList));
         window.localStorage.setItem('totalVotes', this.totalVotes);
