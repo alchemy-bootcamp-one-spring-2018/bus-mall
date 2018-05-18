@@ -7,12 +7,16 @@ body {
     border-color: white;
     border-width: 3px;
     margin: 10px;
+    margin-bottom: 0px;
 }
+
 img {
- width: 250px;
- height: 250px;
+ width: 325px;
+ height: 325px;
  border-style: solid;
  cursor: pointer;
+ margin-top: 10px;
+ margin-bottom: 10px;
 
 }
 body {
@@ -21,22 +25,26 @@ body {
 }
 #image-area{
     width: 90%;
-    background-color: grey;
+    background-color: rgba(95, 93, 93, 0.719) ;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     border-style: solid;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
+
 header {
     border-style: solid;
     background-color: rgba(0, 0, 0, 0.664);
     margin: 10px;
+    font-family: 'Bungee Shade', cursive;
 }
 #image-vote {
     display: flex;
     justify-content: center;
 }
+
 table {
     background-color: grey;
 }
@@ -59,21 +67,52 @@ td {
     align-content: flex-start;
 }
 a {
-    color:grey;
+    color:lightgrey;
     text-decoration: none;
     text-transform: uppercase;
+    
+}
+a:hover {
     cursor: pointer;
+    color: gray;
 }
 button {
     height: 3em;
     width:10em;
     color: white;
     background-color: grey;
-    border-style: none
+    border-style: none;
+    font-family: 'Bungee Shade', cursive;
+    border-radius: 3px;
 }
 button:hover {
     background-color: rgb(105, 127, 160);
     cursor: pointer;
     border-style: solid;
     border-color: white;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: white;
+    background-color: rgb(0, 0, 0, 0.65);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#head-div {
+    background-color: rgb(0, 0, 0, 0.651);
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    margin-top: -76.5px;
+    border-style: solid;
+    border-color: lightblue;
+    border-width: 2px;
+    border-radius: 10px;
+}
+h2 {
+    font-size: 18px;
+    margin-top: 3px;;
+
 }
