@@ -16,10 +16,10 @@ class Results {
             let percentage = parseInt((pic.votes / pic.shown).toFixed(2) * 100);
             // FANCY SHIT
             let color;
-            if(percentage < 33) {
+            if(percentage <= 33) {
                 color = '#FF0000';
             }
-            else if(percentage < 66) {
+            else if(percentage <= 66) {
                 color = '#0000FF';
             }
             else {
