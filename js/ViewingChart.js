@@ -1,10 +1,10 @@
 'use strict';
-/* globals */
-/* exported Chart */
+/* globals Chart */
+/* exported ViewingChart */
 
 const viewingChartTemplate = document.getElementById('voting-results-template').content;
 
-class Chart {
+class ViewingChart {
     constructor(imageArray) {
         this.items = imageArray;
 
@@ -24,6 +24,7 @@ class Chart {
             labels.push(products.name);
             data.push(products.timesVoted);
         }
+        console.log(labels, data);
 
         this.chart = new Chart(ctx, {
             type: 'bar',
