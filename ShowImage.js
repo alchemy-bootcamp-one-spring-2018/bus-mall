@@ -1,21 +1,32 @@
-const showImagesTemplate = document.getElementById(show-images-template);
+/* exported ShowImages */
 
-class ShowImages {
+const showImagesTemplate = document.getElementById('show-images-template');
+
+class Product {
 
     constructor() {
+        this.arrayOfProducts = arrayOfProducts;
+        this.totalCount = 0;
 
     }
 
 
     render() {
-        const dom = showImagesTemplate;
+        const dom = showImagesTemplate.content;
 
         this.header = dom.querySelector('h2');
-        this.___ = dom.querySelector('imgage-');   
-        this.header.textContent= this.product.name;  
-        this.  = this.product.image;
+        this.container = dom.querySelector('show-images');
+
+        for(let i = 0; i < 3; i++) {
+
+            const image = this.container.querySelector('image-' + i);
+            this.header.textContent = this.product.name;
+            this.container = this.product.image;
+            image.addEventListener('click', () => {
+                this.onSelect(this.arrayOfProducts[i]);
+            });
+
 
         return dom;
+        
     }
-
-}
