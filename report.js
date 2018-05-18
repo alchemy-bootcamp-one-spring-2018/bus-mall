@@ -3,6 +3,6 @@
 'use strict';
 
 const app = new ResultReportApp();
-const dom = app.render();
+const doms = app.render();
 const root = document.getElementById('root');
-root.appendChild(dom);
+root.appendChild(doms);

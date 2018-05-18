@@ -8,14 +8,14 @@ window.onbeforeunload = () => {
 
 
 let productArray;
-if(productData) {
-    productArray = JSON.parse(productData);
+if(!productData) {
+    initProducts();
 }
 else {
-    clearProducts();
+    productArray = JSON.parse(productData);
 }
 
-function clearProducts() {
+function initProducts() {
     class Product {
         constructor(name, image) {
             this.name = name;
@@ -73,5 +73,5 @@ function clearProducts() {
 
 function clearProductsArray() {
     window.localStorage.clear('products');
-    clearProducts();
+    initProducts();
 }

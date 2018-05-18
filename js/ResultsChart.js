@@ -15,7 +15,7 @@ class ResultsChart {
         let labels = [];
         let data = [];
 
-        for(let i = 0; i < this.resultsList.length, i++) {
+        for(let i = 0; i < this.resultsList.length; i++) {
             const product = this.resultsList[i];
             labels.push(product.name);
             data.push(product.clicks);
