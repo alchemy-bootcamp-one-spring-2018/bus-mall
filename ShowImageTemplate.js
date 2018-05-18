@@ -2,6 +2,8 @@
 
 const showImagesTemplate = document.getElementById('show-images-template');
 
+
+//Product?
 class Image {
     constructor(image, onSelect) {
         this.image = image;
