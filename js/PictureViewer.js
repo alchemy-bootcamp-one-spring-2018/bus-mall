@@ -33,6 +33,16 @@ class PictureViewer {
         return dom;
     }
 
+    stop() {
+        const ul = this.ul;
+        while(ul.lastElementChild) {
+            ul.lastElementChild.remove();
+        }
+        const endMessage = document.createElement('li');
+        endMessage.textContent = 'Done!';
+        ul.appendChild(endMessage);
+    }
+
     random(max) {
         let random = Math.floor(Math.random() * Math.floor(max));
         return random;
