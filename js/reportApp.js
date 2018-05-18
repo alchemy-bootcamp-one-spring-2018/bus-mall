@@ -11,6 +11,12 @@ class ReportApp {
 
     render() {
         const dom = appTemplate;
+
+        const button = dom.querySelector('button');
+        button.addEventListener('click', () => {
+            clearItemData();
+            window.location.reload();
+        })
         
         const totalsReportSection = dom.getElementById('totals-report');
         const totalsReportComponent = new TotalsDisplayReport(this.items);
