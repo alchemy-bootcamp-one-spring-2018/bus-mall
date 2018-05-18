@@ -2,9 +2,9 @@
 /* exported Vote */
 'use strict';
 
-const voteTemplate = document.getElementById('vote-template');
+const imageViewerTemplate = document.getElementById('image-viewer-template').content;
 
-class Vote {
+class ImageViewer {
     constructor(image0, image1, image2, onImageVote) {
         this.image0 = image0;
         this.image1 = image1;
@@ -13,8 +13,10 @@ class Vote {
         
     }
 
+
     render() {
-        const dom = voteTemplate.content.cloneNode(true);
+        const dom = imageViewerTemplate.cloneNode(true);
+        
         const first = dom.getElementById('item-0');
         first.src = this.image0.image;
         first.addEventListener('click', () => {

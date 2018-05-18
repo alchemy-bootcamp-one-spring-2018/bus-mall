@@ -8,11 +8,8 @@ class Result {
     
     }
     render() {
-        const dom = resultTemplate.content.cloneNode(true);
-        const h2 = dom.querySelector('h2');
-        h2.textContent = 'Results:';
     
-        return dom;
+    
     }
 }
 
