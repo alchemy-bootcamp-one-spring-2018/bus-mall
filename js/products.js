@@ -4,8 +4,8 @@ class Product {
     constructor (name, image){
         this.name = name;
         this.image = './images/' + image;
-        this.view = 0;
-        this.count = 0;
+        this.views = 0;
+        this.votes = 0;
     }
 }
 

@@ -6,33 +6,39 @@
 const productVote = document.getElementById('product-vote-template');
 
 class ProductVote {
-
-    constructor(image0, image1, image2) {
-        this.image0 = image0;
-        this.image1 = image1;
-        this.image2 = image2;
+    constructor(productObjects){
+        this.productImagesArray = productObjects;
     }
 
     render() {
-
         const randomProductImages = productVote.content.cloneNode(true);
-        const firstProduct = randomProductImages.getElementById('product-1');
-        const secondProduct = randomProductImages.getElementById('product-2');
-        const thirdProduct = randomProductImages.getElementById('product-3');
-        firstProduct.src = this.image0;
-        secondProduct.src = this.image1;
-        thirdProduct.src = this.image2;
+
+        for( let i = 0; i < this.productImagesArray.length; i++) {
+            const templateImages = randomProductImages.getElementById(`product-${i}`)
+            templateImages.src = this.productImagesArray[i].image;
+        }
+        
+        
+        const firstProduct = randomProductImages.getElementById('product-0');
+        const secondProduct = randomProductImages.getElementById('product-1');
+        const thirdProduct = randomProductImages.getElementById('product-2');
+        
+        firstProduct.src = this.productImagesArray[0].image;
+        secondProduct.src = this.productImagesArray[1].image;
+        thirdProduct.src = this.productImagesArray[2].image;
         
         firstProduct.addEventListener('click',()=> {
-            console.log('event listener working?', this.image0 );
-         } )
+            voteClick(this.product0);
+            console.log('event listener working?', this.product0 );
+        } )
         secondProduct.addEventListener('click',()=> {
-            console.log('event listener working?', secondProduct );
-         } )
+            
+        } )
         thirdProduct.addEventListener('click',()=> {
-            console.log('event listener working?', thirdProduct );
-         } )
-       
+            
+        } )
+        
         return randomProductImages;
     }
 }
+

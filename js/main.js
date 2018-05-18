@@ -4,6 +4,5 @@
 const app = new App();
 const dom = app.render();
 const root = document.getElementById('root');
-console.log('hello root?' ,  root);
 //put the apps dom into root
 root.appendChild(dom); 
