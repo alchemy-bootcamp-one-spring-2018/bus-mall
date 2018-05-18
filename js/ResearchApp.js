@@ -1,8 +1,8 @@
 /* globals ImageViewer productArray */
-/* exported App */
+/* exported ResearchApp */
 
 
-class App {
+class ResearchApp {
     constructor() {
         this.productArray = productArray;
         this.totalVotes = 0;
