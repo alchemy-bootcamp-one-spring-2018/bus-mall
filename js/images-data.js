@@ -80,7 +80,7 @@ function initImages() {
         },
         {
             name: 'pen',
-            imageSrc: 'img/pen.jpg',
+            imageSrc: 'img/pen.png',
             views: 0,
             votes: 0
         },

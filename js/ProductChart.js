@@ -21,7 +21,6 @@ class ProductChart {
             const product = this.imagesData[i];
             labels.push(product.name);
             data.push(product.votes);
-            data.push(product.views);
         }
 
         this.chart = new Chart(ctx, {
@@ -32,14 +31,29 @@ class ProductChart {
                     label: '# of Votes',
                     data: data,
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1,)',
-                        'rgba(255, 206, 86, 1,)'
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
                     ],
                     borderWidth: 1
                 }]

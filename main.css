@@ -1,3 +1,17 @@
+body {
+    background-color: gray;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    /* transform: scale(.75, 1); */
+    object-fit: contain;
+    object-position: 50% 50%;
+    object-fit: cover; 
+    overflow: hidden; 
+    }
+
 #chart-container {
     height: 350px;
 }
