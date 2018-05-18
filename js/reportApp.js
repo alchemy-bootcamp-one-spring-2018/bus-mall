@@ -17,12 +17,16 @@ class ReportApp {
             clearItemData();
             window.location.reload();
         })
-        
+
         const totalsReportSection = dom.getElementById('totals-report');
         const totalsReportComponent = new TotalsDisplayReport(this.items);
-        console.log(this.items);
         const totalsReportDom = totalsReportComponent.render();
         totalsReportSection.appendChild(totalsReportDom);
+
+        const totalsChartSection = dom.getElementById('totals-chart');
+        const totalsChartComponent = new ItemsChart(this.items);
+        const totalsChartDom = totalsChartComponent.render();
+        totalsChartSection.appendChild(totalsChartDom);
 
         return dom;
     }

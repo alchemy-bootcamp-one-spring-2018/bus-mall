@@ -19,7 +19,7 @@ class App {
             imageViewerComponent.update(acquireRandomItems());
             this.totalViews++;
             if(this.totalViews >= 25){
-                alert('good job');
+                document.getElementById('results-link').removeAttribute('hidden');
             }
         });
 

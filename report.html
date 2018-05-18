@@ -16,6 +16,7 @@
                 <button>Clear Info</button>
             </section>
             <section id="totals-report"></section>
+            <section id="totals-chart"></section>
         </template>
     
         <template id="totals-display-template">
@@ -41,9 +42,19 @@
                 <td></td>
             </tr>
         </template>
+
+        <template id="items-chart-template">
+            <h2>Chart</h2>
+            <div id="chart-container">
+                <canvas width="400"></canvas>
+            </div>
+        </template>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
         <script src="js/data.js"></script>
         <script src="js/totalsReport.js"></script>
         <script src="js/totalsDisplay.js"></script>
+        <script src="js/chart.js"></script>
         <script src="js/reportApp.js"></script>
         <script src="report.js"></script> 
     
