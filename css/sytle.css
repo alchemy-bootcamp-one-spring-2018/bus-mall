@@ -20,7 +20,9 @@ img {
 
 }
 img:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
+    transition: 0.5s;
+
 }
 body {
     background-image: url('/assets/street.jpg');
@@ -76,6 +78,8 @@ a {
 a:hover {
     cursor: pointer;
     color: lightgray;
+    transition: 0.5s;
+
 }
 button {
     height: 3em;
@@ -92,6 +96,8 @@ button:hover {
     cursor: pointer;
     border-style: solid;
     border-color: white;
+    transition: 0.3s;
+
 }
 footer{
     display: flex;
