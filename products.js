@@ -1,5 +1,5 @@
 'use strict';
-/* exported ProductToShow */
+/* exported ProductToShow, arrayOfProducts */
 
 
 class ProductToShow {

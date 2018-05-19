@@ -1,4 +1,5 @@
-
+/* globals arrayOfProducts, Product */
+/* exported App */
 
 const appTemplate = document.getElementById('app-template').content;
 
