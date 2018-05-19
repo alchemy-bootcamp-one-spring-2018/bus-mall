@@ -24,7 +24,6 @@ class ViewingChart {
             labels.push(products.name);
             data.push(products.timesVoted);
         }
-        console.log(labels, data);
 
         this.chart = new Chart(ctx, {
             type: 'bar',
