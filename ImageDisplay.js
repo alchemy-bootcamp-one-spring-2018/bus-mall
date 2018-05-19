@@ -1,3 +1,4 @@
+/* globals Product */
 /* exported ImageDisplay imageElement */
 
 
@@ -12,18 +13,24 @@ class ImageDisplay {
     
     render() {
         const dom = imageTemplate.cloneNode(true);
-        const img = dom.querySelector('img');
-        console.log('addEventListener', addEventListener);
-        
+        console.log('onSelect', this.onSelect);
+        const imageContainer = dom.querySelector('#image-container');
+
+        console.log('Product', Product);
         for(let i = 0; i < 3; i++) {
+            const productComponent = new Product(this.imageSrc[i], this.onSelect);
             
-            const imageElement = dom.getElementById('img' + i);
-            imageElement.src = this.imageSrc[i].name;
-            console.log('imageElement', imageElement);
-            img.addEventListener('click', () => {
-                this.onSelect(this.imageSrc[i]);
-            });
-            imageElement.style.height = '200px';
+            imageContainer.appendChild(productComponent.render());
+
+
+            
+            // const imageElement = dom.getElementById('img' + i);
+            // imageElement.src = this.imageSrc[i].name;
+            // console.log('imageElement', imageElement);
+            // img.addEventListener('click', () => {
+            //     this.onSelect(this.imageSrc[i]);
+            // });
+            // imageElement.style.height = '200px';
         }
         return dom;
     }
