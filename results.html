@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Rancho" rel="stylesheet">
+    <title>Popular Products: Reported Statistics</title>
+</head>
+<body>
+    <div id="root"></div>
+        <template id="app-template">
+            <section id="chart-display"></section>
+        </template>
+
+    <template id="voting-results-template">
+        <h1>Voting Results</h1>
+        <h4><a href="index.html">Home (Voting)</a></h4>
+        <div id="chart">
+            <canvas width="800px">
+    
+            </canvas>
+        </div>
+    </template>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/ViewingChart.js"></script>
+    <script src="js/ChartApp.js"></script>
+    <script src="js/chartmain.js"></script>
+</body>
+</html>
