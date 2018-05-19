@@ -15,4 +15,6 @@ render() {
         this.container = this.product.image;
         image.addEventListener('click', () => {
             this.onSelect(this.arrayOfProducts[i]);
-        });
+        }
+    }
+}

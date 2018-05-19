@@ -1,8 +1,5 @@
 'use strict';
-/* exportedProduct */
-
-
-let arrayOfProducts;
+/* exported ProductToShow */
 
 
 class ProductToShow {
@@ -34,5 +31,5 @@ let waterCan = new ProductToShow('water can', 'images/water-can.jpg', 0);
 let wineGlass = new ProductToShow('wine glass', 'images/wine-glass.jpg', 0);
 
 
-arrayOfProducts = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
+let arrayOfProducts = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
 

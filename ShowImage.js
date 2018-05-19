@@ -1,4 +1,4 @@
-/* exported ShowImages */
+/* exported Product */
 
 const showImagesTemplate = document.getElementById('show-images-template').content;
 
@@ -15,18 +15,15 @@ class Product {
             console.log('this is what you look at', this.container);
             const img = this.container.querySelector('#image-' + i);
             img.src = this.arrayOfProducts[i].image;
-
-
         }
-
-
-        //this.arrayOfProducts.viewCount++;
-        // img.addEventListener('click', () => {
-        //     this.onSelect(this.arrayOfProducts);
-    
+        
         return dom;
     }
 }
 
-//);
+//this.arrayOfProducts.viewCount++;
+// img.addEventListener('click', () => {
+//     this.onSelect(this.arrayOfProducts);
+
+
 

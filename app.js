@@ -1,3 +1,5 @@
+
+
 const appTemplate = document.getElementById('app-template').content;
 
 class App {

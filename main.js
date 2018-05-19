@@ -1,4 +1,4 @@
-/* globals Product */
+/* globals App */
 
 const app = new App();
 
