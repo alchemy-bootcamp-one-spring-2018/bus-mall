@@ -24,8 +24,9 @@ class App {
         // });
 
         const addDisplayComponent = new ImageDisplay(threeImages, (image) => {
-            this.image; 
-            console.log(image + 'has been clicked');
+            // onClick for Product 
+            // this.image; 
+            console.log(image.name + 'has been clicked');
         });
         addImageSection.appendChild(addDisplayComponent.render());
         return dom;
