@@ -11,13 +11,8 @@ class ImageDisplay {
     }
     
     render() {
-        const dom = imageTemplate;
-        
-        
+        const dom = imageTemplate.cloneNode(true);
         const img = dom.querySelector('img');
-        img.addEventListener('click', () => {
-            this.onSelect(this.imageSrc);
-        });
         console.log('addEventListener', addEventListener);
         
         for(let i = 0; i < 3; i++) {
@@ -25,6 +20,9 @@ class ImageDisplay {
             const imageElement = dom.getElementById('img' + i);
             imageElement.src = this.imageSrc[i].name;
             console.log('imageElement', imageElement);
+            img.addEventListener('click', () => {
+                this.onSelect(this.imageSrc[i]);
+            });
             imageElement.style.height = '200px';
         }
         return dom;
