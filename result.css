@@ -52,10 +52,6 @@ header {
     align-items: center;
 }
 
-canvas {
-    
-}
-
 button {
     margin-top: 50px;
     border: none;
@@ -112,21 +108,8 @@ td{
     margin-top: 50px;
 }
 
-#thanks-message {
-    margin-top: 250px;
-}
-
-img {
-    margin: 50px;
-    width: 100%;
-}
-
-#motto {
-    color: white;
-    font-size: 6em;
-    position: absolute;
-    font-family: 'Fjalla One', sans-serif;
-    top: 300px;
+#result-chart {
+    height: 100vh;
 }
 
 a:link, a:visited {
