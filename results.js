@@ -24,7 +24,6 @@ class Results {
             const nameData = document.createElement('td');
             nameData.textContent = product.name;
             row.appendChild(nameData);
-            //resultsList.appendChild(row);
             
             const viewsData = document.createElement('td');
             viewsData.textContent = product.views;
@@ -34,14 +33,8 @@ class Results {
             countData.textContent = product.count;
             row.appendChild(countData);
             resultsList.appendChild(row);
-        
-            //resultsList.appendChild(row);
-            /*const views = document.createElement('td');
-            views.textContent = this.list[i].views;
-            resultsList.appendChild(views); */
 
         }
-        //this.list[i].count.toString();//this.list[i].views.toString();
 
         return dom;
 
