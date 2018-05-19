@@ -13,7 +13,6 @@ const picturesData = window.localStorage.getItem('pictures');
 
 window.onbeforeunload = () => {
     window.localStorage.setItem('pictures', JSON.stringify(pictures));
-    window.localStorage.setItem('totalCount', 0);
 };
 
 let pictures;

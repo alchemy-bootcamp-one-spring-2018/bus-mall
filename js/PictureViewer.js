@@ -17,26 +17,18 @@ class PictureViewer {
         }
 
         let pictureArray = [];
-        // let arrayCopy = this.picture.slice();
         for(let i = 0; i < 3; i++) {
             let index = this.random(this.picture.length);
-
             if(pictureArray.includes(this.picture[index]) || this.lastArray.includes(this.picture[index])) {
                 i--;
                 continue;
             }
             pictureArray[i] = this.picture[index];
-            // tempArray.push(index);
-            // this.picture.splice(index, 1);
         }
+        
         this.lastArray = pictureArray;
         const pictureComponent = new Picture(this.lastArray, this.onSelect);
         ul.appendChild(pictureComponent.render());
-
-        // for(let i = 0; i < tempArray.length; i++) {
-        //     const pictureComponent = new Picture(tempArray[i], this.onSelect);
-        //     ul.appendChild(pictureComponent.render());
-        // }
     }
 
     render() {
@@ -49,6 +41,7 @@ class PictureViewer {
     }
 
     stop() {
+        const dom = pictureViewerTemplate;
         const ul = this.ul;
         while(ul.lastElementChild) {
             ul.lastElementChild.remove();
@@ -56,6 +49,20 @@ class PictureViewer {
         const endMessage = document.createElement('li');
         endMessage.textContent = 'Done!';
         ul.appendChild(endMessage);
+
+        return dom;
+    }
+
+    restart() {
+        const dom = pictureViewerTemplate;
+        const ul = dom.querySelector('ul');
+        this.ul = ul;
+
+        const endMessage = document.createElement('li');
+        endMessage.textContent = 'Done!';
+        ul.appendChild(endMessage);
+
+        return dom;
     }
 
     random(max) {
