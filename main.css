@@ -10,8 +10,11 @@ header {
     display: -webkit-box;  /* iOS 6-, Safari 3.1-6 */
     display: -ms-flexbox;  /* IE 10 */
     display: -webkit-flex; /* source: stack-overflow */
-    display: flex;
-    height: 160px;
+    /* display: flex; */
+    flex: 1 1 auto; /* Positive flex-shrink */
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 190px;
 }
 
 div h1 {
@@ -38,6 +41,7 @@ img {
     object-position: 50% 50%;
     object-fit: cover; 
     overflow: hidden; 
+    align-items: center;
     }
 
 a {
@@ -59,11 +63,14 @@ a:hover {
 
 #bus-logo {
     position: absolute;
+    left: 3px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #bus-mall {
-    position: relative;
-    left: 3px;
+    position: absolute;
+    left: 6px;
     padding: 0px;
     margin: 0px;
 }
@@ -73,4 +80,10 @@ a:hover {
     width: 600px;
     object-fit: contain;
     margin-left: 100px;
+    float: right;
 }
+
+#app-template {
+    display: flex;
+}
+
