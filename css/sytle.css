@@ -1,6 +1,6 @@
 body {
     color: white;
-    background-image: url('/street.jpg');
+    background-image: url('https://chrisgolden77.github.io/lab10-BusMall/street.jpg');
     text-align: center;
 }
 #root {
