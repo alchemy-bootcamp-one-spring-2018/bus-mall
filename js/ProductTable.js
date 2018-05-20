@@ -7,7 +7,6 @@ const productTableTemplate = document.getElementById('product-table-report-templ
 class ProductTable {
     constructor(imagesData) {
         this.imagesData = imagesData;
-
     }
 
     render() {

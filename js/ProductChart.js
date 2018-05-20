@@ -31,44 +31,50 @@ class ProductChart {
                     label: '# of Votes',
                     data: data,
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
 
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
 
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
 
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
+                        'rgba(0, 74, 124, 0.7)',
                     ],
                     borderWidth: 1
                 }]
             },
             options: {
+                animation: {
+                    duration: 2000,
+                    easing: 'linear'
+                },
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
                     yAxes: [{
                         ticks: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            callback: function(value) { if(Number.isInteger(value)) { return value; } }, //source: stack-overflow
+                            stepSize: 1
                         }
                     }]
-                }
-            }
+                },
+            },
         });
 
         return dom;

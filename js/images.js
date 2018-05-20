@@ -34,6 +34,5 @@ class ProductDisplay {
         this.update(this.imagesData);
         
         return dom;
-
     }
 }

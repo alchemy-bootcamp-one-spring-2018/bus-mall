@@ -1,4 +1,5 @@
 /* exported ProductTotals */
+'use strict';
 
 const productTotalsTemplate = document.getElementById('product-totals-report-template').content;
 

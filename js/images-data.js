@@ -1,5 +1,4 @@
-/* exported imagesData  */
-/* globals */
+/* exported imagesData, clearProductsData, initImages  */
 'use strict';
 
 const ProductsData = window.localStorage.getItem('imagesData');

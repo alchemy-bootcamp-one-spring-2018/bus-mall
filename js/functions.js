@@ -2,8 +2,7 @@
 /* globals imagesData */
 'use strict';
 
-
-//function - pick three index values
+//function - pick three random index values
 function find3images() {
     let copy = imagesData.slice();
     let holderArray = [];
@@ -11,10 +10,9 @@ function find3images() {
     for(let i = 0; i < 3; i++) {
         
         let imageOne = randomImage(copy);
-        // imageOne.views++;
         holderArray.push(imageOne);
-
     }
+
     return holderArray;
 }
 

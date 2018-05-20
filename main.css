@@ -5,16 +5,14 @@ body {
 }
 
 header {
-    margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
     display: -webkit-box;  /* iOS 6-, Safari 3.1-6 */
     display: -ms-flexbox;  /* IE 10 */
     display: -webkit-flex; /* source: stack-overflow */
-    /* display: flex; */
-    flex: 1 1 auto; /* Positive flex-shrink */
+    display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    height: 190px;
+    height: 260px;
 }
 
 div h1 {
@@ -36,17 +34,17 @@ p {
 img {
     height: 300px;
     width: 300px;
-    /* transform: scale(.75, 1); */
     object-fit: contain;
     object-position: 50% 50%;
     object-fit: cover; 
     overflow: hidden; 
-    align-items: center;
+    justify-content: center;
     }
 
 a {
     color: gray;
     font-family: 'Noto Sans';
+    margin-top: 0px;
 }
 
 a:link {
@@ -57,33 +55,130 @@ a:hover {
     text-decoration: underline;
 }
 
+/* source: divtable.com/table-styler with minor color changes */
+table.paleBlueRows {
+    font-family: "Times New Roman", Times, serif;
+    border: 1px solid #FFFFFF;
+    width: 350px;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+    margin-bottom: 60px;
+}
+
+table.paleBlueRows td, table.paleBlueRows th {
+    border: 1px solid #FFFFFF;
+    padding: 3px 2px;
+}
+
+table.paleBlueRows tbody td {
+    font-size: 13px;
+}
+
+table.paleBlueRows tr:nth-child(even) {
+    background: #D0E4F5;
+}
+
+table.paleBlueRows thead {
+    background: #005691;
+    border-bottom: 5px solid #FFFFFF;
+}
+
+table.paleBlueRows thead th {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+}
+
+table.paleBlueRows thead th:first-child {
+    border-left: none;
+}
+
+table.paleBlueRows tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    background: #D0E4F5;
+    border-top: 3px solid #444444;
+}
+
+table.paleBlueRows tfoot td {
+    font-size: 14px;
+}
+
 #chart-container {
     height: 350px;
 }
 
 #bus-logo {
     position: absolute;
-    left: 3px;
+    top: 100px;
+    left: 30px;
     padding: 0px;
     margin: 0px;
 }
 
 #bus-mall {
     position: absolute;
-    left: 6px;
+    top: 93px;
+    left: 33px;
     padding: 0px;
     margin: 0px;
 }
 
 #instructions {
     height: 300px;
-    width: 600px;
+    width: 800px;
     object-fit: contain;
-    margin-left: 100px;
-    float: right;
+    margin-left: 190px;
+    overflow: scroll;
 }
 
-#app-template {
+#image-display-template {
     display: flex;
+    justify-content: center;
 }
+
+#image-h2 {
+    margin-bottom: 6px;
+}
+
+#results-bus-logo {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#results-bus-mall {
+    position: absolute;
+    top: 19px;
+    left: 40px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#results-bus-mall h1 {
+    color: white;
+    margin: 0px;
+    font-size: 8px;
+}
+
+#results-bus-mall-title h1 {
+    color: white;
+    margin: 0px;
+    position: absolute;
+    top: 10px;
+    left: 106px;
+}
+
+#clear-data {
+    margin-bottom: 14px;
+    margin-left: 60px;
+}
+
+
 
