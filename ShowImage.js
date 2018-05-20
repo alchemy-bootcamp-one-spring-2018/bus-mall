@@ -1,12 +1,14 @@
 /* exported Product */
 
+//randomProduct();
 const showImagesTemplate = document.getElementById('show-images-template').content;
 
 class Product {
     constructor(arrayOfProducts) {
         this.arrayOfProducts = arrayOfProducts;
     }
-
+    
+    
     render() {
         const dom = showImagesTemplate.cloneNode(true);
         this.container = dom.querySelector('div');
@@ -24,6 +26,9 @@ class Product {
 //this.arrayOfProducts.viewCount++;
 // img.addEventListener('click', () => {
 //     this.onSelect(this.arrayOfProducts);
+    
+/* above added saturday night */
+    
 
 
 

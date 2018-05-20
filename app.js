@@ -1,3 +1,4 @@
+
 /* globals arrayOfProducts, Product */
 /* exported App */
 
@@ -11,13 +12,13 @@ class App {
 
     render() {
         const dom = appTemplate;
-
+        
         const displayImageSection = dom.getElementById('display-image-section');
         const imageViewerComponent = new Product(arrayOfProducts);
         const imageDom = imageViewerComponent.render();
         displayImageSection.appendChild(imageDom);
-
+        
         return dom;
-
+        
     }
 }
