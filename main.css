@@ -38,7 +38,6 @@ img {
     object-position: 50% 50%;
     object-fit: cover; 
     overflow: hidden; 
-    justify-content: center;
     }
 
 a {
@@ -136,13 +135,13 @@ table.paleBlueRows tfoot td {
     overflow: scroll;
 }
 
-#image-display-template {
-    display: flex;
-    justify-content: center;
-}
-
 #image-h2 {
     margin-bottom: 6px;
+}
+
+#images {
+    display: flex;
+    justify-content: space-around;
 }
 
 #results-bus-logo {
