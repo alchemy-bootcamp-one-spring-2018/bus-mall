@@ -30,7 +30,7 @@ let appTemplate = document.getElementById('app-template').content;
 class App {
     constructor() {
         this.arrayOfProducts = arrayOfProducts;
-        this.totalCount = localStorage.getItem('total count');
+        this.totalViews = localStorage.getItem('total views');
     }
     
     render() {
@@ -41,7 +41,16 @@ class App {
             item.votes++;
             console.log(item.name + ' has ' + item.votes + ' votes ');
             imageViewerComponent.update(getRandomProducts());
-            this.totalCount++;
+            this.totalViews++;
+            window.localStorage.setItem('total count', this.totalViews);
+            if(this.totalViews >= 25) {
+                console.log('me 25 plus');
+                
+                for(let i = 0; i < 3; i++) {
+                    console.log('i counting');
+                }
+
+            }
         
         });
         
