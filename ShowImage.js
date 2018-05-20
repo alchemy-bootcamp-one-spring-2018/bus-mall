@@ -4,10 +4,14 @@
 const showImagesTemplate = document.getElementById('show-images-template').content;
 
 class Product {
-    constructor(arrayOfProducts) {
+    constructor(arrayOfProducts, onSelect) {
         this.arrayOfProducts = arrayOfProducts;
+        this.onSelect = onSelect;
     }
     
+    update(arrayOfProducts) {
+        this.arrayOfProducts = arrayOfProducts;
+    }
     
     render() {
         const dom = showImagesTemplate.cloneNode(true);
