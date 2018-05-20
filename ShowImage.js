@@ -1,6 +1,6 @@
 /* exported Product */
 
-//randomProduct();
+
 const showImagesTemplate = document.getElementById('show-images-template').content;
 
 class Product {
@@ -37,11 +37,6 @@ class Product {
     }
 }
 
-//this.arrayOfProducts.viewCount++;
-// img.addEventListener('click', () => {
-//     this.onSelect(this.arrayOfProducts);
-    
-/* above added saturday night */
     
 
 

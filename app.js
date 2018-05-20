@@ -30,7 +30,7 @@ let appTemplate = document.getElementById('app-template').content;
 class App {
     constructor() {
         this.arrayOfProducts = arrayOfProducts;
-        this.totalCount = 0;
+        this.totalCount = localStorage.getItem('total count');
     }
     
     render() {
@@ -38,7 +38,10 @@ class App {
         
         const displayImageSection = dom.getElementById('display-image-section');
         const imageViewerComponent = new Product(getRandomProducts(), (item) => {
+            item.votes++;
+            console.log(item.name + ' has ' + item.votes + ' votes ');
             imageViewerComponent.update(getRandomProducts());
+            this.totalCount++;
         
         });
         
