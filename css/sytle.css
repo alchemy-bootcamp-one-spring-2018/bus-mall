@@ -1,5 +1,7 @@
 body {
     color: white;
+    background-image: url('/street.jpg');
+    text-align: center;
 }
 #root {
     background-color: rgba(0, 0, 0, 0.651);
@@ -24,10 +26,7 @@ img:hover {
     transition: 0.5s;
 
 }
-body {
-    background-image: url('/street.jpg');
-    text-align: center;
-}
+
 #image-area{
     width: 95%;
     display: flex;
