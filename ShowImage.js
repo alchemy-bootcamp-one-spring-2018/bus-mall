@@ -11,6 +11,13 @@ class Product {
     
     update(arrayOfProducts) {
         this.arrayOfProducts = arrayOfProducts;
+    
+        for(let i = 0; i < 3; i++) {
+            console.log('this is what you look at', this.container);
+            const img = this.container.querySelector('#image-' + i);
+            img.src = this.arrayOfProducts[i].image;
+            arrayOfProducts[i].views++;
+        }
     }
     
     render() {
@@ -18,11 +25,14 @@ class Product {
         this.container = dom.querySelector('div');
         
         for(let i = 0; i < 3; i++) {
-            console.log('this is what you look at', this.container);
+            console.log('hey u', this.container);
             const img = this.container.querySelector('#image-' + i);
-            img.src = this.arrayOfProducts[i].image;
+            img.addEventListener('click', () => {
+                this.onSelect(this.arrayOfProducts[i]);
+            });
         }
         
+        this.update(this.arrayOfProducts);
         return dom;
     }
 }
