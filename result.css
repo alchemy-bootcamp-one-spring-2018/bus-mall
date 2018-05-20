@@ -108,8 +108,9 @@ td{
     margin-top: 50px;
 }
 
-#result-chart {
+#chart-container {
     height: 100vh;
+    width: 100%
 }
 
 a:link, a:visited {
