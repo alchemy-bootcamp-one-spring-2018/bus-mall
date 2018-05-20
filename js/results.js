@@ -1,6 +1,6 @@
 
 /* globals Product, productList */
-/* exported Result */
+/* exported VoteResults */
 
 
 

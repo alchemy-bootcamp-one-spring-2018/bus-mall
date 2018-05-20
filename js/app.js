@@ -12,15 +12,21 @@ class App {
 
     render() {
         const dom = appTemplate.content;
-        const productVoteSection = dom.getElementById('product-vote');
         
+        const productVoteSection = dom.getElementById('product-vote');
         const selectedImages = threeRandomProducts(this.productImagesArray);
-
         const productVoteComponent = new ProductVote(selectedImages);
         const productDom = productVoteComponent.render();
        
         productVoteSection.appendChild(productDom);
+
+        //Results List
+        const resultsSection = dom.getElementById('results');
+        const resultsComponent = new VoteResults();
+        const resultsDom = resultsComponent.render();
         
+        resultsSection.appendChild(resultsDom);
+
         return dom;
     } 
 }
