@@ -20,12 +20,12 @@ class App {
        
         productVoteSection.appendChild(productDom);
 
-        //Results List
-        const resultsSection = dom.getElementById('results');
-        const resultsComponent = new VoteResults();
-        const resultsDom = resultsComponent.render();
+        // //Results List
+        // const resultsSection = dom.getElementById('results');
+        // const resultsComponent = new VoteResults();
+        // const resultsDom = resultsComponent.render();
         
-        resultsSection.appendChild(resultsDom);
+        // resultsSection.appendChild(resultsDom);
 
         return dom;
     } 
@@ -53,8 +53,8 @@ function threeRandomProducts(productData) {
     return arrayOfThreeProducts;
 }
 
-function voteClick(product) {
-    product.votes++; 
-}
+// function voteClick(threeRandomProducts) {
+//     threeRandomProducts.votes++; 
+// }
 
 

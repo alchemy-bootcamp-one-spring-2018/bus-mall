@@ -4,15 +4,15 @@
 
 
 
-const resultsTemplate = document.getElementById('results-template');
+// const resultsTemplate = document.getElementById('results-template');
 
-class VoteResults {
-    constructor(){
+// class VoteResults {
+//     constructor(){
 
-    }
-    render() {
-        const voteResults = resultsTemplate.content.cloneNode(true);
+//     }
+//     render() {
+//         const voteResults = resultsTemplate.content.cloneNode(true);
 
-        return voteResults;
-    }
-}
+//         return voteResults;
+//     }
+// }
