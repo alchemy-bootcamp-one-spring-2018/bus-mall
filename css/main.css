@@ -2,7 +2,7 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-a {
+button, a {
     float: right;
 }
 
@@ -13,14 +13,14 @@ img {
 }
 
 table {
-    width: 50%;
+    width: 800px;
     text-align: center;
     font-size: 14px;
     border-collapse: collapse;
 }
 
 #chart-root {
-    width: 50%;
+    width: 800px;
 }
 
 td {

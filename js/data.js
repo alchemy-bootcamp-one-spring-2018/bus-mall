@@ -7,13 +7,11 @@ window.onbeforeunload = () => {
 };
 
 let products;
-//if (productsData) {
-if(productsData !== 'undefined') {  // different than Marty's.  Apple vs. Windows?
-//if(window.localStorage.length > 0) {
-    products = JSON.parse(productsData);
-}
-else {
+if(productsData === 'undefined' || !productsData) {
     initializeProducts();
+}
+else { 
+    products = JSON.parse(productsData);
 }
 
 
@@ -59,4 +57,5 @@ function initializeProducts() {
 function clearProductData() {
     window.localStorage.clear('products');
     initializeProducts();
+    location.reload(true);
 }

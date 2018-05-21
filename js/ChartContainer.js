@@ -38,10 +38,12 @@ class ChartContainer {
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: false,
+                maintainAspectRatio: true,
                 scales: {
                     yAxes: [{
                         ticks: {
+                            stepSize: 1,
+                            min: 0,
                             beginAtZero:true
                         }
                     }],
