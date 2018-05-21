@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="result.css">
+    <link href="https://fonts.googleapis.com/css?family=Average|Fjalla+One|Rajdhani:300" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/BM-favicon.png">
+    <title>BusMall Results</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>BUSMALL</h1></a>
+        <h4>The Ultimate Shopping Experience</h4>
+        <hr>
+        <div>
+            <a href="#">About</a>
+            <a href="#">Shop</a>
+            <a href="survey.html">Survey</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+        </div>
+        <hr>
+    </header>
+    <div id="root"></div>
+
+    <footer>
+        <hr>
+        <p>&copy; BusMall 2018. All rights reserved.</p>
+    </footer>
+
+    <template id="app-template">
+        
+        <section id="result-chart"></section>
+        <section id="result"></section>
+        <button id="clear-results">Clear All Results</button>
+    </template>
+
+    <template id="result-template">
+        <h2>Results:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Clicks</th>
+                    <th>Views</th>
+                    <th>Percent</th>
+                </tr>
+            </thead>
+            <tbody id="result-tbody">
+                
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </table>
+    </template>
+
+    <template id="product-result-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <template id="result-chart-template">
+        <h2>Result Chart</h2>
+        <div id="chart-container">
+            <canvas width="900"></canvas>
+        </div>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/ResultChart.js"></script>
+    <script src="./js/ProductResult.js"></script>
+    <script src="./js/Result.js"></script>
+    <script src="./js/ResultApp.js"></script>
+    <script src="mainResult.js"></script>
+</body>
+</html>
