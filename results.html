@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sytle.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+</head>
+<body>
+    <header id="results-header">
+        <h1>Survey Results</h1>
+        <div id="head-div">
+                <a id="results-head" href="index.html"><h2>Back to survey</h2></a>
+            </div>
+    </header>
+    <div id="root"></div>
+    <template id="app-template">
+        <div id="results-box">
+        <section id="results-section"></section>
+        <section id="chart-section"></section>
+        </div>
+        <button>Reset Data</button>
+    </template>
+    <!--result templates-->
+    <template id="results-template">
+        <table id="results-table">
+            <tr>
+                <th>Product:</th>
+                <th>Times Viewed:</th>
+                <th>Times Selected:</th>
+                <tbody></tbody>
+            </tr>
+        </table>
+
+    </template>
+
+    <template id="results-data-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+    <template id="chart-template">
+        <div id="chart-container">
+            <canvas width="400"></canvas>
+        </div>
+    </template>
+    <footer>
+        <h2 id="intro" >Thank you for participating in our survey. Your actions play a hand in giving our development team a good idea where to go when designing a product. </h2>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="javaScript/objects.js"></script>
+    <script src="javaScript/SurveyResult.js"></script>
+    <script src="javaScript/chart.js"></script>
+    <script src="javaScript/ResultsArea.js"></script>
+    <script src="javaScript/ReportApp.js"></script>
+    <script src="javaScript/main.js"></script>
+</body>
+</html>
