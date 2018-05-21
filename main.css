@@ -4,8 +4,8 @@ img {
 }
 body {
     height: 100%;
+    background-color: black;
     color: white;
-  
     background-image: url("images/whatisspacet.jpg");
     height: 100%;
     background-position: center;
