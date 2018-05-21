@@ -1,0 +1,25 @@
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: lightskyblue;
+}
+
+#pic-template {
+    display: inline;
+    justify-content: center;
+}
+#image-1, #image-2, #image-3 {
+    height: 275px;
+    width: 275px;
+    border: 10px solid;
+    color: darkkhaki;
+    border-collapse: collapse;
+}
+td {
+    text-align: center;
+}
+td.product-name {
+    text-align: left;
+}
+td.percent {
+    text-align: right;
+}
