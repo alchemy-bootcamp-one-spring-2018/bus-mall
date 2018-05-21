@@ -21,16 +21,7 @@ class ImageDisplay {
             const productComponent = new Product(this.imageSrc[i], this.onSelect);
             
             imageContainer.appendChild(productComponent.render());
-
-
-            
-            // const imageElement = dom.getElementById('img' + i);
-            // imageElement.src = this.imageSrc[i].name;
-            // console.log('imageElement', imageElement);
-            // img.addEventListener('click', () => {
-            //     this.onSelect(this.imageSrc[i]);
-            // });
-            // imageElement.style.height = '200px';
+    
         }
         return dom;
     }

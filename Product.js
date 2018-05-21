@@ -7,7 +7,6 @@ class Product {
     constructor(product, onSelect) {
         this.product = product;
         this.onSelect = onSelect;
-
     }
 
 
@@ -20,7 +19,6 @@ class Product {
             this.onSelect(this.product);
         });
         return dom;
-        
     }
-
 }
+

@@ -10,23 +10,26 @@ class App {
         this.totalViews = 0;
 
     }
-    // 
+    
 
     render() {
         const dom = picTemplate.content;
+        var globalCounter = 0;
+        console.log('image.name' + 'has been clicked');
 
         const addImageSection = dom.getElementById('add-display');
         const threeImages = randomize();
         console.log('threeImages', threeImages);
         
-        // img.addEventListener('click', (userSelection) => {
-        //     this.onSelect(this.channel);
-        // });
+        
 
         const addDisplayComponent = new ImageDisplay(threeImages, (image) => {
-            // onClick for Product 
-            // this.image; 
-            console.log(image.name + 'has been clicked');
+            
+            image.clicked ++;
+            globalCounter++;
+            console.log('global counter', globalCounter);
+            console.log('image counter' + image.name + "  " + image.clicked);
+
         });
         addImageSection.appendChild(addDisplayComponent.render());
         return dom;
@@ -34,12 +37,3 @@ class App {
 }
 
 
-// adding event listener
-// document.getElementById('img').addEventListener('click', clickCount);
-
-// function clickCount() {
-    
-
-// }
-
-// var imageThree = randomImage(copy);
