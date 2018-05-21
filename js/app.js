@@ -53,8 +53,8 @@ function threeRandomProducts(productData) {
     return arrayOfThreeProducts;
 }
 
-// function voteClick(threeRandomProducts) {
-//     threeRandomProducts.votes++; 
-// }
+ function voteClick(threeRandomProducts) {     
+     threeRandomProducts.votes++; 
+ }
 
 
