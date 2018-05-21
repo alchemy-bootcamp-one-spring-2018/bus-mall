@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bus Mall</title>
+    <link href="assets/icon.png" rel="icon">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container border" id="main">
+<!-- HEADER -->
+        <div class="container" id="header">
+            <div class="container">
+                <span class="flex-item">
+                    <img id="bus" src="assets/logo.png">
+                </span>
+                <span class="flex-item">
+                    <h1>BUS MALL</h1>
+                </span>
+            </div>
+            <div class="container" id="nav">
+                <span class="flex-item">
+                    <a class="tab" href="#">HOME</a>
+                </span>
+                <span class="flex-item">
+                    <a class="tab" href="index.html">PRODUCTS</a>                    
+                </span>
+                <span class="flex-item">
+                    <a class="tab" href="#">REPORT</a>
+                </span>
+                <span class="flex-item">
+                    <a class="tab" id="clear" href="#">CLEAR</a>
+                </span>        
+            </div>
+        </div>
+<!-- END OF HEADER -->
+<!-- BODY -->
+    <div id="root"></div>
+    
+    <template id="app-template" class="container">
+        <section id="chart-section"></section>
+        <section id="results-section"></section>
+    </template>
+
+    <template id="results-template">
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </template>
+
+    <template id="chart-template">
+        <span class="container border">
+            <canvas id="myChart"></canvas>
+        </span>
+    </template>
+<!-- END OF BODY -->
+    </div>
+</body>
+<!-- CHART.JS -->
+<script src="/js/chart.js"></script>
+<!--  -->
+<script src="js/ResultsDisplay.js"></script>
+<script src="js/ChartDisplay.js"></script>
+<script src="js/ReportApp.js"></script>
+<script src="report.js"></script>
+</html>

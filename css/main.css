@@ -67,7 +67,7 @@ img {
     margin: 0 33px;
     padding: 13px;
     flex-direction: column;
-    width: 1174px;
+    width: 1186px;
 }
 
 #picture-section img {
@@ -103,26 +103,40 @@ img {
 }
 
 #results-section {
-    flex: 1;
+    display: flex;
     margin: auto;
-    background: black;
-    height: auto;
-    width: 100%;
-}
-
-#results-section span {
-    /* top: 50%;
-    transform: translate(0, -50%); */
-    font-size: .75rem;
-    line-height: 1.25;
+    background: white;
     color: black;
-    margin: auto;
-    padding: 13px;
-    margin: auto;
+    width: 100%;
+    justify-content: center;
 }
 
-#picture-section {
-    flex: 4;
+#results-section table {
+    border-collapse: collapse;
+}
+
+#results-section td {
+    padding: 0 33px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#results-section tr:nth-child(even) {
+    background: rgb(188, 255, 248);
+}
+
+#results-section tr:nth-child(odd) {
+    background: #FFF
+}
+
+#title-row {
+    font-weight: bold;
+    background: black !important;
+    color: white;
+}
+
+#title-item {
+    font-weight: bold;
 }
 
 #text {

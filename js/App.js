@@ -2,47 +2,56 @@
 /* exported App */
 const appTemplate = document.getElementById('app-template');
 
+window.onunload = function() {
+    localStorage.setItem('lastPic', true);
+};
+
 class App {
 
     constructor() {
         this.pictures = pictures;
         this.random = new Random(this.pictures);
         this.totalVotes = 0;
+        this.completed = window.localStorage.getItem('completed');
     }
 
     setPictures() {
-        if(this.completed) {
-            return;
+        if(localStorage.getItem('lastPic') === 'true') {
+            this.pics = JSON.parse(localStorage.getItem('pics'));
         }
-        const pics = this.random.randomize();
-        for(let i = 0; i < pics.length; i++) {
-            pics[i].shown++;
+        else {
+            this.pics = this.random.randomize();
+        }
+
+        for(let i = 0; i < this.pics.length; i++) {
+            this.pics[i].shown++;
         }
 
         if(!this.pictureDisplay) {
-            this.pictureDisplay = new PictureDisplay(pics, pic => {
+            this.pictureDisplay = new PictureDisplay(this.pics, pic => {
+                if(this.completed) {
+                    return;
+                }
+                localStorage.setItem('lastPic', false);
                 this.totalVotes++;
                 pic.votes++;
-                if(this.totalVotes === 25) {
+                this.results = new Results(this.pictures, this.totalVotes);
+                this.results.tally();
+                if(this.totalVotes >= 25) {
                     this.completed = true;
-                    this.results = new Results(this.pictures);
-                    this.resultsSection.appendChild(this.results.render());
+                    window.localStorage.setItem('completed', this.completed);
                 }
-                else {
-                    this.setPictures();
-                }
+                this.setPictures();
             });
             this.picturesSection.appendChild(this.pictureDisplay.render());
         }
         else {
-            this.pictureDisplay.update(pics);
+            this.pictureDisplay.update(this.pics);
         }
     }
 
     render() {
         const dom = appTemplate.content;
-
-        this.resultsSection = dom.getElementById('results-section');
 
         this.picturesSection = dom.getElementById('picture-section');
 
