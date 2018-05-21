@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bus Mall</title>
+    <link href="assets/icon.png" rel="icon">
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container border" id="main">
+<!-- HEADER -->
+        <div class="container" id="header">
+            <div class="container">
+                <span class="flex-item">
+                    <img id="bus" src="assets/logo.png">
+                </span>
+                <span class="flex-item">
+                    <h1>BUS MALL</h1>
+                </span>
+            </div>
+            <div class="container" id="nav">
+                <span class="flex-item">
+                    <a class="tab" href="#">HOME</a>
+                </span>
+                <span class="flex-item">
+                    <a class="tab" href="#">PRODUCTS</a>                    
+                </span>
+                <span class="flex-item">
+                    <a class="tab" href="#">ABOUT</a>
+                </span>
+                <span class="flex-item">
+                    <a class="tab" href="#">CONTACT</a>
+                </span>        
+            </div>
+        </div>
+<!-- END OF HEADER -->
+<!-- BODY -->
+    <div id="root"></div>
+    
+    <template id="app-template" class="container">
+        <section id="picture-section"></section>
+        <section id="results-section"></section>
+    </template>
+
+    <template id="results-template">
+        <span class="container border">
+            <canvas id="myChart" ></canvas>
+        </span>
+    </template>
+
+    <template id="picture-template">
+        <span class="container border">
+            <img>
+            <img>
+            <img>
+        </span>
+    </template>
+
+    <div class="flex-item border" id="text">
+        <p>Meditation humblebrag air plant, beard banh mi scenester brooklyn cred locavore quinoa. Artisan truffaut VHS +1 cliche letterpress glossier shaman austin blog vinyl cloud bread live-edge williamsburg bitters. La croix four dollar toast snackwave ennui, tousled dreamcatcher man braid. Viral adaptogen distillery, raw denim 90's wolf lomo. Biodiesel selvage four loko bushwick jean shorts literally kitsch kinfolk air plant sriracha swag cronut portland.
+        </p>
+    </div>
+<!-- END OF BODY -->
+    </div>
+</body>
+<!-- CHART.JS -->
+<script src="/js/chart.js"></script>
+<!--  -->
+<script src="js/Random.js"></script>
+<script src="js/Results.js"></script>
+<script src="js/PictureDisplay.js"></script>
+<script src="js/pictures.js"></script>
+<script src="js/App.js"></script>
+<script src="main.js"></script>
+</html>

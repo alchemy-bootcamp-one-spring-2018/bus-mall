@@ -1,0 +1,131 @@
+/* ANIMATIONS */
+
+@keyframes bus {
+    0% {
+        left: 420%
+    } 80% {
+        left: 0%;
+    } 91% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* STYLING */
+
+html {
+    padding: 0;
+    margin: 0;
+    display: block;
+    overflow-x: hidden;
+}
+
+body {
+    background: darkslategray;
+    background-image: url('../assets/bg.png');
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+#bus {
+    position: relative;
+    /* margin: 3px; */
+    animation: bus 3s ease-out forwards;
+    margin: 0 33px 0 0;
+    z-index: 0;
+    /* border: 1px solid red; */
+}
+
+.container {
+    display: flex;
+    /* margin: 0 0 13px 0; */
+    justify-content: space-between;
+    /* background: white; */
+    /* border: 1px solid red; */
+}
+
+.flex-item {
+    margin: 13px auto 13px auto;
+    /* border: 1px solid red; */
+}
+
+.border {
+    border-top: 3px solid gray;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid gray;
+}
+
+#main {
+    background: white;
+    margin: 0 33px;
+    padding: 13px;
+    flex-direction: column;
+    width: 1174px;
+}
+
+#picture-section img {
+    cursor: pointer;
+}
+
+#nav {
+    align-items: flex-end;
+    z-index: 1;
+}
+
+#header {
+    margin: 3px;
+    /* border: 1px solid red; */
+}
+
+#header a {
+    height: 69px;
+    font-size: 2rem;
+    text-decoration: none;
+    background: black;
+    color: white;
+    padding: 13px 13px 17px 13px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#results-section {
+    flex: 1;
+    margin: auto;
+    background: black;
+    height: auto;
+    width: 100%;
+}
+
+#results-section span {
+    /* top: 50%;
+    transform: translate(0, -50%); */
+    font-size: .75rem;
+    line-height: 1.25;
+    color: black;
+    margin: auto;
+    padding: 13px;
+    margin: auto;
+}
+
+#picture-section {
+    flex: 4;
+}
+
+#text {
+    margin: 0;
+    padding: 13px;
+}
