@@ -1,5 +1,17 @@
 /* exported products, clearProductData */
 
+class Product {
+
+    constructor(productName, imageName, chartColor) {
+        this.productName = productName;
+        this.imageName = imageName;
+        this.chartColor = chartColor;
+        this.timesPresented = 0;
+        this.timesChosen = 0;
+    }
+
+}
+
 const productsData = window.localStorage.getItem('products');
 
 window.onbeforeunload = () => {
@@ -10,24 +22,12 @@ let products;
 if(productsData === 'undefined' || !productsData) {
     initializeProducts();
 }
-else { 
+else {
     products = JSON.parse(productsData);
 }
 
 
 function initializeProducts() {
-
-    class Product {
-
-        constructor(productName, imageName, chartColor) {
-            this.productName = productName;
-            this.imageName = imageName;
-            this.chartColor = chartColor;
-            this.timesPresented = 0;
-            this.timesChosen = 0;
-        }
-    
-    }
 
     products = [
         new Product ('R2 Luggage', 'bag.jpg', 'red'),

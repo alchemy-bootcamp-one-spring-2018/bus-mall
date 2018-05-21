@@ -1,5 +1,7 @@
 /* exported ProductImage */
 
+const figureTemplate = document.getElementById('product-image-template').content;
+
 class ProductImage {
 
     constructor(product, handlePictureClicked) {
@@ -9,12 +11,14 @@ class ProductImage {
 
     // render this image and append it to rootElement
     render() {
-        let dom = document.createElement('img');
-        dom.src = 'img/' + this.product.imageName;
-        dom.style.height = '200px';
-        dom.addEventListener('click', () => {
+        const dom = figureTemplate.cloneNode(true);
+        const imageElement = dom.querySelector('img');
+        const captionElement = dom.querySelector('figcaption');
+        imageElement.src = 'img/' + this.product.imageName;
+        imageElement.addEventListener('click', () => {
             this.handlePictureClicked(this.product);
         });
+        captionElement.textContent = this.product.productName;
         return dom;
     }
 }

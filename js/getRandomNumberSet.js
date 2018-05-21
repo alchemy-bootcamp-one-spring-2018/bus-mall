@@ -1,12 +1,16 @@
 /* exported getRandomNumberSet*/
 
+let mostRecentNumberSet = [];
+
 // returns an array (randomNumberSet) of setSize integers between zero and max
 function getRandomNumberSet(setSize, max) {
 
-    // create an array we can splice things from
+    // create an array we can splice things from.  Do not include numbers in most recent number set.
     var numberArray = [];
     for(let i = 0; i < max; i++) {
-        numberArray.push(i);
+        if(!mostRecentNumberSet.includes(i)) {
+            numberArray.push(i);
+        }
     }
 
     // get an array of random, non-repeating numbers
@@ -17,6 +21,7 @@ function getRandomNumberSet(setSize, max) {
         numberArray.splice (index, 1);
     }
 
+    mostRecentNumberSet = randomNumberSet;
     return randomNumberSet;
 
 }
