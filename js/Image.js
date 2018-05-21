@@ -1,9 +1,9 @@
-/* exported Image */
+/* exported IndividualImage */
 'use strict';
 
 const imageTemplate = document.getElementById('image-template');
 
-class Image {
+class IndividualImage {
     constructor(product, onClick) {
         this.product = product;
         this.onClick = onClick;

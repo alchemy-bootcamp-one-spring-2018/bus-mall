@@ -5,7 +5,7 @@
 class Product {
     constructor(name, image) {
         this.name = name;
-        this.image = 'image/' + image;
+        this.image = './image/' + image;
         this.views = 0;
         this.clicks = 0;
         this.percentage = 0;
@@ -81,6 +81,3 @@ function clearProductsData() {
     window.localStorage.clear('products');
     initializeProducts();
 }
-
-// window.location.reload();
-// window.location = home.hmtl;

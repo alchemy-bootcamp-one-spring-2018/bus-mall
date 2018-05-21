@@ -1,4 +1,4 @@
-/* globals Image */
+/* globals IndividualImage */
 /* exported Choice */
 'use strict';
 
@@ -17,7 +17,7 @@ class Choice {
         }
 
         for(let i = 0; i < array.length; i++) {
-            const imageComponent = new Image(array[i], this.onClick);
+            const imageComponent = new IndividualImage(array[i], this.onClick);
             this.imageSection.appendChild(imageComponent.render());
             imageComponent.id = 'image-' + i;
         }
