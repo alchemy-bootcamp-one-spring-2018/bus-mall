@@ -1,11 +1,6 @@
 /* globals products getRandomNumberSet TableRow ProductImage ChartContainer */
 /* exported App */
 
-const rootPictures = document.getElementById('picture-root');
-const rootTable = document.getElementById('table-root');
-const rootChart = document.getElementById('chart-root');
-const rootRemaining = document.getElementById('decisions-remaining');
-
 class App {
 
     constructor() {
@@ -16,12 +11,14 @@ class App {
     }
 
     drawChart() {
+        const rootChart = document.getElementById('chart-root');
         const myChart = new ChartContainer (products);
         const dom = myChart.render();
         rootChart.appendChild(dom);
     }
 
     drawTable() {
+        const rootTable = document.getElementById('table-root');
         const tableDom = document.getElementById('table-template').content;
         const rootTableRow = tableDom.getElementById('table-row-root');
         // fill the table with rows
@@ -34,6 +31,8 @@ class App {
     }
 
     drawPictures() {
+        const rootPictures = document.getElementById('picture-root');
+        const rootRemaining = document.getElementById('decisions-remaining');
 
         // get set of random numbers to choose products
         var randomNumberSet = getRandomNumberSet(this.productsToShow, this.products.length);
