@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main_results.css">
+    <title>BusMall</title>
+</head>
+<body>
+    <div id="root">
+        
+        <a href="index.html">Back to survey</a>
+    
+    </div>
+
+    <template id="app-template">
+        <h1>Survey Results</h1>
+
+        <section id="results">
+
+        </section>
+
+        <button>Clear Data</button>
+
+        <section id="viewing-chart">
+
+        </section>
+
+    </template>
+
+    <template id="results-template">
+         <table>
+             <thead>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><b>Views</b></td>
+                    <td><b>Votes</b></td>
+                </tr>
+             </thead>
+
+             <tbody id="results-list">
+
+             </tbody>
+
+         </table>
+
+    </template>
+
+    <template id="viewing-chart-template">
+        <div id="chart-container">
+            <canvas width="400"></canvas>
+        </div>
+    </template>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="./js/ViewingChart.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/results.js"></script>
+    <script src="./js/results_app.js"></script>
+    <script src="./js/main_results.js"></script>
+
+</body>
+</html>
