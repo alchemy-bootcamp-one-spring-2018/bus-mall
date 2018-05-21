@@ -1,13 +1,16 @@
 /* globals Chart */
-/* exported ViewingChart */
+/* exported ChartContainer */
 
-class ViewingChart {
+const chartTemplate = document.getElementById('chart-template').content;
+
+class ChartContainer {
     constructor(products) {
         this.products = products;
     }
 
     render() {
-        const canvas = document.querySelector('canvas');
+        const dom = chartTemplate;
+        const canvas = dom.querySelector('canvas');
         const ctx = canvas.getContext('2d');
 
         let labels = [];
@@ -41,10 +44,18 @@ class ViewingChart {
                         ticks: {
                             beginAtZero:true
                         }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false
+                        }
                     }]
                 }
             }
         });
+        return dom;
 
     }
 }

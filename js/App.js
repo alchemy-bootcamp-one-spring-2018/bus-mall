@@ -1,9 +1,10 @@
-/* globals products getRandomNumberSet ReportItem ImageItem  ViewingChart*/
+/* globals products getRandomNumberSet TableRow ProductImage ChartContainer */
 /* exported App */
 
 const rootPictures = document.getElementById('picture-root');
-const rootResults = document.getElementById('result-root');
-const rootChart = document.getElementById('chart-root')
+const rootTable = document.getElementById('table-root');
+const rootChart = document.getElementById('chart-root');
+const rootRemaining = document.getElementById('decisions-remaining');
 
 class App {
 
@@ -15,21 +16,21 @@ class App {
     }
 
     drawChart() {
-        const myChart = new ViewingChart (products);
-        myChart.render();
+        const myChart = new ChartContainer (products);
+        const dom = myChart.render();
+        rootChart.appendChild(dom);
     }
 
     drawTable() {
-        // fill the table with result rows
+        const tableDom = document.getElementById('table-template').content;
+        const rootTableRow = tableDom.getElementById('table-row-root');
+        // fill the table with rows
         for(let index = 0; index < products.length; index++) {
-            let reportItem = new ReportItem (products[index]);
-            reportItem.render(rootResults);
+            let newRow = new TableRow (products[index]);
+            let rowDom = newRow.render();
+            rootTableRow.appendChild(rowDom);
         }
-        // reveal the table
-        let hiddenElements = document.querySelectorAll('.hidden');
-        for(let i = 0; i < hiddenElements.length; i++) {
-            hiddenElements[i].classList.toggle('hidden');
-        }
+        rootTable.appendChild(tableDom);
     }
 
     drawPictures() {
@@ -42,23 +43,26 @@ class App {
         while(rootPictures.lastElementChild) {
             rootPictures.lastElementChild.remove();
         }
+
+        // show decisions remaining
+        rootRemaining.textContent = this.maxClicks - this.totalClicks;
         
         // render the image for each product
         for(let loopIndex = 0; loopIndex < this.productsToShow; loopIndex ++) {
             var randomIndex = randomNumberSet[loopIndex];
             products[randomIndex].timesPresented++; // increment presented
-            let imageItem = new ImageItem(products[randomIndex], (product) => {
+            let productImage = new ProductImage(products[randomIndex], (product) => {
                 // this callback function handles when the picture is clicked
                 product.timesChosen++;
                 this.totalClicks++;
                 if(this.totalClicks < this.maxClicks) {
                     this.drawPictures();
                 } else if(this.totalClicks === this.maxClicks) {
-                    this.drawTable();
-                    this.drawChart();
+                    rootRemaining.textContent = '0 - Session complete!';
                 }
             });
-            imageItem.render(rootPictures);
+            const dom = productImage.render();
+            rootPictures.appendChild(dom);
         }
     }
 

@@ -7,6 +7,7 @@ window.onbeforeunload = () => {
 };
 
 let products;
+//if (productsData) {
 if(productsData !== 'undefined') {  // different than Marty's.  Apple vs. Windows?
 //if(window.localStorage.length > 0) {
     products = JSON.parse(productsData);
