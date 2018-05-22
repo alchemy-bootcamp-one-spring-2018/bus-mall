@@ -1,8 +1,20 @@
+body {
+    background-color:  lightblue;
+}
 h1 {
     text-align: center;
 }
 
 img {
     height: 200px;
+    margin: 40px;
+    border-style: solid; 
+    border-color: black;
+    border-radius: 40px 10px;
     
+}
+
+#image-container {
+    margin: 0;
+    background-color: paleturquoise
 }

@@ -28,7 +28,7 @@ class App {
             image.clicked ++;
             globalCounter++;
             console.log('global counter', globalCounter);
-            console.log('image counter' + image.name + "  " + image.clicked);
+            console.log('image counter' + image.name + '' + image.clicked);
 
         });
         addImageSection.appendChild(addDisplayComponent.render());
