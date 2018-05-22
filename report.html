@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Document</title>
+</head>
+<body>
+        <div id="root"></div>
+
+        <template id="app-template">
+            <h1>Results viewing section</h1>
+            <section>
+                <a href="index.html">Go back to voting!</a>
+                <button>Clear Info</button>
+            </section>
+            <section id="totals-report"></section>
+            <section id="totals-chart"></section>
+        </template>
+    
+        <template id="totals-display-template">
+            <h2>Report</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>View Count</th>
+                        <th>Vote Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>>
+        </template>
+
+        <template id="totals-report-template">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </template>
+
+        <template id="items-chart-template">
+            <h2>Chart</h2>
+            <div id="chart-container">
+                <canvas width="400"></canvas>
+            </div>
+        </template>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/totalsReport.js"></script>
+        <script src="js/totalsDisplay.js"></script>
+        <script src="js/chart.js"></script>
+        <script src="js/reportApp.js"></script>
+        <script src="report.js"></script> 
+    
+</body>
+</html>
