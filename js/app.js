@@ -1,5 +1,7 @@
+'use strict';
 /* globals arrayOfProducts, Product */
 /* exported App, imageDom */
+
 function getRandomProducts() {
     let copy = arrayOfProducts.slice();
     let holderArray = [];
@@ -8,9 +10,10 @@ function getRandomProducts() {
         holderArray.push(itemOne);
     }
     return holderArray;
+
 }
 
-getRandomProducts();
+//getRandomProducts();
     
     
 function getRandomItem(arrayOfProducts) {
@@ -25,12 +28,13 @@ function getRandomNumber(max) {
 }
 
 
-let appTemplate = document.getElementById('app-template').content;
+const appTemplate = document.getElementById('app-template').content;
 
 class App {
     constructor() {
         this.arrayOfProducts = arrayOfProducts;
         this.totalViews = localStorage.getItem('total views');
+        console.log();
     }
     
     render() {
@@ -44,20 +48,20 @@ class App {
             this.totalViews++;
             window.localStorage.setItem('total count', this.totalViews);
             if(this.totalViews >= 25) {
-                console.log('me 25 plus');
+                console.log('at 25 plus');
+                // 25 votes works in console log
                 
                 for(let i = 0; i < 3; i++) {
-                    console.log('i counting');
+                    document.getElementById('image-' + i);
+                    console.log('i counting' + i);
                 }
-
             }
-        
         });
         
-        const imageDom = imageViewerComponent.render(); 
+        const imageDom = imageViewerComponent.render();
         displayImageSection.appendChild(imageDom);
         
-        return dom; 
+        return dom;
     }
 }
     

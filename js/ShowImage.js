@@ -1,12 +1,14 @@
+'use strict';
 /* exported Product */
 
 
 const showImagesTemplate = document.getElementById('show-images-template').content;
 
 class Product {
-    constructor(arrayOfProducts, onSelect) {
+    constructor(arrayOfProducts, onSelect, totalClicks) {
         this.arrayOfProducts = arrayOfProducts;
         this.onSelect = onSelect;
+        this.totalClicks = totalClicks;
     }
     
     update(arrayOfProducts) {
