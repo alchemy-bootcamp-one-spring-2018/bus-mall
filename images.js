@@ -1,5 +1,9 @@
 /* exported imageObjectsArray randomize*/
 
+window.onbeforeunload = () => {
+    window.localStorage.setItem('objectArray', JSON.stringify(imageObjectsArray));
+};
+
 const imageObjectsArray = [
     { name: 'images/bag.jpg',
         clicked: 0,

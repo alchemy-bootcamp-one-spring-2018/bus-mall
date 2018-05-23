@@ -8,6 +8,7 @@ class App {
     constructor() {
         this.images = imageObjectsArray;
         this.totalViews = 0;
+        this.votes = window.localStorage.getItem('votes');
 
     }
     

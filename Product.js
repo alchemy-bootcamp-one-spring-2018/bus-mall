@@ -11,7 +11,6 @@ class Product {
 
 
     render() {
-        console.log('this.product', this.product);
         const dom = productTemplate.content.cloneNode(true);
         const img = dom.querySelector('img');
         img.src = this.product.name;
