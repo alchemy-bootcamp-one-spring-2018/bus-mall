@@ -24,15 +24,15 @@ class App {
         
         
 
-        const addDisplayComponent = new ImageDisplay(threeImages, (image) => {
+        this.addDisplayComponent = new ImageDisplay(threeImages, (image) => {
             
             image.clicked ++;
             globalCounter++;
             console.log('global counter', globalCounter);
             console.log('image counter' + image.name + '' + image.clicked);
-
+            addImageSection.appendChild(this.addDisplayComponent.render());
         });
-        addImageSection.appendChild(addDisplayComponent.render());
+        addImageSection.appendChild(this.addDisplayComponent.render());
         return dom;
     }
 }

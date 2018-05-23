@@ -8,16 +8,24 @@ class Product {
         this.product = product;
         this.onSelect = onSelect;
     }
+    updateImage() {
+
+        this.image.src = this.product.name;
+        return this.dom;
+    }
 
 
     render() {
-        const dom = productTemplate.content.cloneNode(true);
-        const img = dom.querySelector('img');
-        img.src = this.product.name;
-        img.addEventListener('click', () => {
+        this.dom = productTemplate.content.cloneNode(true);
+        this.image = this.dom.querySelector('img');
+        this.image.addEventListener('click', () => {
             this.onSelect(this.product);
         });
-        return dom;
+        this.updateImage();
+        return this.dom;
     }
+
 }
+
+
 

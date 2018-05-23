@@ -86,6 +86,8 @@ const imageObjectsArray = [
         displayed: 0
     }];
 
+
+    
 function randomize() {  
     const threeImages = [];
 
