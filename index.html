@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Welcome to Bus Mall</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <header>
+            <h1>Bus Mall Survey</h1>
+            <div id="head-div">
+                <a id="results-head" href="results.html"><h2>See results</h2></a>
+            </div>
+    </header>
+
+    <template id="app-template">
+        <h1>Bus Mall...your favorite <em>alternative</em> option for travel!</h1>
+        
+        <section id="add-display"></section>
+    </template>
+
+    <!-- voting template -->
+    <template id="image-template">
+        <h2>Select your favorite image:</h2>
+        <div id="image-container"></div>
+    </template>
+    <!-- image template -->
+    <template id="product-template">
+        <img>
+    </template>
+
+    <div>
+        <h2>
+            Welcome to our bus mall survey!
+        </h2>
+            <p>Please take a moment to help us choose what products to offer by selecting your favorite product from each set of three that are displayed</p>
+            <p>Votes will be tallied and displayed at the end.</p>
+    </div>
+    
+    
+    <script src="images.js"></script>    
+    <script src="random.js"></script>
+    <script src="Product.js"></script>    
+    <script src="ImageDisplay.js"></script>    
+    <script src="App.js"></script>    
+    <script src="main.js"></script>    
+</body>
+</html>
