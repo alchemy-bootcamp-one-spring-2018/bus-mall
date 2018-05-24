@@ -1,5 +1,3 @@
-
-
 /* exported Results*/
 /* globals Result */
 const resultsTemplate = document.getElementById('results-template');

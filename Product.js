@@ -2,7 +2,6 @@
 
 const productTemplate = document.getElementById('product-template');
 
-
 class Product {
     constructor(product, onSelect) {
         this.product = product;
@@ -13,7 +12,6 @@ class Product {
         this.image.src = this.product.name;
         return this.dom;
     }
-
 
     render() {
         this.dom = productTemplate.content.cloneNode(true);
@@ -26,6 +24,3 @@ class Product {
     }
 
 }
-
-
-

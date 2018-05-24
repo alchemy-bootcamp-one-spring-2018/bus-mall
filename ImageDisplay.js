@@ -31,11 +31,9 @@ class ImageDisplay {
                 const productComponent = new Product(this.imageSrc[i], this.onSelect);
             
                 this.imageContainer.appendChild(productComponent.render());
-            
             }
             this.rendered = true;
             return this.dom;
-
         }
     }
 }

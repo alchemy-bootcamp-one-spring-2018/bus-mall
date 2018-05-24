@@ -1,7 +1,6 @@
 /* globals App */
 'use strict';
 
-
 const app = new App();
 
 const dom = app.render();

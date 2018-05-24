@@ -11,7 +11,6 @@ class App {
         this.votes = window.localStorage.getItem('votes');
 
     }
-    
 
     render() {
         const dom = picTemplate.content;
@@ -21,8 +20,7 @@ class App {
         const addImageSection = dom.getElementById('add-display');
         const threeImages = randomize();
         console.log('threeImages', threeImages);
-        
-        
+                
 
         this.addDisplayComponent = new ImageDisplay(threeImages, (image) => {
             
@@ -36,5 +34,3 @@ class App {
         return dom;
     }
 }
-
-
