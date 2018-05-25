@@ -12,17 +12,12 @@ class Selected {
 
     render() {
         const dom = clickedTemplate.cloneNode(true);
-        // const clickedPic = this.onClick(this.object);
             
         const domImage = dom.querySelector('img');
-        // function onClick(domImage){
         domImage.addEventListener('click', () => {
             this.onClick(this.object);
         });
-        // }
-        
-        // onClick();
-        // for (let i = 0; i < 25, i++;) {
+    
 
 
         domImage.src = this.object.path;
