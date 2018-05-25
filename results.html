@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vote Results</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <header id="results-head">
+            <h1>Survey Results</h1>
+            <div id="results-div">
+                    <a id="results-head" href="index.html"><h2>Return to survey</h2></a>
+                </div>
+    </header>
+
+    <template id="app-template">
+            <div id="results-box">
+            <section id="results-section"></section>
+            <section id="chart-section"></section>
+            </div>
+            <button>Reset Data</button>
+    </template>
+
+    <!--results table-->
+    <template id="results-template">
+            <table id="results-table">
+                <tr>
+                    <th>Product:</th>
+                    <th>Times Viewed:</th>
+                    <th>Times Selected:</th>
+                    <tbody></tbody>
+                </tr>
+            </table>
+    </template>
+    
+    <template id="results-data-template">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+    </template>
+
+    
+    <script src="Product.js"></script>      
+    <script src="VoteResult.js"></script>      
+    <script src="results.js"></script>      
+    <script src="main.js"></script>      
+</body>
+</html>
