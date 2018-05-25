@@ -4,7 +4,7 @@
 
 ### Backstory
 
-You've been hired by a startup called BusMall, whose product is similar to the SkyMall catalog found in the seatback pockets on airplanes: a catalog of assorted high-markup products provided to a captive audience seeking a mental escape from the drudgery of travel.
+You've been hired by a startup called BusMall, whose product is similar to the SkyMall catalog found in the seat back pockets on airplanes: a catalog of assorted high-markup products provided to a captive audience seeking a mental escape from the drudgery of travel.
 
 But in this case, BusMall catalogs are placed on regional transit system buses... whose overall travel times are now comparable to cross-country flights, after all.
 

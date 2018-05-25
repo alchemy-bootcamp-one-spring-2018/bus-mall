@@ -1,0 +1,22 @@
+
+.img {
+    width: 200px;
+    height: 200px;
+}
+
+#image-viewer-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+h2 {
+    text-align: center
+}
+
+h1 {
+    text-align: center
+}
+h3 {
+    text-align: center
+}

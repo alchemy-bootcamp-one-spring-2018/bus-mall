@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="report.css">
+    <title>BusMall Product Research Results</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <template id="app-template">
+        <h1>BusMall Voting Results</h1>
+        <section id="results"></section>
+        <section id="results-chart"></section>
+    </template>
+
+    <template id="results-template">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Votes</th>
+                    <th>Viewed</th>
+                </tr>
+            </thead>
+            <tbody>    
+            </tbody>
+        </table>
+    </template>
+
+    <template id="product-results-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <template id="results-chart-template">
+        <div>
+            <canvas width="800"></canvas>
+        </div>
+    </template>
+    <p>
+        <button id="clear-button">CLEAR DATA</button>
+    </p>
+    <a href="index.html">Back to Product Selector</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    
+    <script src="js/products.js"></script>
+    <script src="js/ResultsChart.js"></script>
+    <script src="js/ProductResults.js"></script>
+    <script src="js/Results.js"></script>
+    <script src="js/ResultReportApp.js"></script>
+    <script src="report.js"></script>
+</body>
+</html>
