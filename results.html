@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Survey Results</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <a href="index.html">Return to Survey</a>
+
+    <h1>Product Survey Results</h1>
+
+    <button onclick="clearProductData()">Reset Results</button>
+
+    <div id="chart-root"></div>
+    <div id="table-root"></div>
+
+    <template id="table-template">
+        <h2>Table</h2>
+        <table>
+            <thead>
+             <tr>
+                  <th>Product Name</th>
+                  <th>Times Presented</th>
+                  <th>Times Chosen</th>
+                </tr>
+            </thead>
+            <tbody id="table-row-root"></tbody>
+        </table>
+    </template>
+
+    <template id="table-row-template">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <template id="chart-template">
+        <h2>Chart</h2>
+        <div>
+            <canvas></canvas>
+        </div>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/TableRow.js"></script>
+    <script src="js/ChartContainer.js"></script>
+    <script src="js/App.js"></script>
+    <script src="results.js"></script>
+
+</body>
+</html>
