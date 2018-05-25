@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 10</title>
+    <link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body class="main">
+    <div id="root"></div>
+    
+    <template id="app-template">
+        <h1>Choose a product</h1>
+        <section id="image-viewer"></section>
+    </template>
+    
+    <!-- Templates bellow this line will go into the app-template -->
+    
+    <template id="image-viewer-template">
+        <div>
+            <img id="image-1">
+            <img id="image-2">
+            <img id="image-3">
+        </div>
+    </template>
+    <a href="report.html">View Report</a>
+    
+    <script src="js/products.js"></script>
+    <script src="js/randomizer.js"></script>
+    <script src="js/ImageViewer.js"></script>
+    <script src="js/App.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
